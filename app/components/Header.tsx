@@ -1,0 +1,67 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+
+export default function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 30);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navLinks = [
+    { label: "About", href: "/#about" },
+    { label: "Projects", href: "/#projects" },
+    { label: "Blog", href: "/blog" },
+    { label: "Contact", href: "/#contact" },
+  ];
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 pt-4 sm:pt-5 flex justify-center">
+      <nav 
+        className="flex items-center justify-between gap-4 px-4 py-2.5 rounded-2xl transition-all duration-400 ease-out"
+        style={{
+          background: scrolled 
+            ? 'linear-gradient(135deg, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.72) 50%, rgba(255,255,255,0.82) 100%)'
+            : 'linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.28) 50%, rgba(255,255,255,0.38) 100%)',
+          backdropFilter: scrolled ? 'blur(24px) saturate(200%)' : 'blur(16px) saturate(160%)',
+          WebkitBackdropFilter: scrolled ? 'blur(24px) saturate(200%)' : 'blur(16px) saturate(160%)',
+          border: scrolled ? '1px solid rgba(0,0,0,0.06)' : '1px solid rgba(255,255,255,0.5)',
+          boxShadow: scrolled 
+            ? '0 4px 24px -4px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.95)'
+            : '0 2px 16px -2px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.03), inset 0 1px 0 rgba(255,255,255,0.7)',
+        }}
+      >
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2 group">
+          <Image 
+            src="/logo.svg" 
+            alt="HLL" 
+            width={16} 
+            height={16}
+            className="opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+          />
+        </Link>
+        
+        {/* Nav links */}
+        <div className="flex items-center gap-0.5 sm:gap-1">
+          {navLinks.map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className="relative px-3 py-1.5 text-[0.6875rem] sm:text-[0.75rem] font-medium text-[#1a1918]/55 hover:text-[#1a1918] transition-colors duration-250 rounded-lg overflow-hidden group"
+            >
+              <span className="absolute inset-0 bg-[#cbb37c]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-250 rounded-lg" />
+              <span className="relative">{link.label}</span>
+            </Link>
+          ))}
+        </div>
+      </nav>
+    </header>
+  );
+}
