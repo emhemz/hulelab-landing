@@ -98,10 +98,10 @@ export default function Header() {
 
           {/* Dropdown Menu - macOS Dock style */}
           <div 
-            className={`absolute top-full right-0 pt-3 flex flex-col gap-2 transition-all duration-500 ease-out origin-top-right ${
+            className={`absolute top-full right-0 pt-3 flex flex-col gap-2 transition-all duration-300 ease-out origin-top-right ${
               menuOpen 
-                ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto' 
-                : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
+                ? 'opacity-100 pointer-events-auto' 
+                : 'opacity-0 pointer-events-none'
             }`}
           >
             {/* Invisible bridge */}
@@ -117,12 +117,12 @@ export default function Header() {
                   href={link.href}
                   className="group relative"
                   style={{
-                    transitionDelay: menuOpen ? `${index * 50}ms` : '0ms',
+                    animation: menuOpen ? `slideIn 0.4s ease-out ${index * 0.1}s both` : 'none',
                   }}
                   onClick={() => setMenuOpen(false)}
                 >
                   <div 
-                    className={`px-5 py-3 rounded-xl transition-all duration-300 flex items-center justify-between gap-8 ${
+                    className={`px-5 py-3 rounded-xl transition-all duration-300 flex items-center justify-between gap-8 group-hover:scale-110 group-hover:rotate-2 ${
                       isActive ? 'pr-3' : ''
                     }`}
                     style={{
