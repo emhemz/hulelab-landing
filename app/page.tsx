@@ -245,11 +245,13 @@ function WorkCard({
       )}
       
       {/* Content */}
-      <div className="relative p-8 flex items-start gap-6">
-        {/* Icon with animated background */}
-        <div className="relative flex-shrink-0 mt-1">
+      <div className={`relative p-8 ${imageSrc ? 'flex items-start gap-6' : 'flex flex-col items-center text-center'}`}>
+        {/* Icon with animated background - larger when no image */}
+        <div className={`relative ${imageSrc ? 'flex-shrink-0 mt-1' : 'mb-8'}`}>
           <div className="absolute inset-0 bg-[#cbb37c]/15 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500 scale-0 group-hover:scale-150" />
-          <div className="relative text-[#cbb37c]/40 group-hover:text-[#cbb37c] transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+          <div className={`relative text-[#cbb37c]/40 group-hover:text-[#cbb37c] transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 ${
+            imageSrc ? '' : 'scale-[2.5]'
+          }`}>
             {icon}
           </div>
         </div>
@@ -263,7 +265,9 @@ function WorkCard({
           </p>
           
           {/* Hover indicator */}
-          <div className="flex items-center gap-2 mt-5 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
+          <div className={`flex items-center gap-2 mt-5 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0 ${
+            imageSrc ? '' : 'justify-center'
+          }`}>
             <div className="h-px w-8 bg-gradient-to-r from-[#cbb37c]/60 to-transparent" />
             <span className="text-[0.75rem] text-[#cbb37c] tracking-wide">Explore</span>
           </div>
@@ -518,14 +522,12 @@ export default function Home() {
                 text="Software that reflects how learning actually works. Built slowly, tested carefully."
                 index={1}
                 icon={icons.products}
-                imageSrc="/ChatGPT Image Jan 14, 2026, 04_08_43 PM.png"
               />
               <WorkCard
                 title="Practice"
                 text="The conditions for genuine improvement. Deliberate repetition, feedback, and time."
                 index={2}
                 icon={icons.practice}
-                imageSrc="/ChatGPT Image Jan 14, 2026, 04_01_34 PM.png"
               />
             </div>
           </section>
