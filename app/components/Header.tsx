@@ -18,6 +18,13 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   const navLinks = [
     { label: "About", href: "/about" },
     { label: "Projects", href: "/projects" },
@@ -31,6 +38,7 @@ export default function Header() {
         {/* Logo - Left Corner */}
         <Link 
           href="/" 
+          onClick={handleLogoClick}
           className="group flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-500 hover:px-6 overflow-hidden"
           style={{
             background: scrolled 
