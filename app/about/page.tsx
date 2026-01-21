@@ -71,9 +71,7 @@ export default function AboutPage() {
               {/* Neuroscience */}
               <div className="group p-8 rounded-2xl border border-black/5 bg-white/50 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
-                  <span className="inline-block w-12 h-12 rounded-full bg-[#cbb37c]/10 flex items-center justify-center mb-4">
-                    <span className="text-[1.5rem]">🧠</span>
-                  </span>
+                  <div className="w-1 h-12 bg-gradient-to-b from-[#cbb37c] to-[#cbb37c]/20 rounded-full" />
                 </div>
                 <h3 className="text-[1.125rem] font-medium tracking-tight text-[#1a1918] mb-4">
                   Neuroscience
@@ -86,9 +84,7 @@ export default function AboutPage() {
               {/* Entrepreneurship */}
               <div className="group p-8 rounded-2xl border border-black/5 bg-white/50 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
-                  <span className="inline-block w-12 h-12 rounded-full bg-[#cbb37c]/10 flex items-center justify-center mb-4">
-                    <span className="text-[1.5rem]">🚀</span>
-                  </span>
+                  <div className="w-1 h-12 bg-gradient-to-b from-[#cbb37c] to-[#cbb37c]/20 rounded-full" />
                 </div>
                 <h3 className="text-[1.125rem] font-medium tracking-tight text-[#1a1918] mb-4">
                   Entrepreneurship
@@ -101,9 +97,7 @@ export default function AboutPage() {
               {/* Design */}
               <div className="group p-8 rounded-2xl border border-black/5 bg-white/50 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
-                  <span className="inline-block w-12 h-12 rounded-full bg-[#cbb37c]/10 flex items-center justify-center mb-4">
-                    <span className="text-[1.5rem]">✨</span>
-                  </span>
+                  <div className="w-1 h-12 bg-gradient-to-b from-[#cbb37c] to-[#cbb37c]/20 rounded-full" />
                 </div>
                 <h3 className="text-[1.125rem] font-medium tracking-tight text-[#1a1918] mb-4">
                   Design
@@ -116,9 +110,7 @@ export default function AboutPage() {
               {/* Engineering */}
               <div className="group p-8 rounded-2xl border border-black/5 bg-white/50 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
-                  <span className="inline-block w-12 h-12 rounded-full bg-[#cbb37c]/10 flex items-center justify-center mb-4">
-                    <span className="text-[1.5rem]">⚙️</span>
-                  </span>
+                  <div className="w-1 h-12 bg-gradient-to-b from-[#cbb37c] to-[#cbb37c]/20 rounded-full" />
                 </div>
                 <h3 className="text-[1.125rem] font-medium tracking-tight text-[#1a1918] mb-4">
                   Engineering
@@ -131,9 +123,7 @@ export default function AboutPage() {
               {/* Elite Performance */}
               <div className="group p-8 rounded-2xl border border-black/5 bg-white/50 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
-                  <span className="inline-block w-12 h-12 rounded-full bg-[#cbb37c]/10 flex items-center justify-center mb-4">
-                    <span className="text-[1.5rem]">🏆</span>
-                  </span>
+                  <div className="w-1 h-12 bg-gradient-to-b from-[#cbb37c] to-[#cbb37c]/20 rounded-full" />
                 </div>
                 <h3 className="text-[1.125rem] font-medium tracking-tight text-[#1a1918] mb-4">
                   Elite Performance
