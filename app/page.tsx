@@ -477,7 +477,7 @@ export default function Home() {
               </header>
 
               {/* What We Work On */}
-          <section id="projects" className="reveal mb-40 md:mb-56 relative">
+          <section className="reveal mb-40 md:mb-56 relative">
             {/* Section header with decorative element */}
             <div className="flex items-center gap-6 mb-14 md:mb-16">
               <div className="flex flex-col gap-2">
@@ -594,7 +594,7 @@ export default function Home() {
           </section>
 
           {/* Contact section - more engaging */}
-          <section id="contact" className="reveal mb-40 md:mb-56 relative">
+          <section className="reveal mb-40 md:mb-56 relative">
             <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
               <div>
                 <span className="text-[0.7rem] tracking-[0.2em] uppercase text-[#cbb37c]/70 font-medium mb-6 block">Connect</span>

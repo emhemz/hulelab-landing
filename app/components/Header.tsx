@@ -20,9 +20,9 @@ export default function Header() {
 
   const navLinks = [
     { label: "About", href: "/about" },
-    { label: "Projects", href: "/#projects" },
+    { label: "Projects", href: "/projects" },
     { label: "Blog", href: "/blog" },
-    { label: "Contact", href: "/#contact" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -114,9 +114,7 @@ export default function Header() {
             <div className="p-2">
               {navLinks.map((link, index) => {
                 // Check if this link is active
-                const isActive = link.href.startsWith('/#') 
-                  ? pathname === '/' 
-                  : pathname === link.href || pathname?.startsWith(link.href + '/');
+                const isActive = pathname === link.href || pathname?.startsWith(link.href + '/');
                 
                 return (
                   <Link
