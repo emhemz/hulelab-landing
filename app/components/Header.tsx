@@ -23,9 +23,9 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 pt-4 sm:pt-5 flex justify-center">
+    <header className="fixed top-0 left-0 right-0 z-50 px-6 sm:px-8 pt-4 transition-all duration-300">
       <nav 
-        className="flex items-center justify-between gap-4 px-4 py-2.5 rounded-2xl transition-all duration-400 ease-out"
+        className="max-w-[1400px] mx-auto flex items-center justify-between px-6 py-3 rounded-2xl transition-all duration-400 ease-out"
         style={{
           background: scrolled 
             ? 'linear-gradient(135deg, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.72) 50%, rgba(255,255,255,0.82) 100%)'
@@ -39,23 +39,24 @@ export default function Header() {
         }}
       >
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
+        <Link href="/" className="flex items-center gap-3 group">
           <img 
             src={`${BASE_PATH}/logo.svg`}
             alt="HLL" 
-            width={16} 
-            height={16}
-            className="opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+            width={22} 
+            height={22}
+            className="opacity-80 group-hover:opacity-100 transition-opacity duration-300"
           />
+          <span className="text-[0.9375rem] font-medium tracking-tight text-[#1a1918] hidden sm:block">Human Learning Lab</span>
         </Link>
         
         {/* Nav links */}
-        <div className="flex items-center gap-0.5 sm:gap-1">
+        <div className="flex items-center gap-2">
           {navLinks.map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className="relative px-3 py-1.5 text-[0.6875rem] sm:text-[0.75rem] font-medium text-[#1a1918]/55 hover:text-[#1a1918] transition-colors duration-250 rounded-lg overflow-hidden group"
+              className="relative px-4 py-2 text-[0.875rem] font-medium text-[#1a1918]/60 hover:text-[#1a1918] transition-colors duration-250 rounded-lg overflow-hidden group"
             >
               <span className="absolute inset-0 bg-[#cbb37c]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-250 rounded-lg" />
               <span className="relative">{link.label}</span>
