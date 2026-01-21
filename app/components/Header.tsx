@@ -86,21 +86,28 @@ export default function Header() {
 
           {/* Dropdown Menu */}
           <div 
-            className={`absolute top-full right-0 mt-2 w-56 rounded-2xl overflow-hidden transition-all duration-500 ease-out origin-top-right ${
+            className={`absolute top-full right-0 pt-2 transition-all duration-500 ease-out origin-top-right ${
               menuOpen 
                 ? 'opacity-100 scale-100 translate-y-0' 
                 : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
             }`}
-            style={{
-              background: 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.92) 100%)',
-              backdropFilter: 'blur(32px) saturate(200%)',
-              WebkitBackdropFilter: 'blur(32px) saturate(200%)',
-              border: '1px solid rgba(0,0,0,0.08)',
-              boxShadow: '0 20px 60px -12px rgba(0,0,0,0.25), 0 8px 24px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.95)',
-            }}
           >
-            {/* Accent line at top */}
-            <div className="h-0.5 bg-gradient-to-r from-transparent via-[#cbb37c] to-transparent" />
+            {/* Invisible bridge */}
+            <div className="h-2 w-full" />
+            
+            {/* Actual menu */}
+            <div 
+              className="w-56 rounded-2xl overflow-hidden"
+              style={{
+                background: 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.92) 100%)',
+                backdropFilter: 'blur(32px) saturate(200%)',
+                WebkitBackdropFilter: 'blur(32px) saturate(200%)',
+                border: '1px solid rgba(0,0,0,0.08)',
+                boxShadow: '0 20px 60px -12px rgba(0,0,0,0.25), 0 8px 24px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.95)',
+              }}
+            >
+              {/* Accent line at top */}
+              <div className="h-0.5 bg-gradient-to-r from-transparent via-[#cbb37c] to-transparent" />
             
             <div className="p-2">
               {navLinks.map((link, index) => (
@@ -134,6 +141,7 @@ export default function Header() {
                   </svg>
                 </Link>
               ))}
+            </div>
             </div>
           </div>
         </div>
