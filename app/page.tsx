@@ -203,18 +203,33 @@ function WorkCard({
   title, 
   text, 
   index,
-  icon 
+  icon,
+  imageSrc
 }: { 
   title: string; 
   text: string; 
   index: number;
   icon: React.ReactNode;
+  imageSrc?: string;
 }) {
   return (
     <article 
       className="group relative overflow-hidden rounded-xl border border-[#1a1918]/5 transition-all duration-700 ease-out hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.3)] hover:-translate-y-1"
       style={{ transitionDelay: `${index * 50}ms` }}
     >
+      {/* Image at top if provided */}
+      {imageSrc && (
+        <div className="relative h-48 overflow-hidden">
+          <img 
+            src={`${BASE_PATH}${imageSrc}`}
+            alt={title} 
+            className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#f5f3f0] via-[#f5f3f0]/30 to-transparent" />
+          <div className="absolute bottom-4 right-6 text-[4rem] font-serif leading-none text-white/20 select-none">0{index + 1}</div>
+        </div>
+      )}
+      
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#cbb37c]/8 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700" />
       <div className="absolute inset-0 bg-gradient-to-tl from-white/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700" />
@@ -222,10 +237,12 @@ function WorkCard({
       {/* Accent line - animated from left */}
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#cbb37c] via-[#cbb37c]/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-x-full group-hover:translate-x-0" />
       
-      {/* Number indicator */}
-      <div className="absolute top-6 right-6 text-[5rem] font-serif leading-none text-[#cbb37c]/4 group-hover:text-[#cbb37c]/8 transition-all duration-700 select-none">
-        0{index + 1}
-      </div>
+      {/* Number indicator - only show if no image */}
+      {!imageSrc && (
+        <div className="absolute top-6 right-6 text-[5rem] font-serif leading-none text-[#cbb37c]/4 group-hover:text-[#cbb37c]/8 transition-all duration-700 select-none">
+          0{index + 1}
+        </div>
+      )}
       
       {/* Content */}
       <div className="relative p-8 flex items-start gap-6">
@@ -494,18 +511,21 @@ export default function Home() {
                 text="How people acquire knowledge and skill. What helps retention. What leads to real understanding."
                 index={0}
                 icon={icons.learning}
+                imageSrc="/ChatGPT Image Jan 14, 2026, 04_08_30 PM.png"
               />
               <WorkCard
                 title="Products"
                 text="Software that reflects how learning actually works. Built slowly, tested carefully."
                 index={1}
                 icon={icons.products}
+                imageSrc="/ChatGPT Image Jan 14, 2026, 04_08_43 PM.png"
               />
               <WorkCard
                 title="Practice"
                 text="The conditions for genuine improvement. Deliberate repetition, feedback, and time."
                 index={2}
                 icon={icons.practice}
+                imageSrc="/ChatGPT Image Jan 14, 2026, 04_01_34 PM.png"
               />
             </div>
           </section>
