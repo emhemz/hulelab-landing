@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import Header from "./components/Header";
+
+const BASE_PATH = process.env.NODE_ENV === 'production' ? '/hulelab-landing' : '';
 
 // Get scroll progress and scrollY
 function useScroll() {
@@ -242,11 +243,11 @@ const icons = {
 // Logo component
 function Logo({ className = "", size = 32 }: { className?: string; size?: number }) {
   return (
-    <Image 
-      src="/logo.svg" 
+    <img 
+      src={`${BASE_PATH}/logo.svg`}
       alt="Human Learning Lab" 
       width={size} 
-      height={size}
+      height={size} 
       className={className}
     />
   );
@@ -322,13 +323,12 @@ function LunaSection() {
             />
             
             {/* Image */}
-            <Image
-              src="/luna.png"
+            <img
+              src={`${BASE_PATH}/luna.png`}
               alt="Luna app - podcast player for learning"
               width={500}
               height={600}
               className="relative w-full h-auto max-w-[380px] mx-auto md:mx-0 md:ml-auto"
-              priority
             />
           </div>
           

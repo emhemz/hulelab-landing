@@ -1,8 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+
+const BASE_PATH = process.env.NODE_ENV === 'production' ? '/hulelab-landing' : '';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -39,8 +40,8 @@ export default function Header() {
       >
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <Image 
-            src="/logo.svg" 
+          <img 
+            src={`${BASE_PATH}/logo.svg`}
             alt="HLL" 
             width={16} 
             height={16}
