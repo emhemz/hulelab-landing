@@ -2,12 +2,14 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const BASE_PATH = process.env.NODE_ENV === 'production' ? '/hulelab-landing' : '';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 30);
@@ -88,7 +90,7 @@ export default function Header() {
           <div 
             className={`absolute top-full right-0 pt-2 transition-all duration-500 ease-out origin-top-right ${
               menuOpen 
-                ? 'opacity-100 scale-100 translate-y-0' 
+                ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto' 
                 : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
             }`}
           >
@@ -110,37 +112,54 @@ export default function Header() {
               <div className="h-0.5 bg-gradient-to-r from-transparent via-[#cbb37c] to-transparent" />
             
             <div className="p-2">
-              {navLinks.map((link, index) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className="group flex items-center justify-between px-4 py-3 rounded-xl hover:bg-[#cbb37c]/10 transition-all duration-300"
-                  style={{
-                    transitionDelay: menuOpen ? `${index * 50}ms` : '0ms',
-                  }}
-                  onClick={() => setMenuOpen(false)}
-                >
-                  <span className="text-[0.9375rem] font-medium text-[#1a1918]/70 group-hover:text-[#cbb37c] transition-colors duration-300">
-                    {link.label}
-                  </span>
-                  <svg 
-                    width="16" 
-                    height="16" 
-                    viewBox="0 0 16 16" 
-                    className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1"
+              {navLinks.map((link, index) => {
+                // Check if this link is active
+                const isActive = link.href.startsWith('/#') 
+                  ? pathname === '/' 
+                  : pathname === link.href || pathname?.startsWith(link.href + '/');
+                
+                return (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    className={`group flex items-center justify-between px-4 py-3 rounded-xl transition-all duration-300 ${
+                      isActive ? 'bg-[#cbb37c]/15' : 'hover:bg-[#cbb37c]/10'
+                    }`}
+                    style={{
+                      transitionDelay: menuOpen ? `${index * 50}ms` : '0ms',
+                    }}
+                    onClick={() => setMenuOpen(false)}
                   >
-                    <path 
-                      d="M6 4l4 4-4 4" 
-                      stroke="currentColor" 
-                      strokeWidth="1.5" 
-                      fill="none" 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round"
-                      className="text-[#cbb37c]"
-                    />
-                  </svg>
-                </Link>
-              ))}
+                    <span className={`text-[0.9375rem] font-medium transition-colors duration-300 ${
+                      isActive ? 'text-[#cbb37c]' : 'text-[#1a1918]/70 group-hover:text-[#cbb37c]'
+                    }`}>
+                      {link.label}
+                    </span>
+                    
+                    {/* Active indicator dot */}
+                    {isActive ? (
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#cbb37c]" />
+                    ) : (
+                      <svg 
+                        width="16" 
+                        height="16" 
+                        viewBox="0 0 16 16" 
+                        className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1"
+                      >
+                        <path 
+                          d="M6 4l4 4-4 4" 
+                          stroke="currentColor" 
+                          strokeWidth="1.5" 
+                          fill="none" 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round"
+                          className="text-[#cbb37c]"
+                        />
+                      </svg>
+                    )}
+                  </Link>
+                );
+              })}
             </div>
             </div>
           </div>
