@@ -509,7 +509,8 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Learning card - full height */}
               <WorkCard
                 title="Learning"
                 text="How people acquire knowledge and skill. What helps retention. What leads to real understanding."
@@ -517,18 +518,22 @@ export default function Home() {
                 icon={icons.learning}
                 imageSrc="/ChatGPT Image Jan 14, 2026, 04_08_30 PM.png"
               />
-              <WorkCard
-                title="Products"
-                text="Software that reflects how learning actually works. Built slowly, tested carefully."
-                index={1}
-                icon={icons.products}
-              />
-              <WorkCard
-                title="Practice"
-                text="The conditions for genuine improvement. Deliberate repetition, feedback, and time."
-                index={2}
-                icon={icons.practice}
-              />
+              
+              {/* Products and Practice stacked vertically */}
+              <div className="flex flex-col gap-6">
+                <WorkCard
+                  title="Products"
+                  text="Software that reflects how learning actually works. Built slowly, tested carefully."
+                  index={1}
+                  icon={icons.products}
+                />
+                <WorkCard
+                  title="Practice"
+                  text="The conditions for genuine improvement. Deliberate repetition, feedback, and time."
+                  index={2}
+                  icon={icons.practice}
+                />
+              </div>
             </div>
           </section>
 
