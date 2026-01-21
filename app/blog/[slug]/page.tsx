@@ -77,6 +77,13 @@ In 10 years, the best learning tools won't be the ones that give you answers. Th
   },
 };
 
+// Generate static paths for all blog posts
+export function generateStaticParams() {
+  return Object.keys(posts).map((slug) => ({
+    slug,
+  }));
+}
+
 export default function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const containerRef = useReveal();
   const { slug } = use(params);
