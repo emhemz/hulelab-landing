@@ -1,25 +1,6 @@
-"use client";
-
 import Link from "next/link";
-import { useEffect, useRef, use } from "react";
 import { notFound } from "next/navigation";
 import Header from "../../components/Header";
-
-// Reveal sections on scroll
-function useReveal() {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const io = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("visible")),
-      { threshold: 0.15, rootMargin: "0px 0px -80px 0px" }
-    );
-    ref.current?.querySelectorAll(".reveal").forEach((el) => io.observe(el));
-    return () => io.disconnect();
-  }, []);
-
-  return ref;
-}
 
 // Blog post data (same as before, but with full content)
 const posts = {
@@ -84,9 +65,8 @@ export function generateStaticParams() {
   }));
 }
 
-export default function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
-  const containerRef = useReveal();
-  const { slug } = use(params);
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const post = posts[slug as keyof typeof posts];
 
   if (!post) {
@@ -102,8 +82,8 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
       <Header />
 
       <main className="relative z-10 min-h-screen">
-        <div ref={containerRef} className="max-w-[720px] mx-auto px-8 sm:px-10 pt-32 md:pt-44 pb-32">
-          <article className="reveal">
+        <div className="max-w-[720px] mx-auto px-8 sm:px-10 pt-32 md:pt-44 pb-32">
+          <article>
             {/* Meta */}
             <div className="mb-6 flex items-center gap-4">
               <span className="text-[0.6875rem] tracking-[0.2em] uppercase text-[#cbb37c]/70">
@@ -128,7 +108,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
           </article>
 
           {/* Navigation */}
-          <footer className="reveal mt-20 md:mt-28 pt-10 border-t border-black/5">
+          <footer className="mt-20 md:mt-28 pt-10 border-t border-black/5">
             <div className="flex items-center justify-between">
               <Link href="/blog" className="link-hover text-[0.875rem]">
                 ← All posts
