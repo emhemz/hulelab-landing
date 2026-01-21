@@ -419,7 +419,7 @@ export default function Home() {
       <Header />
 
       <main className="relative z-10 min-h-screen">
-        <div ref={containerRef} className="max-w-[1100px] mx-auto px-10 sm:px-12 md:px-16 pt-32 md:pt-44 pb-32">
+        <div ref={containerRef} className="max-w-[1400px] mx-auto px-10 sm:px-12 md:px-16 pt-32 md:pt-44 pb-32">
           
               {/* Hero */}
               <header id="about" className="min-h-[85vh] flex flex-col justify-center mb-40 md:mb-56 relative">

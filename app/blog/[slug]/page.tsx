@@ -82,7 +82,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <Header />
 
       <main className="relative z-10 min-h-screen">
-        <div className="max-w-[720px] mx-auto px-8 sm:px-10 pt-32 md:pt-44 pb-32">
+        <div className="max-w-[900px] mx-auto px-10 sm:px-16 pt-32 md:pt-44 pb-32">
           <article>
             {/* Meta */}
             <div className="mb-6 flex items-center gap-4">

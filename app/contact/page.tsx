@@ -9,7 +9,7 @@ export default function ContactPage() {
       <div className="grain" />
       <Header />
       <main className="relative z-10 min-h-screen">
-        <div className="max-w-[1100px] mx-auto px-10 sm:px-16 pt-32 md:pt-44 pb-32">
+        <div className="max-w-[1400px] mx-auto px-10 sm:px-16 pt-32 md:pt-44 pb-32">
           <header className="mb-16 md:mb-20">
             <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[3.75rem] leading-[1] tracking-[-0.04em] mb-4">
               Get in Touch

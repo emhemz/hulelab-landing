@@ -31,7 +31,7 @@ export default function AboutPage() {
       <Header />
 
       <main className="relative z-10 min-h-screen">
-        <div ref={containerRef} className="max-w-[720px] mx-auto px-8 sm:px-10 pt-32 md:pt-44 pb-32">
+        <div ref={containerRef} className="max-w-[1400px] mx-auto px-10 sm:px-16 pt-32 md:pt-44 pb-32">
           
           {/* Page title */}
           <header className="mb-20 md:mb-28 reveal">

@@ -47,46 +47,44 @@ function PostPreview({ post, index }: { post: typeof posts[0]; index: number }) 
   return (
     <Link 
       href={`/blog/${post.slug}`}
-      className="group reveal block"
+      className="group reveal block h-full"
     >
-      <article className="relative p-8 -mx-8 transition-all duration-500 ease-out">
-        {/* Hover background with shadow */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-sm" />
-        <div className="absolute inset-0 shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-sm" />
-        
-        {/* Accent line on left - appears on hover */}
-        <div className="absolute left-0 top-8 bottom-8 w-[2px] bg-gradient-to-b from-[#cbb37c]/0 via-[#cbb37c]/60 to-[#cbb37c]/0 opacity-0 group-hover:opacity-100 transition-all duration-500 origin-center scale-y-0 group-hover:scale-y-100" />
+      <article className="relative h-full p-8 md:p-10 transition-all duration-500 ease-out rounded-2xl border border-black/5 bg-white/50 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.25)] hover:-translate-y-1">
+        {/* Number badge */}
+        <div className="absolute top-8 md:top-10 right-8 md:right-10 text-[4rem] font-serif leading-none text-[#1a1918]/5 group-hover:text-[#cbb37c]/15 transition-colors duration-500 select-none">
+          0{index + 1}
+        </div>
         
         <div className="relative">
           {/* Date */}
-          <div className="mb-4 flex items-center gap-4">
-            <span className="text-[0.6875rem] tracking-[0.2em] uppercase text-[#cbb37c]/70 group-hover:text-[#cbb37c] transition-colors duration-500">
+          <div className="mb-6 flex items-center gap-3">
+            <span className="text-[0.6875rem] tracking-[0.2em] uppercase text-[#cbb37c]/70 group-hover:text-[#cbb37c] transition-colors duration-500 font-medium">
               {post.date}
             </span>
-            <div className="h-px w-6 bg-gradient-to-r from-[#1a1918]/15 to-transparent group-hover:from-[#cbb37c]/40 transition-colors duration-500" />
+            <div className="h-px flex-1 max-w-[60px] bg-gradient-to-r from-[#cbb37c]/20 via-[#cbb37c]/40 to-transparent group-hover:from-[#cbb37c]/40 transition-colors duration-500" />
           </div>
 
           {/* Title */}
-          <h2 className="text-[1.5rem] sm:text-[1.75rem] mb-4 leading-[1.15] group-hover:text-[#cbb37c] transition-colors duration-500">
+          <h2 className="text-[1.75rem] sm:text-[2rem] mb-5 leading-[1.15] tracking-tight group-hover:text-[#cbb37c] transition-colors duration-500">
             {post.title}
           </h2>
 
           {/* Excerpt */}
-          <p className="text-[#6b6966] leading-[1.8] mb-5 group-hover:text-[#1a1918] transition-colors duration-500">
+          <p className="text-[#6b6966] text-[1.0625rem] leading-[1.8] mb-8 group-hover:text-[#1a1918] transition-colors duration-500">
             {post.excerpt}
           </p>
 
           {/* Read more link */}
-          <div className="inline-flex items-center gap-2 text-[0.875rem] text-[#1a1918] group-hover:text-[#cbb37c] transition-colors duration-500">
-            <span>Read more</span>
+          <div className="inline-flex items-center gap-2 text-[0.9375rem] text-[#1a1918] group-hover:text-[#cbb37c] transition-colors duration-500 font-medium">
+            <span>Read article</span>
             <svg 
-              width="12" 
-              height="12" 
-              viewBox="0 0 12 12" 
-              className="opacity-50 group-hover:opacity-100 transition-all duration-500 group-hover:translate-x-1"
+              width="14" 
+              height="14" 
+              viewBox="0 0 14 14" 
+              className="opacity-60 group-hover:opacity-100 transition-all duration-500 group-hover:translate-x-1"
             >
               <path 
-                d="M1 6h10M7 2l4 4-4 4" 
+                d="M1 7h12M9 2l5 5-5 5" 
                 stroke="currentColor" 
                 strokeWidth="1.5" 
                 fill="none" 
@@ -113,19 +111,19 @@ export default function BlogPage() {
       <Header />
 
       <main className="relative z-10 min-h-screen">
-        <div ref={containerRef} className="max-w-[720px] mx-auto px-8 sm:px-10 pt-32 md:pt-44 pb-32">
+        <div ref={containerRef} className="max-w-[1400px] mx-auto px-10 sm:px-16 pt-32 md:pt-44 pb-32">
           {/* Page title */}
-          <header className="mb-16 md:mb-20">
-            <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[3.75rem] leading-[1] tracking-[-0.04em] mb-5">
+          <header className="mb-16 md:mb-24">
+            <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[4rem] leading-[1] tracking-[-0.04em] mb-5">
               Blog
             </h1>
-            <p className="text-[#6b6966] leading-[1.8] max-w-[480px]">
+            <p className="text-[#6b6966] text-[1.0625rem] leading-[1.8] max-w-[540px]">
               Thoughts on learning, tools, and the future.
             </p>
           </header>
 
-          {/* Blog post previews */}
-          <div className="space-y-2">
+          {/* Blog post previews - Grid layout */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {posts.map((post, index) => (
               <PostPreview key={post.slug} post={post} index={index} />
             ))}
