@@ -96,80 +96,66 @@ export default function Header() {
             />
           </button>
 
-          {/* Dropdown Menu */}
+          {/* Dropdown Menu - macOS Dock style */}
           <div 
-            className={`absolute top-full right-0 pt-2 transition-all duration-500 ease-out origin-top-right ${
+            className={`absolute top-full right-0 pt-3 flex flex-col gap-2 transition-all duration-500 ease-out origin-top-right ${
               menuOpen 
                 ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto' 
                 : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
             }`}
           >
             {/* Invisible bridge */}
-            <div className="h-2 w-full" />
+            <div className="h-3 w-full" />
             
-            {/* Actual menu */}
-            <div 
-              className="w-56 rounded-2xl overflow-hidden"
-              style={{
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.92) 100%)',
-                backdropFilter: 'blur(32px) saturate(200%)',
-                WebkitBackdropFilter: 'blur(32px) saturate(200%)',
-                border: '1px solid rgba(0,0,0,0.08)',
-                boxShadow: '0 20px 60px -12px rgba(0,0,0,0.25), 0 8px 24px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.95)',
-              }}
-            >
-              {/* Accent line at top */}
-              <div className="h-0.5 bg-gradient-to-r from-transparent via-[#cbb37c] to-transparent" />
-            
-            <div className="p-2">
-              {navLinks.map((link, index) => {
-                // Check if this link is active
-                const isActive = pathname === link.href || pathname?.startsWith(link.href + '/');
-                
-                return (
-                  <Link
-                    key={link.label}
-                    href={link.href}
-                    className={`group flex items-center justify-between px-4 py-3 rounded-xl transition-all duration-300 ${
-                      isActive ? 'bg-[#cbb37c]/15' : 'hover:bg-[#cbb37c]/10'
+            {/* Menu links - floating like Dock */}
+            {navLinks.map((link, index) => {
+              const isActive = pathname === link.href || pathname?.startsWith(link.href + '/');
+              
+              return (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="group relative"
+                  style={{
+                    transitionDelay: menuOpen ? `${index * 50}ms` : '0ms',
+                  }}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <div 
+                    className={`px-5 py-3 rounded-xl transition-all duration-300 flex items-center justify-between gap-8 ${
+                      isActive ? 'pr-3' : ''
                     }`}
                     style={{
-                      transitionDelay: menuOpen ? `${index * 50}ms` : '0ms',
+                      background: scrolled || isActive
+                        ? 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.92) 100%)'
+                        : 'linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0.45) 100%)',
+                      backdropFilter: 'blur(20px) saturate(180%)',
+                      WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                      border: isActive ? '1px solid rgba(203,179,124,0.3)' : '1px solid rgba(255,255,255,0.6)',
+                      boxShadow: isActive 
+                        ? '0 8px 32px -8px rgba(203,179,124,0.4), inset 0 1px 0 rgba(255,255,255,0.9)'
+                        : '0 4px 16px -4px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.8)',
                     }}
-                    onClick={() => setMenuOpen(false)}
                   >
-                    <span className={`text-[0.9375rem] font-medium transition-colors duration-300 ${
+                    <span className={`text-[0.9375rem] font-medium transition-colors duration-300 whitespace-nowrap ${
                       isActive ? 'text-[#cbb37c]' : 'text-[#1a1918]/70 group-hover:text-[#cbb37c]'
                     }`}>
                       {link.label}
                     </span>
                     
                     {/* Active indicator dot */}
-                    {isActive ? (
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#cbb37c]" />
-                    ) : (
-                      <svg 
-                        width="16" 
-                        height="16" 
-                        viewBox="0 0 16 16" 
-                        className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1"
-                      >
-                        <path 
-                          d="M6 4l4 4-4 4" 
-                          stroke="currentColor" 
-                          strokeWidth="1.5" 
-                          fill="none" 
-                          strokeLinecap="round" 
-                          strokeLinejoin="round"
-                          className="text-[#cbb37c]"
-                        />
-                      </svg>
+                    {isActive && (
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#cbb37c] animate-pulse" />
                     )}
-                  </Link>
-                );
-              })}
-            </div>
-            </div>
+                  </div>
+                  
+                  {/* Hover accent line */}
+                  <div className={`absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#cbb37c] via-[#cbb37c]/60 to-transparent rounded-full transition-all duration-300 ${
+                    isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                  }`} />
+                </Link>
+              );
+            })}
           </div>
         </div>
       </nav>
