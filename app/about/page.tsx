@@ -71,7 +71,16 @@ export default function AboutPage() {
               {/* Neuroscience */}
               <div className="group p-8 rounded-2xl border border-black/5 bg-white/50 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
-                  <div className="w-1 h-12 bg-gradient-to-b from-[#cbb37c] to-[#cbb37c]/20 rounded-full" />
+                  <div className="w-12 h-12 rounded-full border-2 border-[#cbb37c]/30 flex items-center justify-center group-hover:border-[#cbb37c] transition-colors duration-500">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#cbb37c]">
+                      <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.5"/>
+                      <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.5"/>
+                      <line x1="12" y1="4" x2="12" y2="8" stroke="currentColor" strokeWidth="1.5"/>
+                      <line x1="12" y1="16" x2="12" y2="20" stroke="currentColor" strokeWidth="1.5"/>
+                      <line x1="4" y1="12" x2="8" y2="12" stroke="currentColor" strokeWidth="1.5"/>
+                      <line x1="16" y1="12" x2="20" y2="12" stroke="currentColor" strokeWidth="1.5"/>
+                    </svg>
+                  </div>
                 </div>
                 <h3 className="text-[1.125rem] font-medium tracking-tight text-[#1a1918] mb-4">
                   Neuroscience
@@ -84,7 +93,13 @@ export default function AboutPage() {
               {/* Entrepreneurship */}
               <div className="group p-8 rounded-2xl border border-black/5 bg-white/50 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
-                  <div className="w-1 h-12 bg-gradient-to-b from-[#cbb37c] to-[#cbb37c]/20 rounded-full" />
+                  <div className="w-12 h-12 rounded-full border-2 border-[#cbb37c]/30 flex items-center justify-center group-hover:border-[#cbb37c] transition-colors duration-500">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#cbb37c]">
+                      <path d="M12 3L4 8L12 13L20 8L12 3Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+                      <path d="M4 12L12 17L20 12" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+                      <path d="M4 16L12 21L20 16" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
                 </div>
                 <h3 className="text-[1.125rem] font-medium tracking-tight text-[#1a1918] mb-4">
                   Entrepreneurship
@@ -97,7 +112,16 @@ export default function AboutPage() {
               {/* Design */}
               <div className="group p-8 rounded-2xl border border-black/5 bg-white/50 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
-                  <div className="w-1 h-12 bg-gradient-to-b from-[#cbb37c] to-[#cbb37c]/20 rounded-full" />
+                  <div className="w-12 h-12 rounded-full border-2 border-[#cbb37c]/30 flex items-center justify-center group-hover:border-[#cbb37c] transition-colors duration-500">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#cbb37c]">
+                      <rect x="6" y="6" width="12" height="12" stroke="currentColor" strokeWidth="1.5"/>
+                      <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.5"/>
+                      <line x1="6" y1="6" x2="9" y2="9" stroke="currentColor" strokeWidth="1.5"/>
+                      <line x1="18" y1="6" x2="15" y2="9" stroke="currentColor" strokeWidth="1.5"/>
+                      <line x1="6" y1="18" x2="9" y2="15" stroke="currentColor" strokeWidth="1.5"/>
+                      <line x1="18" y1="18" x2="15" y2="15" stroke="currentColor" strokeWidth="1.5"/>
+                    </svg>
+                  </div>
                 </div>
                 <h3 className="text-[1.125rem] font-medium tracking-tight text-[#1a1918] mb-4">
                   Design
@@ -110,7 +134,14 @@ export default function AboutPage() {
               {/* Engineering */}
               <div className="group p-8 rounded-2xl border border-black/5 bg-white/50 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
-                  <div className="w-1 h-12 bg-gradient-to-b from-[#cbb37c] to-[#cbb37c]/20 rounded-full" />
+                  <div className="w-12 h-12 rounded-full border-2 border-[#cbb37c]/30 flex items-center justify-center group-hover:border-[#cbb37c] transition-colors duration-500">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#cbb37c]">
+                      <path d="M8 8L12 4L16 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M8 16L12 20L16 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" strokeWidth="1.5"/>
+                      <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                    </svg>
+                  </div>
                 </div>
                 <h3 className="text-[1.125rem] font-medium tracking-tight text-[#1a1918] mb-4">
                   Engineering
@@ -123,7 +154,11 @@ export default function AboutPage() {
               {/* Elite Performance */}
               <div className="group p-8 rounded-2xl border border-black/5 bg-white/50 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
-                  <div className="w-1 h-12 bg-gradient-to-b from-[#cbb37c] to-[#cbb37c]/20 rounded-full" />
+                  <div className="w-12 h-12 rounded-full border-2 border-[#cbb37c]/30 flex items-center justify-center group-hover:border-[#cbb37c] transition-colors duration-500">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#cbb37c]">
+                      <path d="M12 4L15 10L21 11L16.5 15.5L18 21L12 18L6 21L7.5 15.5L3 11L9 10L12 4Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
                 </div>
                 <h3 className="text-[1.125rem] font-medium tracking-tight text-[#1a1918] mb-4">
                   Elite Performance
