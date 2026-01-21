@@ -43,11 +43,11 @@ export default function Header() {
           <img 
             src={`${BASE_PATH}/logo.svg`}
             alt="HLL" 
-            width={22} 
-            height={22}
+            width={18} 
+            height={18}
             className="opacity-80 group-hover:opacity-100 transition-opacity duration-300"
           />
-          <span className="text-[0.9375rem] font-medium tracking-tight text-[#1a1918] hidden sm:block">Human Learning Lab</span>
+          <span className="text-[0.875rem] font-medium tracking-tight text-[#1a1918] hidden sm:block">Human Learning Lab</span>
         </Link>
         
         {/* Nav links */}
