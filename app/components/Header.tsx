@@ -148,11 +148,6 @@ export default function Header() {
                       <div className="w-1.5 h-1.5 rounded-full bg-[#cbb37c] animate-pulse" />
                     )}
                   </div>
-                  
-                  {/* Hover accent line */}
-                  <div className={`absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#cbb37c] via-[#cbb37c]/60 to-transparent rounded-full transition-all duration-300 ${
-                    isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
-                  }`} />
                 </Link>
               );
             })}
