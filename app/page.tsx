@@ -488,50 +488,13 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="space-y-5">
-              {/* Learning card with image */}
-              <article className="group relative overflow-hidden rounded-xl border border-[#1a1918]/5 transition-all duration-700 ease-out hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.3)] hover:-translate-y-1">
-                {/* Hero image */}
-                <div className="relative h-72 overflow-hidden">
-                  <img 
-                    src={`${BASE_PATH}/ChatGPT Image Jan 14, 2026, 04_08_30 PM.png`}
-                    alt="Learning" 
-                    className="w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-105"
-                    style={{ objectPosition: 'center 30%' }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#f5f3f0] via-[#f5f3f0]/50 to-transparent opacity-70" />
-                  <div className="absolute bottom-6 left-8 text-[5rem] font-serif leading-none text-white/15 select-none">01</div>
-                </div>
-                
-                {/* Content */}
-                <div className="relative p-8">
-                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#cbb37c] via-[#cbb37c]/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-x-full group-hover:translate-x-0" />
-                  
-                  <div className="flex items-start gap-6">
-                    <div className="relative flex-shrink-0 mt-1">
-                      <div className="absolute inset-0 bg-[#cbb37c]/15 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500 scale-0 group-hover:scale-150" />
-                      <div className="relative text-[#cbb37c]/40 group-hover:text-[#cbb37c] transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
-                        {icons.learning}
-                      </div>
-                    </div>
-                    
-                    <div className="flex-1">
-                      <h3 className="text-[1.125rem] sm:text-[1.25rem] font-medium mb-3 text-[#1a1918] group-hover:text-[#cbb37c] transition-colors duration-500 tracking-tight">
-                        Learning
-                      </h3>
-                      <p className="text-[#6b6966] leading-[1.75] text-[0.9375rem] group-hover:text-[#1a1918] transition-colors duration-500">
-                        How people acquire knowledge and skill. What helps retention. What leads to real understanding.
-                      </p>
-                      
-                      <div className="flex items-center gap-2 mt-5 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
-                        <div className="h-px w-8 bg-gradient-to-r from-[#cbb37c]/60 to-transparent" />
-                        <span className="text-[0.75rem] text-[#cbb37c] tracking-wide">Explore</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <WorkCard
+                title="Learning"
+                text="How people acquire knowledge and skill. What helps retention. What leads to real understanding."
+                index={0}
+                icon={icons.learning}
+              />
               <WorkCard
                 title="Products"
                 text="Software that reflects how learning actually works. Built slowly, tested carefully."
