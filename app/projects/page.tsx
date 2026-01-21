@@ -90,42 +90,6 @@ export default function ProjectsPage() {
             </div>
           </section>
 
-          {/* Future Projects */}
-          <section className="mb-24 md:mb-32">
-            <h2 className="text-[1.5rem] sm:text-[1.75rem] mb-10">
-              In Development
-            </h2>
-            <div className="space-y-8">
-              <div className="p-8 rounded-2xl border border-black/5 bg-white/50 backdrop-blur-sm hover:border-[#cbb37c]/20 transition-all duration-300">
-                <div className="inline-block px-3 py-1 rounded-full bg-[#6b6966]/10 border border-[#6b6966]/20 mb-4">
-                  <span className="text-[0.6875rem] tracking-[0.12em] uppercase text-[#6b6966] font-medium">
-                    Research Phase
-                  </span>
-                </div>
-                <h3 className="text-[1.25rem] font-medium text-[#1a1918] mb-3">
-                  Learning from Text
-                </h3>
-                <p className="text-[#6b6966] leading-[1.7]">
-                  Exploring how to apply the same learning principles from Luna to written content. How do we help people actually learn from articles, papers, and books—not just read them?
-                </p>
-              </div>
-
-              <div className="p-8 rounded-2xl border border-black/5 bg-white/50 backdrop-blur-sm hover:border-[#cbb37c]/20 transition-all duration-300">
-                <div className="inline-block px-3 py-1 rounded-full bg-[#6b6966]/10 border border-[#6b6966]/20 mb-4">
-                  <span className="text-[0.6875rem] tracking-[0.12em] uppercase text-[#6b6966] font-medium">
-                    Early Concept
-                  </span>
-                </div>
-                <h3 className="text-[1.25rem] font-medium text-[#1a1918] mb-3">
-                  Practice Environment
-                </h3>
-                <p className="text-[#6b6966] leading-[1.7]">
-                  A space for deliberate practice. Tools that help you build skill through focused repetition, immediate feedback, and progressive challenge.
-                </p>
-              </div>
-            </div>
-          </section>
-
           {/* Philosophy */}
           <section className="mb-24 md:mb-32 relative overflow-hidden rounded-2xl p-8 md:p-12 bg-white/80 backdrop-blur-sm border border-black/5">
             <h2 className="text-[1.5rem] sm:text-[1.75rem] mb-6">
