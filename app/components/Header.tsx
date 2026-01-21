@@ -74,13 +74,13 @@ export default function Header() {
             }}
           >
             <div 
-              className={`h-0.5 bg-[#1a1918]/60 group-hover:bg-[#cbb37c] transition-all duration-300 ${menuOpen ? 'w-6' : 'w-6'}`}
+              className={`h-0.5 bg-[#1a1918]/60 group-hover:bg-[#cbb37c] transition-all duration-300 ${menuOpen ? 'w-6 bg-[#cbb37c]' : 'w-6'}`}
             />
             <div 
-              className={`h-0.5 bg-[#1a1918]/60 group-hover:bg-[#cbb37c] transition-all duration-300 ${menuOpen ? 'w-6' : 'w-4'}`}
+              className={`h-0.5 bg-[#1a1918]/60 group-hover:bg-[#cbb37c] transition-all duration-300 ${menuOpen ? 'w-6 bg-[#cbb37c]' : 'w-4'}`}
             />
             <div 
-              className={`h-0.5 bg-[#1a1918]/60 group-hover:bg-[#cbb37c] transition-all duration-300 ${menuOpen ? 'w-6' : 'w-5'}`}
+              className={`h-0.5 bg-[#1a1918]/60 group-hover:bg-[#cbb37c] transition-all duration-300 ${menuOpen ? 'w-6 bg-[#cbb37c]' : 'w-5'}`}
             />
           </button>
 
@@ -111,6 +111,7 @@ export default function Header() {
                   style={{
                     transitionDelay: menuOpen ? `${index * 50}ms` : '0ms',
                   }}
+                  onClick={() => setMenuOpen(false)}
                 >
                   <span className="text-[0.9375rem] font-medium text-[#1a1918]/70 group-hover:text-[#cbb37c] transition-colors duration-300">
                     {link.label}
