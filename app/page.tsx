@@ -428,14 +428,14 @@ export default function Home() {
                   01
                 </div>
                 
-                {/* Background image - architectural space */}
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[50%] h-[70%] opacity-[0.15] pointer-events-none overflow-hidden rounded-l-3xl">
+                {/* Background image - architectural space - more subtle */}
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[45%] h-[60%] opacity-[0.08] pointer-events-none overflow-hidden rounded-l-3xl blur-sm">
                   <img 
                     src={`${BASE_PATH}/ChatGPT Image Jan 14, 2026, 04_01_38 PM.png`}
                     alt="" 
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#f5f3f0] via-[#f5f3f0]/50 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#f5f3f0] via-[#f5f3f0]/70 to-transparent" />
                 </div>
                 
                 {/* Logo with title - more dramatic */}
@@ -492,14 +492,15 @@ export default function Home() {
               {/* Learning card with image */}
               <article className="group relative overflow-hidden rounded-xl border border-[#1a1918]/5 transition-all duration-700 ease-out hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.3)] hover:-translate-y-1">
                 {/* Hero image */}
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-72 overflow-hidden">
                   <img 
                     src={`${BASE_PATH}/ChatGPT Image Jan 14, 2026, 04_08_30 PM.png`}
                     alt="Learning" 
-                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-105"
+                    style={{ objectPosition: 'center 30%' }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#f5f3f0] via-[#f5f3f0]/40 to-transparent opacity-80" />
-                  <div className="absolute bottom-6 left-8 text-[5rem] font-serif leading-none text-white/20 select-none">01</div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#f5f3f0] via-[#f5f3f0]/50 to-transparent opacity-70" />
+                  <div className="absolute bottom-6 left-8 text-[5rem] font-serif leading-none text-white/15 select-none">01</div>
                 </div>
                 
                 {/* Content */}
