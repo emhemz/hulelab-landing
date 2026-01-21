@@ -8,6 +8,14 @@
   --subtle: #e8e6e2;
 }
 
+.dark {
+  --bg: #0a0a0a;
+  --fg: #e8e6e2;
+  --muted: #9b9894;
+  --accent: #cbb37c;
+  --subtle: #1a1918;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
