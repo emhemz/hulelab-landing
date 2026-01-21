@@ -31,7 +31,7 @@ export default function Header() {
         {/* Logo - Left Corner */}
         <Link 
           href="/" 
-          className="group flex items-center gap-2 px-4 py-3 rounded-xl transition-all duration-300"
+          className="group flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-500 hover:px-6 overflow-hidden"
           style={{
             background: scrolled 
               ? 'linear-gradient(135deg, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.72) 50%, rgba(255,255,255,0.82) 100%)'
@@ -46,12 +46,14 @@ export default function Header() {
         >
           <img 
             src={`${BASE_PATH}/logo.svg`}
-            alt="HLL" 
+            alt="Human Learning Lab" 
             width={20} 
             height={20}
-            className="opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+            className="opacity-80 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0"
           />
-          <span className="text-[0.8125rem] font-medium tracking-tight text-[#1a1918] hidden sm:block">HLL</span>
+          <span className="font-serif text-[0.9375rem] tracking-tight text-[#1a1918] whitespace-nowrap max-w-0 group-hover:max-w-xs opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+            Human Learning Lab
+          </span>
         </Link>
         
         {/* Hamburger Menu - Right Corner */}
