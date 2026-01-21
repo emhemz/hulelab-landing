@@ -9,11 +9,87 @@
 }
 
 :root.dark {
-  --bg: #0a0a0a;
+  --bg: #0f0f0f;
   --fg: #e8e6e2;
   --muted: #9b9894;
-  --accent: #cbb37c;
-  --subtle: #1a1918;
+  --accent: #d4be8a;
+  --subtle: #2a2a2a;
+}
+
+/* Hide images in dark mode */
+.dark img[alt="Learning"],
+.dark img[alt="Time"] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Adjust cards in dark mode */
+.dark article {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.dark article:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(212, 190, 138, 0.3) !important;
+}
+
+/* Dark mode text colors */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: var(--fg);
+}
+
+.dark p,
+.dark span {
+  color: var(--muted);
+}
+
+/* Dark mode navigation/header glassmorphism */
+.dark nav button,
+.dark nav a {
+  background: rgba(30, 30, 30, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+}
+
+.dark nav button:hover,
+.dark nav a:hover {
+  background: rgba(40, 40, 40, 0.8) !important;
+  border-color: rgba(212, 190, 138, 0.3) !important;
+}
+
+/* Dark mode grain - more subtle */
+.dark .grain {
+  opacity: 0.03;
+}
+
+/* Dark mode background gradients - more subtle */
+.dark .bg-gradient-to-t,
+.dark .bg-gradient-to-b,
+.dark .bg-gradient-to-r,
+.dark .bg-gradient-to-l {
+  opacity: 0.3;
+}
+
+/* Dark mode accent colors */
+.dark [class*="text-[#cbb37c]"],
+.dark [class*="border-[#cbb37c]"] {
+  color: #d4be8a;
+  border-color: #d4be8a;
+}
+
+/* Improve dark mode link hover states */
+.dark .link-hover {
+  color: var(--muted);
+}
+
+.dark .link-hover:hover {
+  color: var(--accent);
 }
 
 * {
