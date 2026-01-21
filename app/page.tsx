@@ -428,6 +428,16 @@ export default function Home() {
                   01
                 </div>
                 
+                {/* Background image - architectural space */}
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[50%] h-[70%] opacity-[0.15] pointer-events-none overflow-hidden rounded-l-3xl">
+                  <img 
+                    src={`${BASE_PATH}/ChatGPT Image Jan 14, 2026, 04_01_38 PM.png`}
+                    alt="" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#f5f3f0] via-[#f5f3f0]/50 to-transparent" />
+                </div>
+                
                 {/* Logo with title - more dramatic */}
                 <div className="relative z-10 mb-16 md:mb-20">
                   <div className="flex items-start gap-6 mb-3">
@@ -479,12 +489,48 @@ export default function Home() {
             </div>
             
             <div className="space-y-5">
-              <WorkCard
-                title="Learning"
-                text="How people acquire knowledge and skill. What helps retention. What leads to real understanding."
-                index={0}
-                icon={icons.learning}
-              />
+              {/* Learning card with image */}
+              <article className="group relative overflow-hidden rounded-xl border border-[#1a1918]/5 transition-all duration-700 ease-out hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.3)] hover:-translate-y-1">
+                {/* Hero image */}
+                <div className="relative h-64 overflow-hidden">
+                  <img 
+                    src={`${BASE_PATH}/ChatGPT Image Jan 14, 2026, 04_08_30 PM.png`}
+                    alt="Learning" 
+                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#f5f3f0] via-[#f5f3f0]/40 to-transparent opacity-80" />
+                  <div className="absolute bottom-6 left-8 text-[5rem] font-serif leading-none text-white/20 select-none">01</div>
+                </div>
+                
+                {/* Content */}
+                <div className="relative p-8">
+                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#cbb37c] via-[#cbb37c]/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-x-full group-hover:translate-x-0" />
+                  
+                  <div className="flex items-start gap-6">
+                    <div className="relative flex-shrink-0 mt-1">
+                      <div className="absolute inset-0 bg-[#cbb37c]/15 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500 scale-0 group-hover:scale-150" />
+                      <div className="relative text-[#cbb37c]/40 group-hover:text-[#cbb37c] transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                        {icons.learning}
+                      </div>
+                    </div>
+                    
+                    <div className="flex-1">
+                      <h3 className="text-[1.125rem] sm:text-[1.25rem] font-medium mb-3 text-[#1a1918] group-hover:text-[#cbb37c] transition-colors duration-500 tracking-tight">
+                        Learning
+                      </h3>
+                      <p className="text-[#6b6966] leading-[1.75] text-[0.9375rem] group-hover:text-[#1a1918] transition-colors duration-500">
+                        How people acquire knowledge and skill. What helps retention. What leads to real understanding.
+                      </p>
+                      
+                      <div className="flex items-center gap-2 mt-5 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
+                        <div className="h-px w-8 bg-gradient-to-r from-[#cbb37c]/60 to-transparent" />
+                        <span className="text-[0.75rem] text-[#cbb37c] tracking-wide">Explore</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              
               <WorkCard
                 title="Products"
                 text="Software that reflects how learning actually works. Built slowly, tested carefully."
@@ -511,25 +557,38 @@ export default function Home() {
           {/* Luna */}
           <LunaSection />
 
-          {/* Time - more visual */}
-          <section className="reveal mb-40 md:mb-56 relative overflow-hidden rounded-2xl border border-[#1a1918]/5 p-10 md:p-14 bg-gradient-to-br from-[#cbb37c]/5 via-transparent to-transparent">
-            {/* Decorative element */}
-            <div className="absolute -right-16 -top-16 w-64 h-64 bg-[#cbb37c]/10 rounded-full blur-3xl pointer-events-none" />
+          {/* Time - more visual with image */}
+          <section className="reveal mb-40 md:mb-56 relative overflow-hidden rounded-2xl border border-[#1a1918]/5">
+            {/* Hero image */}
+            <div className="relative h-80 overflow-hidden">
+              <img 
+                src={`${BASE_PATH}/ChatGPT Image Jan 14, 2026, 04_08_38 PM.png`}
+                alt="Time" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#f5f3f0] via-[#f5f3f0]/70 to-[#f5f3f0]/30" />
+            </div>
             
-            <div className="relative">
-              <div className="flex items-center gap-4 mb-8">
-                <div className="w-12 h-px bg-gradient-to-r from-[#cbb37c] to-transparent" />
-                <span className="text-[0.7rem] tracking-[0.2em] uppercase text-[#cbb37c]/70 font-medium">Philosophy</span>
-              </div>
+            {/* Content */}
+            <div className="relative p-10 md:p-14 bg-gradient-to-br from-[#cbb37c]/5 via-transparent to-transparent">
+              {/* Decorative element */}
+              <div className="absolute -right-16 -top-16 w-64 h-64 bg-[#cbb37c]/10 rounded-full blur-3xl pointer-events-none" />
               
-              <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] mb-6 font-serif tracking-tight leading-tight max-w-[600px]">
-                Time
-              </h2>
-              <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] max-w-[540px]">
-                Good tools come from years of observation and iteration. We're not 
-                optimizing for speed. We're trying to understand something real, 
-                and to build things that reflect that understanding.
-              </p>
+              <div className="relative">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-12 h-px bg-gradient-to-r from-[#cbb37c] to-transparent" />
+                  <span className="text-[0.7rem] tracking-[0.2em] uppercase text-[#cbb37c]/70 font-medium">Philosophy</span>
+                </div>
+                
+                <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] mb-6 font-serif tracking-tight leading-tight max-w-[600px]">
+                  Time
+                </h2>
+                <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] max-w-[540px]">
+                  Good tools come from years of observation and iteration. We're not 
+                  optimizing for speed. We're trying to understand something real, 
+                  and to build things that reflect that understanding.
+                </p>
+              </div>
             </div>
           </section>
 
