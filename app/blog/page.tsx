@@ -29,10 +29,34 @@ const posts = [
     excerpt: "An intelligent system is one that, given its time horizon, moves toward actions that expand its future action space.",
   },
   {
+    slug: "the-forgetting-curve",
+    date: "January 2026",
+    title: "The Forgetting Curve",
+    excerpt: "We forget almost everything we learn. Understanding why is the first step to building better tools for retention.",
+  },
+  {
+    slug: "active-recall",
+    date: "January 2026",
+    title: "Active Recall",
+    excerpt: "The most effective learning strategy isn't re-reading or highlighting. It's forcing yourself to retrieve information.",
+  },
+  {
     slug: "consumption-vs-learning",
     date: "January 2026",
     title: "Consumption vs. Learning",
     excerpt: "We consume more content than ever before. But it's easy to forget the difference between consuming and learning.",
+  },
+  {
+    slug: "the-spacing-effect",
+    date: "January 2026",
+    title: "The Spacing Effect",
+    excerpt: "Learning the same amount of material spread over time is far more effective than cramming. Here's why.",
+  },
+  {
+    slug: "context-and-memory",
+    date: "January 2026",
+    title: "Context and Memory",
+    excerpt: "Where you learn something affects how well you remember it. Context is more powerful than we think.",
   },
   {
     slug: "ai-in-ten-years",

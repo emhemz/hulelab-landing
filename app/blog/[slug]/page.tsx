@@ -20,6 +20,44 @@ Maybe this is a better way to think about learning too. Not as accumulation of f
 
 Intelligence is freedom in the future.`,
   },
+  "the-forgetting-curve": {
+    slug: "the-forgetting-curve",
+    date: "January 2026",
+    title: "The Forgetting Curve",
+    content: `In 1885, Hermann Ebbinghaus discovered something important: we forget almost everything we learn.
+
+He tested himself by memorizing nonsense syllables and measuring how much he remembered over time. The curve was steep. Within 24 hours, he'd forgotten about 70% of what he learned. Within a week, almost everything was gone.
+
+This isn't a flaw. It's a feature. Our brains evolved to filter information, not store everything. If you remembered every conversation, every face, every moment, you'd drown in noise.
+
+But the forgetting curve shows something else: forgetting isn't linear. The rate of decay slows down over time. What you remember after a month will stay with you much longer than what you remember after a day.
+
+This means the best time to review something isn't right after you learn it. It's right before you forget it. If you wait too long, it's gone. If you review too soon, you're wasting effort.
+
+That's why spaced repetition works. It fights the forgetting curve at the optimal moment—when the memory is fading but still retrievable.
+
+Most learning tools ignore this. They present information once and assume it sticks. But if we're serious about retention, we need systems that work with the curve, not against it.`,
+  },
+  "active-recall": {
+    slug: "active-recall",
+    date: "January 2026",
+    title: "Active Recall",
+    content: `The most effective learning strategy isn't re-reading, highlighting, or summarizing. It's active recall: forcing yourself to retrieve information from memory.
+
+The research is overwhelming. Students who test themselves remember far more than students who just review their notes. The gap isn't small. It's massive—often 50% better retention or more.
+
+Why does it work? Because retrieval is practice. Every time you pull something from memory, you strengthen that connection. It's like a muscle. The more you use it, the stronger it gets.
+
+But most people avoid recall because it feels harder. Re-reading is comfortable. Testing yourself is uncomfortable. You have to confront what you don't know.
+
+That discomfort is the point. It's called "desirable difficulty." The harder your brain has to work to retrieve something, the better it sticks.
+
+This is why passive learning doesn't work. Watching a video, reading an article, listening to a podcast—it feels like learning, but most of it evaporates. Without retrieval, there's no reinforcement.
+
+The best tools for learning should make recall easy to do and hard to avoid. They should interrupt you with questions. Challenge you to explain what you just heard. Force you to engage.
+
+If you're not retrieving, you're not really learning.`,
+  },
   "consumption-vs-learning": {
     slug: "consumption-vs-learning",
     date: "January 2026",
@@ -35,6 +73,48 @@ What we need is not less content, but better tools for transforming content into
 That's why we're building Luna. A podcast player that takes learning seriously. That helps you go from passive listening to active understanding.
 
 Content isn't the problem. The problem is that we treat all content the same, when some of it actually deserves more attention.`,
+  },
+  "the-spacing-effect": {
+    slug: "the-spacing-effect",
+    date: "January 2026",
+    title: "The Spacing Effect",
+    content: `If you have 6 hours to learn something, should you do it all at once or spread it across multiple days?
+
+The research is clear: spacing wins. Learning the same amount of material over time is far more effective than cramming. It's called the spacing effect, and it's one of the most robust findings in cognitive psychology.
+
+Why does it work? Because memory is strengthened by retrieval. When you return to material after a delay, you have to work to recall it. That effort reinforces the memory.
+
+When you cram, you're not retrieving—you're just reviewing. The information is still fresh, so recall is easy. But easy recall doesn't build strong memories.
+
+Spacing also allows for consolidation. Sleep plays a critical role in memory formation. When you spread learning across days, you give your brain time to process and integrate new information.
+
+But cramming still dominates education. Students study the night before exams. Professionals binge courses right before deadlines. It works for passing tests, but it doesn't work for retention.
+
+The problem is that spacing requires planning. You can't start the day before. You need systems that distribute learning over time and bring material back at the right moments.
+
+That's the kind of tool we want to build. One that respects how memory actually works and makes spacing effortless.`,
+  },
+  "context-and-memory": {
+    slug: "context-and-memory",
+    date: "January 2026",
+    title: "Context and Memory",
+    content: `In 1975, researchers did an unusual study. They had scuba divers memorize lists of words—some on land, some underwater. Later, they tested recall in both environments.
+
+The result: divers who learned underwater remembered better underwater. Divers who learned on land remembered better on land. Context mattered.
+
+This isn't unique to extreme environments. It happens everywhere. The room you study in, the music you listen to, even your mood—all of these things become part of the memory.
+
+When you try to recall something, your brain uses context as a cue. If the context matches, retrieval is easier. If it doesn't, the memory feels distant.
+
+This is why students struggle on exams. They study at home, with music, relaxed. The exam room is silent, sterile, high-pressure. The mismatch makes recall harder.
+
+It's also why place-based learning is so effective. When you link information to a specific location, you give yourself extra cues. Memory palaces work because they anchor abstract ideas to vivid spatial contexts.
+
+But here's the flip side: if you always learn in the same context, your memory becomes dependent on it. To build robust knowledge, you need varied contexts. Study in different places. Review at different times. Test yourself in different moods.
+
+The goal is to make your knowledge context-independent—accessible no matter where you are or what state you're in.
+
+Good learning tools should vary the context, not reinforce a single one.`,
   },
   "ai-in-ten-years": {
     slug: "ai-in-ten-years",
