@@ -544,7 +544,7 @@ export default function Home() {
           <LunaSection />
 
           {/* Time - more visual with image */}
-          <section className="reveal mb-40 md:mb-56 relative overflow-hidden rounded-2xl border border-[#1a1918]/5">
+          <section className="reveal mb-40 md:mb-56 relative overflow-hidden rounded-2xl border border-[#1a1918]/5 dark:border-white/5">
             {/* Hero image */}
             <div className="relative h-80 overflow-hidden">
               <img 
@@ -552,7 +552,7 @@ export default function Home() {
                 alt="Our Philosophy" 
                 className="w-full h-full object-cover hide-in-dark"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#f5f3f0] via-[#f5f3f0]/70 to-[#f5f3f0]/30 dark:from-[#0f0f0f] dark:via-[#0f0f0f]/70 dark:to-[#0f0f0f]/30" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#f5f3f0] via-transparent to-transparent dark:from-[#0f0f0f] dark:via-transparent dark:to-transparent" />
             </div>
             
             {/* Content */}
