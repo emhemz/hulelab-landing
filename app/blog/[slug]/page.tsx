@@ -163,24 +163,47 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       <main className="relative z-10 min-h-screen">
         <div className="max-w-[900px] mx-auto px-10 sm:px-16 pt-32 md:pt-44 pb-32">
+          {/* Back to blog button */}
+          <Link 
+            href="/blog"
+            className="inline-flex items-center gap-2 mb-10 text-[0.875rem] text-[#6b6966] hover:text-[#cbb37c] transition-colors duration-300 group"
+          >
+            <svg 
+              width="16" 
+              height="16" 
+              viewBox="0 0 16 16" 
+              className="transition-transform duration-300 group-hover:-translate-x-1"
+            >
+              <path 
+                d="M10 12L6 8l4-4" 
+                stroke="currentColor" 
+                strokeWidth="1.5" 
+                fill="none" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              />
+            </svg>
+            <span>Back to all posts</span>
+          </Link>
+
           <article>
             {/* Meta */}
             <div className="mb-6 flex items-center gap-4">
-              <span className="text-[0.6875rem] tracking-[0.2em] uppercase text-[#cbb37c]/70">
+              <span className="text-[0.6875rem] tracking-[0.2em] uppercase text-[#cbb37c]/70 dark:text-[#d4be8a]/70">
                 {post.date}
               </span>
-              <div className="h-px w-8 bg-gradient-to-r from-[#1a1918]/20 to-transparent" />
+              <div className="h-px w-8 bg-gradient-to-r from-[#1a1918]/20 to-transparent dark:from-[#d4be8a]/20" />
             </div>
 
             {/* Title */}
-            <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] mb-12 md:mb-16 leading-[1.05] tracking-[-0.03em]">
+            <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] mb-12 md:mb-16 leading-[1.05] tracking-[-0.03em] dark:text-fg">
               {post.title}
             </h1>
 
             {/* Content */}
             <div className="prose prose-custom max-w-none">
               {post.content.split('\n\n').map((paragraph, i) => (
-                <p key={i} className="text-[#6b6966] leading-[1.8] mb-6 text-[1.0625rem]">
+                <p key={i} className="text-[#6b6966] dark:text-fg/70 leading-[1.8] mb-6 text-[1.0625rem]">
                   {paragraph}
                 </p>
               ))}
@@ -188,12 +211,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </article>
 
           {/* Navigation */}
-          <footer className="mt-20 md:mt-28 pt-10 border-t border-black/5">
+          <footer className="mt-20 md:mt-28 pt-10 border-t border-black/5 dark:border-white/5">
             <div className="flex items-center justify-between">
-              <Link href="/blog" className="link-hover text-[0.875rem]">
+              <Link href="/blog" className="text-[0.875rem] text-[#6b6966] hover:text-[#cbb37c] dark:text-fg/70 dark:hover:text-accent transition-colors duration-300">
                 ← All posts
               </Link>
-              <Link href="/" className="link-hover text-[0.875rem]">
+              <Link href="/" className="text-[0.875rem] text-[#6b6966] hover:text-[#cbb37c] dark:text-fg/70 dark:hover:text-accent transition-colors duration-300">
                 Home
               </Link>
             </div>
