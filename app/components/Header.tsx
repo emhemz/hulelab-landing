@@ -69,15 +69,25 @@ export default function Header() {
           onClick={handleLogoClick}
           className="group flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-500 hover:px-6 overflow-hidden"
           style={{
-            background: scrolled 
-              ? 'linear-gradient(135deg, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.72) 50%, rgba(255,255,255,0.82) 100%)'
-              : 'linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.28) 50%, rgba(255,255,255,0.38) 100%)',
+            background: darkMode
+              ? (scrolled 
+                  ? 'linear-gradient(135deg, rgba(30,30,30,0.8) 0%, rgba(30,30,30,0.6) 50%, rgba(30,30,30,0.7) 100%)'
+                  : 'linear-gradient(135deg, rgba(30,30,30,0.6) 0%, rgba(30,30,30,0.4) 50%, rgba(30,30,30,0.5) 100%)')
+              : (scrolled 
+                  ? 'linear-gradient(135deg, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.72) 50%, rgba(255,255,255,0.82) 100%)'
+                  : 'linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.28) 50%, rgba(255,255,255,0.38) 100%)'),
             backdropFilter: scrolled ? 'blur(24px) saturate(200%)' : 'blur(16px) saturate(160%)',
             WebkitBackdropFilter: scrolled ? 'blur(24px) saturate(200%)' : 'blur(16px) saturate(160%)',
-            border: scrolled ? '1px solid rgba(0,0,0,0.06)' : '1px solid rgba(255,255,255,0.5)',
-            boxShadow: scrolled 
-              ? '0 4px 24px -4px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.95)'
-              : '0 2px 16px -2px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.03), inset 0 1px 0 rgba(255,255,255,0.7)',
+            border: darkMode
+              ? (scrolled ? '1px solid rgba(255,255,255,0.1)' : '1px solid rgba(255,255,255,0.08)')
+              : (scrolled ? '1px solid rgba(0,0,0,0.06)' : '1px solid rgba(255,255,255,0.5)'),
+            boxShadow: darkMode
+              ? (scrolled 
+                  ? '0 4px 24px -4px rgba(0,0,0,0.25), 0 2px 6px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.08)'
+                  : '0 2px 16px -2px rgba(0,0,0,0.2), 0 1px 2px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.05)')
+              : (scrolled 
+                  ? '0 4px 24px -4px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.95)'
+                  : '0 2px 16px -2px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.03), inset 0 1px 0 rgba(255,255,255,0.7)'),
           }}
         >
           <img 
@@ -87,7 +97,9 @@ export default function Header() {
             height={20}
             className="opacity-80 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0"
           />
-          <span className="font-serif text-[0.9375rem] tracking-tight text-[#1a1918] whitespace-nowrap max-w-0 group-hover:max-w-xs opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+          <span className={`font-serif text-[0.9375rem] tracking-tight whitespace-nowrap max-w-0 group-hover:max-w-xs opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out ${
+            darkMode ? 'text-[#e8e6e2]' : 'text-[#1a1918]'
+          }`}>
             Human Learning Lab
           </span>
         </Link>
@@ -102,25 +114,47 @@ export default function Header() {
           <button
             className="flex flex-col items-end gap-1.5 px-4 py-3 rounded-xl transition-all duration-300 group"
             style={{
-              background: scrolled 
-                ? 'linear-gradient(135deg, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.72) 50%, rgba(255,255,255,0.82) 100%)'
-                : 'linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.28) 50%, rgba(255,255,255,0.38) 100%)',
+              background: darkMode
+                ? (scrolled 
+                    ? 'linear-gradient(135deg, rgba(30,30,30,0.8) 0%, rgba(30,30,30,0.6) 50%, rgba(30,30,30,0.7) 100%)'
+                    : 'linear-gradient(135deg, rgba(30,30,30,0.6) 0%, rgba(30,30,30,0.4) 50%, rgba(30,30,30,0.5) 100%)')
+                : (scrolled 
+                    ? 'linear-gradient(135deg, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.72) 50%, rgba(255,255,255,0.82) 100%)'
+                    : 'linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.28) 50%, rgba(255,255,255,0.38) 100%)'),
               backdropFilter: scrolled ? 'blur(24px) saturate(200%)' : 'blur(16px) saturate(160%)',
               WebkitBackdropFilter: scrolled ? 'blur(24px) saturate(200%)' : 'blur(16px) saturate(160%)',
-              border: scrolled ? '1px solid rgba(0,0,0,0.06)' : '1px solid rgba(255,255,255,0.5)',
-              boxShadow: scrolled 
-                ? '0 4px 24px -4px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.95)'
-                : '0 2px 16px -2px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.03), inset 0 1px 0 rgba(255,255,255,0.7)',
+              border: darkMode
+                ? (scrolled ? '1px solid rgba(255,255,255,0.1)' : '1px solid rgba(255,255,255,0.08)')
+                : (scrolled ? '1px solid rgba(0,0,0,0.06)' : '1px solid rgba(255,255,255,0.5)'),
+              boxShadow: darkMode
+                ? (scrolled 
+                    ? '0 4px 24px -4px rgba(0,0,0,0.25), 0 2px 6px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.08)'
+                    : '0 2px 16px -2px rgba(0,0,0,0.2), 0 1px 2px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.05)')
+                : (scrolled 
+                    ? '0 4px 24px -4px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.95)'
+                    : '0 2px 16px -2px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.03), inset 0 1px 0 rgba(255,255,255,0.7)'),
             }}
           >
             <div 
-              className={`h-0.5 bg-[#1a1918]/60 group-hover:bg-[#cbb37c] transition-all duration-300 ${menuOpen ? 'w-6 bg-[#cbb37c]' : 'w-6'}`}
+              className={`h-0.5 transition-all duration-300 ${menuOpen ? 'w-6' : 'w-6'} ${
+                darkMode 
+                  ? `bg-[#d4be8a]/80 group-hover:bg-[#d4be8a] ${menuOpen ? 'bg-[#d4be8a]' : ''}` 
+                  : `bg-[#1a1918]/60 group-hover:bg-[#cbb37c] ${menuOpen ? 'bg-[#cbb37c]' : ''}`
+              }`}
             />
             <div 
-              className={`h-0.5 bg-[#1a1918]/60 group-hover:bg-[#cbb37c] transition-all duration-300 ${menuOpen ? 'w-6 bg-[#cbb37c]' : 'w-4'}`}
+              className={`h-0.5 transition-all duration-300 ${menuOpen ? 'w-6' : 'w-4'} ${
+                darkMode 
+                  ? `bg-[#d4be8a]/80 group-hover:bg-[#d4be8a] ${menuOpen ? 'bg-[#d4be8a]' : ''}` 
+                  : `bg-[#1a1918]/60 group-hover:bg-[#cbb37c] ${menuOpen ? 'bg-[#cbb37c]' : ''}`
+              }`}
             />
             <div 
-              className={`h-0.5 bg-[#1a1918]/60 group-hover:bg-[#cbb37c] transition-all duration-300 ${menuOpen ? 'w-6 bg-[#cbb37c]' : 'w-5'}`}
+              className={`h-0.5 transition-all duration-300 ${menuOpen ? 'w-6' : 'w-5'} ${
+                darkMode 
+                  ? `bg-[#d4be8a]/80 group-hover:bg-[#d4be8a] ${menuOpen ? 'bg-[#d4be8a]' : ''}` 
+                  : `bg-[#1a1918]/60 group-hover:bg-[#cbb37c] ${menuOpen ? 'bg-[#cbb37c]' : ''}`
+              }`}
             />
           </button>
 
@@ -154,26 +188,40 @@ export default function Header() {
                       isActive ? 'pr-3' : ''
                     }`}
                     style={{
-                      background: scrolled || isActive
-                        ? 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.92) 100%)'
-                        : 'linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0.45) 100%)',
+                      background: darkMode
+                        ? (scrolled || isActive
+                            ? 'linear-gradient(135deg, rgba(30,30,30,0.8) 0%, rgba(30,30,30,0.6) 50%, rgba(30,30,30,0.7) 100%)'
+                            : 'linear-gradient(135deg, rgba(30,30,30,0.6) 0%, rgba(30,30,30,0.4) 50%, rgba(30,30,30,0.5) 100%)')
+                        : (scrolled || isActive
+                            ? 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.92) 100%)'
+                            : 'linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0.45) 100%)'),
                       backdropFilter: 'blur(20px) saturate(180%)',
                       WebkitBackdropFilter: 'blur(20px) saturate(180%)',
-                      border: isActive ? '1px solid rgba(203,179,124,0.3)' : '1px solid rgba(255,255,255,0.6)',
+                      border: isActive 
+                        ? (darkMode ? '1px solid rgba(212,190,138,0.3)' : '1px solid rgba(203,179,124,0.3)')
+                        : (darkMode ? '1px solid rgba(255,255,255,0.08)' : '1px solid rgba(255,255,255,0.6)'),
                       boxShadow: isActive 
-                        ? '0 8px 32px -8px rgba(203,179,124,0.4), inset 0 1px 0 rgba(255,255,255,0.9)'
-                        : '0 4px 16px -4px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.8)',
+                        ? (darkMode 
+                            ? '0 8px 32px -8px rgba(212,190,138,0.25), inset 0 1px 0 rgba(255,255,255,0.08)'
+                            : '0 8px 32px -8px rgba(203,179,124,0.4), inset 0 1px 0 rgba(255,255,255,0.9)')
+                        : (darkMode
+                            ? '0 4px 16px -4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.05)'
+                            : '0 4px 16px -4px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.8)'),
                     }}
                   >
                     <span className={`text-[0.9375rem] font-medium transition-colors duration-300 whitespace-nowrap ${
-                      isActive ? 'text-[#cbb37c]' : 'text-[#1a1918]/70 group-hover:text-[#cbb37c]'
+                      darkMode
+                        ? (isActive ? 'text-[#d4be8a]' : 'text-[#e8e6e2]/70 group-hover:text-[#d4be8a]')
+                        : (isActive ? 'text-[#cbb37c]' : 'text-[#1a1918]/70 group-hover:text-[#cbb37c]')
                     }`}>
                       {link.label}
                     </span>
                     
                     {/* Active indicator dot */}
                     {isActive && (
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#cbb37c] animate-pulse" />
+                      <div className={`w-1.5 h-1.5 rounded-full animate-pulse ${
+                        darkMode ? 'bg-[#d4be8a]' : 'bg-[#cbb37c]'
+                      }`} />
                     )}
                   </div>
                 </Link>
@@ -186,25 +234,40 @@ export default function Header() {
               className="group relative"
               style={{
                 animation: menuOpen ? `slideIn 0.4s ease-out ${navLinks.length * 0.1}s both` : 'none',
-                ...getGlassmorphismStyle(scrolled),
               }}
             >
               <div 
                 className="px-5 py-3 rounded-xl transition-all duration-300 flex items-center justify-between gap-3 group-hover:scale-110 group-hover:rotate-2"
                 style={{
-                  background: 'transparent',
-                  backdropFilter: 'none',
-                  WebkitBackdropFilter: 'none',
-                  border: 'none',
-                  boxShadow: 'none',
+                  background: darkMode
+                    ? (scrolled 
+                        ? 'linear-gradient(135deg, rgba(30,30,30,0.8) 0%, rgba(30,30,30,0.6) 50%, rgba(30,30,30,0.7) 100%)'
+                        : 'linear-gradient(135deg, rgba(30,30,30,0.6) 0%, rgba(30,30,30,0.4) 50%, rgba(30,30,30,0.5) 100%)')
+                    : (scrolled
+                        ? 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.92) 100%)'
+                        : 'linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0.45) 100%)'),
+                  backdropFilter: 'blur(20px) saturate(180%)',
+                  WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                  border: darkMode 
+                    ? (scrolled ? '1px solid rgba(255,255,255,0.1)' : '1px solid rgba(255,255,255,0.08)')
+                    : '1px solid rgba(255,255,255,0.6)',
+                  boxShadow: darkMode
+                    ? (scrolled 
+                        ? '0 4px 24px -4px rgba(0,0,0,0.25), 0 2px 6px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.08)'
+                        : '0 2px 16px -2px rgba(0,0,0,0.2), 0 1px 2px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.05)')
+                    : '0 4px 16px -4px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.8)',
                 }}
               >
-                <span className="text-[0.9375rem] font-medium transition-colors duration-300 whitespace-nowrap text-fg/70 group-hover:text-accent">
+                <span className={`text-[0.9375rem] font-medium transition-colors duration-300 whitespace-nowrap ${
+                  darkMode ? 'text-[#e8e6e2]/70 group-hover:text-[#d4be8a]' : 'text-[#1a1918]/70 group-hover:text-[#cbb37c]'
+                }`}>
                   {darkMode ? 'Light' : 'Dark'}
                 </span>
                 
                 {/* Sun/Moon icon */}
-                <div className="w-5 h-5 text-fg/50 group-hover:text-accent transition-colors duration-300">
+                <div className={`w-5 h-5 transition-colors duration-300 ${
+                  darkMode ? 'text-[#e8e6e2]/50 group-hover:text-[#d4be8a]' : 'text-[#cbb37c]/60 group-hover:text-[#cbb37c]'
+                }`}>
                   {darkMode ? (
                     // Sun icon
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
