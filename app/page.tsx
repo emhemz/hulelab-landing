@@ -27,14 +27,14 @@ function useScroll() {
   return state;
 }
 
-// Reveal sections on scroll
+// Reveal sections on scroll - faster trigger
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const io = new IntersectionObserver(
       (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("visible")),
-      { threshold: 0.15, rootMargin: "0px 0px -80px 0px" }
+      { threshold: 0.05, rootMargin: "0px 0px -50px 0px" }
     );
     ref.current?.querySelectorAll(".reveal").forEach((el) => io.observe(el));
     return () => io.disconnect();
