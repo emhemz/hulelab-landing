@@ -112,7 +112,7 @@ export default function Header() {
         >
           {/* Hamburger Button */}
           <button
-            className="flex flex-col items-end gap-1.5 px-4 py-3 rounded-xl transition-all duration-300 group"
+            className="hamburger-button flex flex-col items-end gap-1.5 px-4 py-3 rounded-xl transition-all duration-300 group"
             style={{
               background: darkMode
                 ? (scrolled 

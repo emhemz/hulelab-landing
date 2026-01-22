@@ -63,12 +63,12 @@
   border-color: rgba(212, 190, 138, 0.3) !important;
 }
 
-/* Dark mode hamburger icon visibility */
-.dark nav button div {
+/* Dark mode hamburger icon visibility - only target the 3 lines in hamburger button */
+.dark .hamburger-button > div {
   background: rgba(212, 190, 138, 0.8) !important;
 }
 
-.dark nav button:hover div {
+.dark .hamburger-button:hover > div {
   background: rgba(212, 190, 138, 1) !important;
 }
 
