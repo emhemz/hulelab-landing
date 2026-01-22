@@ -453,14 +453,14 @@ export default function Home() {
                   01
                 </div>
                 
-                {/* Background image - architectural space - more subtle */}
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[45%] h-[60%] opacity-[0.08] dark:opacity-[0.03] pointer-events-none overflow-hidden rounded-l-3xl blur-sm">
+                {/* Background image - architectural space - only in light mode */}
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[45%] h-[60%] opacity-[0.08] dark:opacity-0 pointer-events-none overflow-hidden rounded-l-3xl blur-sm transition-opacity duration-500">
                   <img 
                     src={`${BASE_PATH}/ChatGPT Image Jan 14, 2026, 04_01_38 PM.png`}
                     alt="" 
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#f5f3f0] via-[#f5f3f0]/70 to-transparent dark:from-[#0f0f0f] dark:via-[#0f0f0f]/70 dark:to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#f5f3f0] via-[#f5f3f0]/70 to-transparent" />
                 </div>
                 
                 {/* Logo with title - more dramatic */}
