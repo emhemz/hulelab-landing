@@ -226,7 +226,6 @@ function WorkCard({
             className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#f5f3f0] via-[#f5f3f0]/30 to-transparent" />
-          <div className="absolute bottom-4 right-6 text-[4rem] font-serif leading-none text-white/20 select-none">0{index + 1}</div>
         </div>
       )}
       
@@ -236,13 +235,6 @@ function WorkCard({
       
       {/* Accent line - animated from left */}
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#cbb37c] via-[#cbb37c]/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-x-full group-hover:translate-x-0" />
-      
-      {/* Number indicator - only show if no image */}
-      {!imageSrc && (
-        <div className="absolute top-6 right-6 text-[5rem] font-serif leading-none text-[#cbb37c]/4 group-hover:text-[#cbb37c]/8 transition-all duration-700 select-none">
-          0{index + 1}
-        </div>
-      )}
       
       {/* Content */}
       <div className={`relative ${imageSrc ? 'p-5' : 'p-8'} flex items-start gap-5`}>
