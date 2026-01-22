@@ -248,8 +248,8 @@ function WorkCard({
       <div className={`relative ${imageSrc ? 'p-5' : 'p-8'} ${imageSrc ? 'flex items-start gap-4' : 'flex flex-col items-center text-center'}`}>
         {/* Icon with animated background - larger when no image */}
         <div className={`relative ${imageSrc ? 'flex-shrink-0 mt-1' : 'mb-8'}`}>
-          <div className="absolute inset-0 bg-[#cbb37c]/15 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500 scale-0 group-hover:scale-150" />
-          <div className={`relative text-[#cbb37c]/40 group-hover:text-[#cbb37c] transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 ${
+          <div className="absolute inset-0 bg-[#cbb37c]/15 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
+          <div className={`relative text-[#cbb37c]/60 group-hover:text-[#cbb37c] transition-all duration-500 ${
             imageSrc ? '' : 'scale-[2.5]'
           }`}>
             {icon}
@@ -285,8 +285,11 @@ function WorkCard({
 const icons = {
   learning: (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="10" />
-      <path d="M12 6v6l4 2" />
+      <path d="M12 2a10 10 0 0 1 7.07 17.07" />
+      <path d="M12 2a10 10 0 0 0-7.07 17.07" />
+      <circle cx="12" cy="12" r="3" />
+      <path d="M12 9v6" />
+      <path d="M9 12h6" />
     </svg>
   ),
   products: (
@@ -296,16 +299,14 @@ const icons = {
       <path d="M3 9h6" />
     </svg>
   ),
-  practice: (
+  method: (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 2v4" />
-      <path d="M12 18v4" />
-      <path d="M4.93 4.93l2.83 2.83" />
-      <path d="M16.24 16.24l2.83 2.83" />
-      <path d="M2 12h4" />
-      <path d="M18 12h4" />
-      <path d="M4.93 19.07l2.83-2.83" />
-      <path d="M16.24 7.76l2.83-2.83" />
+      <circle cx="12" cy="12" r="3" />
+      <circle cx="12" cy="12" r="8" />
+      <path d="M12 2v2" />
+      <path d="M12 20v2" />
+      <path d="M2 12h2" />
+      <path d="M20 12h2" />
     </svg>
   ),
 };
@@ -532,10 +533,10 @@ export default function Home() {
                   icon={icons.products}
                 />
                 <WorkCard
-                  title="Practice"
-                  text="The conditions for genuine improvement. Deliberate repetition, feedback, and time."
+                  title="Method"
+                  text="Careful observation. Slow iteration. Building on what we learn. Testing with real users."
                   index={2}
-                  icon={icons.practice}
+                  icon={icons.method}
                 />
               </div>
             </div>
