@@ -63,6 +63,24 @@
   border-color: rgba(212, 190, 138, 0.3) !important;
 }
 
+/* Dark mode hamburger icon visibility */
+.dark nav button div {
+  background: rgba(212, 190, 138, 0.8) !important;
+}
+
+.dark nav button:hover div {
+  background: rgba(212, 190, 138, 1) !important;
+}
+
+/* Dark mode section numbers - less visible */
+.dark article > div:first-child {
+  opacity: 0.15 !important;
+}
+
+.dark article:hover > div:first-child {
+  opacity: 0.25 !important;
+}
+
 /* Dark mode grain - more subtle */
 .dark .grain {
   opacity: 0.03;
