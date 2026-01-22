@@ -343,10 +343,10 @@ function LunaSection() {
             </span>
           </div>
           
-          <h2 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] mb-6 font-serif tracking-tight leading-none">
+          <h2 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] mb-6 font-serif tracking-tight leading-none dark:text-fg">
             Luna
           </h2>
-          <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] mb-8 max-w-[460px]">
+          <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] dark:text-fg/70 mb-8 max-w-[460px]">
             A podcast player built for learning. Designed to help you remember, 
             revisit, and build on what you hear.
           </p>
@@ -354,10 +354,10 @@ function LunaSection() {
             href="https://www.lunacast.ai/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-[#cbb37c]/10 to-transparent border border-[#cbb37c]/20 rounded-lg hover:border-[#cbb37c]/40 hover:shadow-[0_8px_30px_-8px_rgba(203,179,124,0.3)] transition-all duration-300"
+            className="group inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-[#cbb37c]/10 to-transparent dark:from-[#d4be8a]/10 border border-[#cbb37c]/20 dark:border-[#d4be8a]/30 rounded-lg hover:border-[#cbb37c]/40 dark:hover:border-[#d4be8a]/50 hover:shadow-[0_8px_30px_-8px_rgba(203,179,124,0.3)] dark:hover:shadow-[0_8px_30px_-8px_rgba(212,190,138,0.2)] transition-all duration-300"
           >
-            <span className="text-[0.9375rem] text-[#1a1918] group-hover:text-[#cbb37c] transition-colors">Visit lunacast.ai</span>
-            <svg width="14" height="14" viewBox="0 0 14 14" className="opacity-50 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">
+            <span className="text-[0.9375rem] text-[#1a1918] dark:text-fg group-hover:text-[#cbb37c] dark:group-hover:text-accent transition-colors">Visit lunacast.ai</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" className="opacity-50 dark:opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">
               <path d="M3 2h9v9M12 2L2 12" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </a>
