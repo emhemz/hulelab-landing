@@ -449,7 +449,7 @@ export default function Home() {
               {/* Hero */}
               <header id="about" className="min-h-[85vh] flex flex-col justify-center mb-40 md:mb-56 relative">
                 {/* Large decorative number */}
-                <div className="absolute -left-4 sm:-left-8 top-0 text-[12rem] sm:text-[16rem] font-serif leading-none text-[#cbb37c]/5 select-none pointer-events-none">
+                <div className="absolute -left-4 sm:-left-8 top-0 text-[12rem] sm:text-[16rem] font-serif leading-none text-[#cbb37c]/5 dark:text-white/[0.02] select-none pointer-events-none">
                   01
                 </div>
                 

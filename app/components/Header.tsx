@@ -186,26 +186,25 @@ export default function Header() {
               className="group relative"
               style={{
                 animation: menuOpen ? `slideIn 0.4s ease-out ${navLinks.length * 0.1}s both` : 'none',
+                ...getGlassmorphismStyle(scrolled),
               }}
             >
               <div 
                 className="px-5 py-3 rounded-xl transition-all duration-300 flex items-center justify-between gap-3 group-hover:scale-110 group-hover:rotate-2"
                 style={{
-                  background: scrolled
-                    ? 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.92) 100%)'
-                    : 'linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0.45) 100%)',
-                  backdropFilter: 'blur(20px) saturate(180%)',
-                  WebkitBackdropFilter: 'blur(20px) saturate(180%)',
-                  border: '1px solid rgba(255,255,255,0.6)',
-                  boxShadow: '0 4px 16px -4px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.8)',
+                  background: 'transparent',
+                  backdropFilter: 'none',
+                  WebkitBackdropFilter: 'none',
+                  border: 'none',
+                  boxShadow: 'none',
                 }}
               >
-                <span className="text-[0.9375rem] font-medium transition-colors duration-300 whitespace-nowrap text-[#1a1918]/70 group-hover:text-[#cbb37c]">
+                <span className="text-[0.9375rem] font-medium transition-colors duration-300 whitespace-nowrap text-fg/70 group-hover:text-accent">
                   {darkMode ? 'Light' : 'Dark'}
                 </span>
                 
                 {/* Sun/Moon icon */}
-                <div className="w-5 h-5 text-[#cbb37c]/60 group-hover:text-[#cbb37c] transition-colors duration-300">
+                <div className="w-5 h-5 text-fg/50 group-hover:text-accent transition-colors duration-300">
                   {darkMode ? (
                     // Sun icon
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
