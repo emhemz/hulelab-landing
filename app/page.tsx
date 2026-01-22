@@ -557,10 +557,10 @@ export default function Home() {
             <div className="relative h-80 overflow-hidden">
               <img 
                 src={`${BASE_PATH}/ChatGPT Image Jan 14, 2026, 04_08_38 PM.png`}
-                alt="Time" 
-                className="w-full h-full object-cover"
+                alt="Our Philosophy" 
+                className="w-full h-full object-cover hide-in-dark"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#f5f3f0] via-[#f5f3f0]/70 to-[#f5f3f0]/30" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#f5f3f0] via-[#f5f3f0]/70 to-[#f5f3f0]/30 dark:from-[#0f0f0f] dark:via-[#0f0f0f]/70 dark:to-[#0f0f0f]/30" />
             </div>
             
             {/* Content */}
@@ -574,10 +574,10 @@ export default function Home() {
                   <span className="text-[0.7rem] tracking-[0.2em] uppercase text-[#cbb37c]/70 font-medium">Philosophy</span>
                 </div>
                 
-                <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] mb-6 font-serif tracking-tight leading-tight max-w-[600px]">
-                  Time
+                <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] mb-6 font-serif tracking-tight leading-tight max-w-[600px] dark:text-fg">
+                  Our Philosophy
                 </h2>
-                <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] max-w-[540px]">
+                <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] dark:text-fg/70 max-w-[540px]">
                   Good tools come from years of observation and iteration. We're not 
                   optimizing for speed. We're trying to understand something real, 
                   and to build things that reflect that understanding.
