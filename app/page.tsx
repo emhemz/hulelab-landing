@@ -245,24 +245,22 @@ function WorkCard({
       )}
       
       {/* Content */}
-      <div className={`relative ${imageSrc ? 'p-5' : 'p-8'} ${imageSrc ? 'flex items-start gap-4' : 'flex flex-col items-center text-center'}`}>
-        {/* Icon with animated background - larger when no image */}
-        <div className={`relative ${imageSrc ? 'flex-shrink-0 mt-1' : 'mb-8'}`}>
+      <div className={`relative ${imageSrc ? 'p-5' : 'p-8'} flex items-start gap-5`}>
+        {/* Icon with animated background */}
+        <div className="relative flex-shrink-0 mt-1">
           <div className="absolute inset-0 bg-[#cbb37c]/15 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
-          <div className={`relative text-[#cbb37c]/60 group-hover:text-[#cbb37c] transition-all duration-500 ${
-            imageSrc ? '' : 'scale-[2.5]'
-          }`}>
+          <div className="relative text-[#cbb37c]/60 group-hover:text-[#cbb37c] transition-all duration-500">
             {icon}
           </div>
         </div>
         
         <div className="flex-1">
-          <h3 className={`font-medium text-[#1a1918] group-hover:text-[#cbb37c] transition-colors duration-500 tracking-tight ${
+          <h3 className={`font-medium text-[#1a1918] dark:text-fg group-hover:text-[#cbb37c] dark:group-hover:text-accent transition-colors duration-500 tracking-tight ${
             imageSrc ? 'text-[1rem] sm:text-[1.125rem] mb-2' : 'text-[1.125rem] sm:text-[1.25rem] mb-3'
           }`}>
             {title}
           </h3>
-          <p className={`text-[#6b6966] group-hover:text-[#1a1918] transition-colors duration-500 ${
+          <p className={`text-[#6b6966] dark:text-fg/70 group-hover:text-[#1a1918] dark:group-hover:text-fg transition-colors duration-500 ${
             imageSrc ? 'leading-[1.6] text-[0.875rem]' : 'leading-[1.75] text-[0.9375rem]'
           }`}>
             {text}
@@ -271,9 +269,9 @@ function WorkCard({
           {/* Hover indicator */}
           <div className={`flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0 ${
             imageSrc ? 'mt-3' : 'mt-5'
-          } ${imageSrc ? '' : 'justify-center'}`}>
+          }`}>
             <div className="h-px w-8 bg-gradient-to-r from-[#cbb37c]/60 to-transparent" />
-            <span className="text-[0.75rem] text-[#cbb37c] tracking-wide">Explore</span>
+            <span className="text-[0.75rem] text-[#cbb37c] dark:text-accent tracking-wide">Explore</span>
           </div>
         </div>
       </div>
