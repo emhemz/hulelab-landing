@@ -237,7 +237,7 @@ export default function Header() {
               }}
             >
               <div 
-                className="px-5 py-3 rounded-xl transition-all duration-300 flex items-center justify-between gap-3 group-hover:scale-110 group-hover:rotate-2"
+                className="px-5 py-3 rounded-xl transition-all duration-300 flex items-center justify-between gap-8 group-hover:scale-110 group-hover:rotate-2"
                 style={{
                   background: darkMode
                     ? (scrolled 
@@ -249,12 +249,10 @@ export default function Header() {
                   backdropFilter: 'blur(20px) saturate(180%)',
                   WebkitBackdropFilter: 'blur(20px) saturate(180%)',
                   border: darkMode 
-                    ? (scrolled ? '1px solid rgba(255,255,255,0.1)' : '1px solid rgba(255,255,255,0.08)')
+                    ? '1px solid rgba(255,255,255,0.08)'
                     : '1px solid rgba(255,255,255,0.6)',
                   boxShadow: darkMode
-                    ? (scrolled 
-                        ? '0 4px 24px -4px rgba(0,0,0,0.25), 0 2px 6px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.08)'
-                        : '0 2px 16px -2px rgba(0,0,0,0.2), 0 1px 2px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.05)')
+                    ? '0 4px 16px -4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.05)'
                     : '0 4px 16px -4px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.8)',
                 }}
               >
