@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Header from "./components/Header";
+import Button from "./components/Button";
 
 const BASE_PATH = process.env.NODE_ENV === 'production' ? '/hulelab-landing' : '';
 
@@ -335,24 +336,29 @@ function LunaSection() {
             </span>
           </div>
           
-          <h2 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] mb-6 font-serif tracking-tight leading-none dark:text-fg">
-            Luna
-          </h2>
+          {/* Luna heading with logo */}
+          <div className="mb-6">
+            <div className="flex items-center gap-3">
+              <img
+                src={`${BASE_PATH}/LUNA logo (5).png`}
+                alt="Luna logo"
+                className="w-12 h-12 sm:w-14 sm:h-14"
+              />
+              <h2 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] font-serif tracking-tight leading-none dark:text-fg">
+                Luna
+              </h2>
+            </div>
+            <p className="text-[0.95rem] text-[#cbb37c]/80 dark:text-[#d4be8a]/80 mt-2 ml-[3.75rem] sm:ml-[4.25rem]">
+              :learn from podcasts
+            </p>
+          </div>
           <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] dark:text-fg/70 mb-8 max-w-[460px]">
             A podcast player built for learning. Designed to help you remember, 
             revisit, and build on what you hear.
           </p>
-          <a
-            href="https://www.lunacast.ai/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-[#cbb37c]/10 to-transparent dark:from-[#d4be8a]/10 border border-[#cbb37c]/20 dark:border-[#d4be8a]/30 rounded-lg hover:border-[#cbb37c]/40 dark:hover:border-[#d4be8a]/50 hover:shadow-[0_8px_30px_-8px_rgba(203,179,124,0.3)] dark:hover:shadow-[0_8px_30px_-8px_rgba(212,190,138,0.2)] transition-all duration-300"
-          >
-            <span className="text-[0.9375rem] text-[#1a1918] dark:text-fg group-hover:text-[#cbb37c] dark:group-hover:text-accent transition-colors">Visit lunacast.ai</span>
-            <svg width="14" height="14" viewBox="0 0 14 14" className="opacity-50 dark:opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">
-              <path d="M3 2h9v9M12 2L2 12" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </a>
+          <Button href="https://www.lunacast.ai/" external icon="external">
+            Visit lunacast.ai
+          </Button>
         </div>
         
         {/* Phone mockup with scroll-driven rotation and scale */}
@@ -418,6 +424,15 @@ function LunaSection() {
 export default function Home() {
   const { progress } = useScroll();
   const containerRef = useReveal();
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const checkDark = () => setIsDark(document.documentElement.classList.contains('dark'));
+    checkDark();
+    const observer = new MutationObserver(checkDark);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>
@@ -543,33 +558,35 @@ export default function Home() {
           {/* Luna */}
           <LunaSection />
 
-          {/* Time - more visual with image */}
-          <section className="reveal mb-40 md:mb-56 relative overflow-hidden rounded-2xl border border-[#1a1918]/5 dark:border-white/5">
-            {/* Hero image */}
-            <div className="relative h-80 overflow-hidden">
+          {/* Our Philosophy - CLEAN VERSION */}
+          <section 
+            className="reveal mb-40 md:mb-56 relative overflow-hidden rounded-2xl border-2 border-[#e8e6e2] dark:border-white/5" 
+            style={{ backgroundColor: isDark ? 'rgba(255,255,255,0.05)' : '#FFFFFF' }}
+          >
+            {/* Hero image - NO OVERLAY */}
+            <div className="relative h-64 overflow-hidden">
               <img 
                 src={`${BASE_PATH}/ChatGPT Image Jan 14, 2026, 04_08_38 PM.png`}
                 alt="Our Philosophy" 
-                className="w-full h-full object-cover hide-in-dark"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#f5f3f0] via-transparent to-transparent dark:from-[#0f0f0f] dark:via-transparent dark:to-transparent" />
             </div>
             
             {/* Content */}
-            <div className="relative p-10 md:p-14 bg-gradient-to-br from-[#cbb37c]/5 via-transparent to-transparent">
-              {/* Decorative element */}
-              <div className="absolute -right-16 -top-16 w-64 h-64 bg-[#cbb37c]/10 rounded-full blur-3xl pointer-events-none" />
-              
+            <div 
+              className="relative p-8 md:p-12" 
+              style={{ backgroundColor: isDark ? 'transparent' : '#FFFFFF' }}
+            >
               <div className="relative">
-                <div className="flex items-center gap-4 mb-8">
+                <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-px bg-gradient-to-r from-[#cbb37c] to-transparent" />
                   <span className="text-[0.7rem] tracking-[0.2em] uppercase text-[#cbb37c]/70 font-medium">Philosophy</span>
                 </div>
                 
-                <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] mb-6 font-serif tracking-tight leading-tight max-w-[600px] dark:text-fg">
+                <h2 className="text-[1.75rem] sm:text-[2rem] md:text-[2.5rem] mb-5 font-serif tracking-tight leading-tight max-w-[600px] dark:text-fg">
                   Our Philosophy
                 </h2>
-                <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] dark:text-fg/70 max-w-[540px]">
+                <p className="text-[1rem] leading-[1.8] text-[#6b6966] dark:text-fg/70 max-w-[540px]">
                   Good tools come from years of observation and iteration. We're not 
                   optimizing for speed. We're trying to understand something real, 
                   and to build things that reflect that understanding.
@@ -589,15 +606,9 @@ export default function Home() {
                 <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] mb-8">
                   We're always interested in conversations about learning, tools, and the future of education.
                 </p>
-                <a
-                  href="mailto:hello@humanlearninglab.com"
-                  className="group inline-flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-[#cbb37c]/10 to-transparent border border-[#cbb37c]/20 rounded-lg hover:border-[#cbb37c]/40 hover:shadow-[0_8px_30px_-8px_rgba(203,179,124,0.3)] transition-all duration-300"
-                >
-                  <span className="text-[0.9375rem] text-[#1a1918] group-hover:text-[#cbb37c] transition-colors font-medium">hello@humanlearninglab.com</span>
-                  <svg width="16" height="16" viewBox="0 0 16 16" className="opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
-                    <path d="M1 8h14M11 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </a>
+                <Button href="mailto:hello@humanlearninglab.com" external icon="arrow">
+                  hello@humanlearninglab.com
+                </Button>
               </div>
               
               {/* Visual element */}

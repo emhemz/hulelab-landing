@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Link from "next/link";
 import Header from "../components/Header";
+import Button from "../components/Button";
 
 const BASE_PATH = process.env.NODE_ENV === 'production' ? '/hulelab-landing' : '';
 
@@ -220,28 +220,9 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <div className="mt-8">
-                  <Link 
-                    href="/projects"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#cbb37c]/10 hover:bg-[#cbb37c]/20 border border-[#cbb37c]/20 hover:border-[#cbb37c]/40 transition-all duration-300 group"
-                  >
-                    <span className="text-[0.9375rem] font-medium text-[#1a1918] dark:text-fg">See our projects</span>
-                    <svg 
-                      width="16" 
-                      height="16" 
-                      viewBox="0 0 16 16" 
-                      className="transition-transform duration-300 group-hover:translate-x-1"
-                    >
-                      <path 
-                        d="M6 4l4 4-4 4" 
-                        stroke="currentColor" 
-                        strokeWidth="1.5" 
-                        fill="none" 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round"
-                        className="text-[#cbb37c]"
-                      />
-                    </svg>
-                  </Link>
+                  <Button href="/projects">
+                    See our projects
+                  </Button>
                 </div>
               </div>
             </div>

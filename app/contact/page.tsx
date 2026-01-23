@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Header from "../components/Header";
+import Button from "../components/Button";
 
 const BASE_PATH = process.env.NODE_ENV === 'production' ? '/hulelab-landing' : '';
 
@@ -27,28 +30,9 @@ export default function ContactPage() {
                   <h2 className="text-[0.8125rem] font-medium tracking-[0.06em] uppercase text-[#6b6966] dark:text-fg/60 mb-4">
                     Email
                   </h2>
-                  <a 
-                    href="mailto:hello@humanlearninglab.com"
-                    className="group inline-flex items-center gap-3 text-[1.5rem] sm:text-[1.75rem] text-[#1a1918] dark:text-fg hover:text-[#cbb37c] dark:hover:text-accent transition-colors duration-300"
-                  >
-                    <span>hello@humanlearninglab.com</span>
-                    <svg 
-                      width="20" 
-                      height="20" 
-                      viewBox="0 0 16 16" 
-                      className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1"
-                    >
-                      <path 
-                        d="M6 4l4 4-4 4" 
-                        stroke="currentColor" 
-                        strokeWidth="1.5" 
-                        fill="none" 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round"
-                        className="text-[#cbb37c]"
-                      />
-                    </svg>
-                  </a>
+                  <Button href="mailto:hello@humanlearninglab.com" external variant="large">
+                    hello@humanlearninglab.com
+                  </Button>
                 </div>
 
                 <div>
