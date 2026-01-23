@@ -40,13 +40,13 @@ export default function AboutPage() {
           <header className="mb-24 md:mb-32 reveal">
             <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
               <div>
-                <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[4rem] leading-[0.95] tracking-[-0.04em] mb-8">
+                <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[4rem] leading-[0.95] tracking-[-0.04em] mb-8 dark:text-fg">
                   About Us
                 </h1>
-                <p className="text-[1.125rem] leading-[1.8] text-[#6b6966] mb-6">
+                <p className="text-[1.125rem] leading-[1.8] text-[#6b6966] dark:text-fg/70 mb-6">
                   Learning is often treated as a problem of content delivery. We think that's backwards. The challenge isn't access to information—it's turning information into understanding, and understanding into capability.
                 </p>
-                <p className="text-[1.125rem] leading-[1.8] text-[#6b6966]">
+                <p className="text-[1.125rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
                   That requires a different approach. One that draws on neuroscience, design, engineering, and the lived experience of high performance.
                 </p>
               </div>
@@ -54,22 +54,22 @@ export default function AboutPage() {
                 <img 
                   src={`${BASE_PATH}/ChatGPT Image Jan 14, 2026, 04_08_41 PM.png`} 
                   alt="Abstract architectural space" 
-                  className="absolute inset-0 w-full h-full object-cover object-center"
+                  className="absolute inset-0 w-full h-full object-cover object-center dark:opacity-40"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent dark:from-black/60 dark:to-black/20" />
               </div>
             </div>
           </header>
 
           {/* Team expertise - Grid */}
           <section className="reveal mb-24 md:mb-32">
-            <h2 className="text-[2rem] sm:text-[2.5rem] mb-14 md:mb-16 tracking-tight">
+            <h2 className="text-[2rem] sm:text-[2.5rem] mb-14 md:mb-16 tracking-tight dark:text-fg">
               Our Background
             </h2>
             
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
               {/* Neuroscience */}
-              <div className="group p-8 rounded-2xl border border-black/5 bg-white/50 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
+              <div className="group p-8 rounded-2xl border border-black/5 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
                   <div className="w-12 h-12 rounded-full border-2 border-[#cbb37c]/30 flex items-center justify-center group-hover:border-[#cbb37c] transition-colors duration-500">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#cbb37c]">
@@ -82,16 +82,16 @@ export default function AboutPage() {
                     </svg>
                   </div>
                 </div>
-                <h3 className="text-[1.125rem] font-medium tracking-tight text-[#1a1918] mb-4">
+                <h3 className="text-[1.125rem] font-medium tracking-tight text-[#1a1918] dark:text-fg mb-4">
                   Neuroscience
                 </h3>
-                <p className="text-[#6b6966] leading-[1.7] text-[0.9375rem]">
+                <p className="text-[#6b6966] dark:text-fg/70 leading-[1.7] text-[0.9375rem]">
                   We understand how the brain encodes, consolidates, and retrieves information. This isn't theoretical—it shapes every decision we make about how our tools work.
                 </p>
               </div>
 
               {/* Entrepreneurship */}
-              <div className="group p-8 rounded-2xl border border-black/5 bg-white/50 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
+              <div className="group p-8 rounded-2xl border border-black/5 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
                   <div className="w-12 h-12 rounded-full border-2 border-[#cbb37c]/30 flex items-center justify-center group-hover:border-[#cbb37c] transition-colors duration-500">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#cbb37c]">
@@ -101,16 +101,16 @@ export default function AboutPage() {
                     </svg>
                   </div>
                 </div>
-                <h3 className="text-[1.125rem] font-medium tracking-tight text-[#1a1918] mb-4">
+                <h3 className="text-[1.125rem] font-medium tracking-tight text-[#1a1918] dark:text-fg mb-4">
                   Entrepreneurship
                 </h3>
-                <p className="text-[#6b6966] leading-[1.7] text-[0.9375rem]">
+                <p className="text-[#6b6966] dark:text-fg/70 leading-[1.7] text-[0.9375rem]">
                   Serial founders who have built, scaled, and learned from both successes and failures. We know how to move from idea to reality.
                 </p>
               </div>
 
               {/* Design */}
-              <div className="group p-8 rounded-2xl border border-black/5 bg-white/50 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
+              <div className="group p-8 rounded-2xl border border-black/5 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
                   <div className="w-12 h-12 rounded-full border-2 border-[#cbb37c]/30 flex items-center justify-center group-hover:border-[#cbb37c] transition-colors duration-500">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#cbb37c]">
@@ -123,16 +123,16 @@ export default function AboutPage() {
                     </svg>
                   </div>
                 </div>
-                <h3 className="text-[1.125rem] font-medium tracking-tight text-[#1a1918] mb-4">
+                <h3 className="text-[1.125rem] font-medium tracking-tight text-[#1a1918] dark:text-fg mb-4">
                   Design
                 </h3>
-                <p className="text-[#6b6966] leading-[1.7] text-[0.9375rem]">
+                <p className="text-[#6b6966] dark:text-fg/70 leading-[1.7] text-[0.9375rem]">
                   Great tools feel obvious in retrospect. Getting there requires obsessive attention to detail and a willingness to start over when something doesn't work.
                 </p>
               </div>
 
               {/* Engineering */}
-              <div className="group p-8 rounded-2xl border border-black/5 bg-white/50 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
+              <div className="group p-8 rounded-2xl border border-black/5 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
                   <div className="w-12 h-12 rounded-full border-2 border-[#cbb37c]/30 flex items-center justify-center group-hover:border-[#cbb37c] transition-colors duration-500">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#cbb37c]">
@@ -143,16 +143,16 @@ export default function AboutPage() {
                     </svg>
                   </div>
                 </div>
-                <h3 className="text-[1.125rem] font-medium tracking-tight text-[#1a1918] mb-4">
+                <h3 className="text-[1.125rem] font-medium tracking-tight text-[#1a1918] dark:text-fg mb-4">
                   Engineering
                 </h3>
-                <p className="text-[#6b6966] leading-[1.7] text-[0.9375rem]">
+                <p className="text-[#6b6966] dark:text-fg/70 leading-[1.7] text-[0.9375rem]">
                   Deep technical expertise in building systems that work reliably at scale. We care about performance, not just features.
                 </p>
               </div>
 
               {/* Elite Performance */}
-              <div className="group p-8 rounded-2xl border border-black/5 bg-white/50 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
+              <div className="group p-8 rounded-2xl border border-black/5 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
                   <div className="w-12 h-12 rounded-full border-2 border-[#cbb37c]/30 flex items-center justify-center group-hover:border-[#cbb37c] transition-colors duration-500">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#cbb37c]">
@@ -160,10 +160,10 @@ export default function AboutPage() {
                     </svg>
                   </div>
                 </div>
-                <h3 className="text-[1.125rem] font-medium tracking-tight text-[#1a1918] mb-4">
+                <h3 className="text-[1.125rem] font-medium tracking-tight text-[#1a1918] dark:text-fg mb-4">
                   Elite Performance
                 </h3>
-                <p className="text-[#6b6966] leading-[1.7] text-[0.9375rem]">
+                <p className="text-[#6b6966] dark:text-fg/70 leading-[1.7] text-[0.9375rem]">
                   Experience at the highest levels of competitive sport. We know what it takes to improve through deliberate practice, feedback, and sustained effort over years.
                 </p>
               </div>
@@ -174,15 +174,15 @@ export default function AboutPage() {
           <section className="reveal mb-24 md:mb-32">
             <div className="grid md:grid-cols-2 gap-12 md:gap-20">
               <div>
-                <h2 className="text-[2rem] sm:text-[2.5rem] mb-8 tracking-tight">
+                <h2 className="text-[2rem] sm:text-[2.5rem] mb-8 tracking-tight dark:text-fg">
                   Why This Combination Matters
                 </h2>
               </div>
               <div className="space-y-6">
-                <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
+                <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
                   Building effective learning tools requires understanding how the mind works, what motivates behavior change, and how to craft experiences that feel natural rather than forced.
                 </p>
-                <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
+                <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
                   It also requires the discipline to build slowly, test rigorously, and accept that real insight takes time. We're not looking for quick wins. We're building for the long term.
                 </p>
               </div>
@@ -190,15 +190,15 @@ export default function AboutPage() {
           </section>
 
           {/* What we're building - Featured section with image */}
-          <section className="reveal mb-32 md:mb-40 relative overflow-hidden rounded-2xl border border-black/5">
+          <section className="reveal mb-32 md:mb-40 relative overflow-hidden rounded-2xl border border-black/5 dark:border-white/5">
             {/* Background image */}
             <div className="absolute inset-0">
               <img 
                 src={`${BASE_PATH}/ChatGPT Image Jan 14, 2026, 04_08_36 PM.png`} 
                 alt="Abstract space" 
-                className="w-full h-full object-cover opacity-10"
+                className="w-full h-full object-cover opacity-10 dark:opacity-5"
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-white via-white/95 to-white/80" />
+              <div className="absolute inset-0 bg-gradient-to-br from-white via-white/95 to-white/80 dark:from-[#0f0f0f] dark:via-[#0f0f0f]/95 dark:to-[#0f0f0f]/80" />
             </div>
             
             <div className="relative p-10 md:p-16">
@@ -208,14 +208,14 @@ export default function AboutPage() {
                     Our Mission
                   </span>
                 </span>
-                <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] mb-8 tracking-tight leading-[1.1]">
+                <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] mb-8 tracking-tight leading-[1.1] dark:text-fg">
                   What We're Building
                 </h2>
                 <div className="space-y-6">
-                  <p className="text-[1.125rem] leading-[1.8] text-[#6b6966]">
+                  <p className="text-[1.125rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
                     Tools that help people learn better. Starting with podcasts, expanding to other forms of long-form content, and eventually to any situation where sustained learning matters.
                   </p>
-                  <p className="text-[1.125rem] leading-[1.8] text-[#6b6966]">
+                  <p className="text-[1.125rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
                     Our first product is Luna—a podcast player designed around how learning actually works. It's the beginning of a longer journey.
                   </p>
                 </div>
@@ -224,7 +224,7 @@ export default function AboutPage() {
                     href="/projects"
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#cbb37c]/10 hover:bg-[#cbb37c]/20 border border-[#cbb37c]/20 hover:border-[#cbb37c]/40 transition-all duration-300 group"
                   >
-                    <span className="text-[0.9375rem] font-medium text-[#1a1918]">See our projects</span>
+                    <span className="text-[0.9375rem] font-medium text-[#1a1918] dark:text-fg">See our projects</span>
                     <svg 
                       width="16" 
                       height="16" 
@@ -248,8 +248,8 @@ export default function AboutPage() {
           </section>
 
           {/* Footer */}
-          <footer className="reveal pt-10 border-t border-black/5 flex justify-between items-center">
-            <span className="text-[0.6875rem] tracking-[0.08em] uppercase text-[#6b6966]/40">
+          <footer className="reveal pt-10 border-t border-black/5 dark:border-white/5 flex justify-between items-center">
+            <span className="text-[0.6875rem] tracking-[0.08em] uppercase text-[#6b6966]/40 dark:text-fg/40">
               Human Learning Lab
             </span>
             <Link href="/" className="link-hover text-[0.875rem]">

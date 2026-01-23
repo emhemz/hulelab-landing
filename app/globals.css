@@ -16,17 +16,35 @@
   --subtle: #2a2a2a;
 }
 
-/* Hide images in dark mode */
+/* Adjust images in dark mode */
 .dark img[alt="Learning"],
 .dark img[alt="Time"] {
-  opacity: 0;
-  pointer-events: none;
+  opacity: 0.8;
 }
 
-/* Adjust cards in dark mode */
+/* Brighten images in light mode */
+img[alt="Learning"],
+img[alt="Time"] {
+  filter: brightness(1.1);
+}
+
+.dark img[alt="Learning"],
+.dark img[alt="Time"] {
+  filter: none;
+}
+
+/* Adjust cards in light and dark mode */
+article {
+  background: rgba(255, 255, 255, 0.8);
+}
+
 .dark article {
   background: rgba(255, 255, 255, 0.02);
   border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+article:hover {
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .dark article:hover {

@@ -80,11 +80,11 @@ export default function ProjectsPage() {
                   </a>
                 </div>
               </div>
-              <div className="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-white via-[#fafaf8] to-[#f5f3f0] dark:from-[#0f0f0f] dark:via-[#151515] dark:to-[#1a1a1a] flex items-center justify-center">
+              <div className="relative w-full h-[500px] flex items-center justify-center">
                 <img 
                   src={`${BASE_PATH}/LUNA logo (5).png`} 
                   alt="Luna logo" 
-                  className="w-80 h-80 object-contain drop-shadow-xl"
+                  className="w-56 h-56 object-contain"
                 />
               </div>
             </div>

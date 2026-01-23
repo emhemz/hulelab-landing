@@ -36,8 +36,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${sourceSerif.variable} ${inter.variable}`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${sourceSerif.variable} ${inter.variable}`} suppressHydrationWarning>
         {children}
       </body>
     </html>
