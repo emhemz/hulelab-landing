@@ -80,7 +80,7 @@ export default function ProjectsPage() {
                   </a>
                 </div>
               </div>
-              <div className="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl bg-white dark:bg-gradient-to-br dark:from-[#1a1a1a] dark:to-[#0f0f0f]">
+              <div className="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-white via-[#fafaf8] to-[#f5f3f0] dark:from-[#1a1a1a] dark:via-[#151515] dark:to-[#0f0f0f]">
                 <img 
                   src={`${BASE_PATH}/luna.png`} 
                   alt="Luna podcast player" 
