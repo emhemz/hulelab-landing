@@ -80,11 +80,18 @@ export default function ProjectsPage() {
                   </a>
                 </div>
               </div>
-              <div className="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-white via-[#fafaf8] to-[#f5f3f0] dark:from-[#1a1a1a] dark:via-[#151515] dark:to-[#0f0f0f]">
+              <div className="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-white via-[#fafaf8] to-[#f5f3f0] dark:from-[#1a1a1a] dark:via-[#151515] dark:to-[#0f0f0f] flex items-center justify-center">
+                {/* Golden logo for light mode */}
                 <img 
-                  src={`${BASE_PATH}/luna.png`} 
-                  alt="Luna podcast player" 
-                  className="absolute inset-0 w-full h-full object-contain"
+                  src={`${BASE_PATH}/LUNA logo (5).png`} 
+                  alt="Luna logo" 
+                  className="w-64 h-64 object-contain dark:hidden"
+                />
+                {/* White logo for dark mode */}
+                <img 
+                  src={`${BASE_PATH}/luna_app_logo (2).png`} 
+                  alt="Luna logo" 
+                  className="w-64 h-64 object-contain hidden dark:block"
                 />
               </div>
             </div>
