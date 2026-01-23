@@ -80,7 +80,7 @@ export default function ProjectsPage() {
                   </a>
                 </div>
               </div>
-              <div className="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-white to-[#f5f3f0] dark:from-[#1a1a1a] dark:to-[#0f0f0f]">
+              <div className="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl bg-white dark:bg-gradient-to-br dark:from-[#1a1a1a] dark:to-[#0f0f0f]">
                 <img 
                   src={`${BASE_PATH}/luna.png`} 
                   alt="Luna podcast player" 
@@ -91,7 +91,7 @@ export default function ProjectsPage() {
           </section>
 
           {/* Philosophy */}
-          <section className="mb-24 md:mb-32 relative overflow-hidden rounded-2xl p-8 md:p-12 bg-white dark:bg-white/5 backdrop-blur-sm border border-[#e8e6e2] dark:border-white/5 shadow-lg dark:shadow-none">
+          <section className="mb-24 md:mb-32 relative overflow-hidden rounded-2xl p-8 md:p-12 bg-white dark:bg-white/5 backdrop-blur-sm border-2 border-[#d4cdc1] dark:border-white/5 shadow-xl dark:shadow-none">
             <h2 className="text-[1.5rem] sm:text-[1.75rem] mb-6 dark:text-fg">
               Our Approach
             </h2>
