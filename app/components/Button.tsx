@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 interface ButtonProps {
   href: string;
@@ -9,15 +12,25 @@ interface ButtonProps {
 }
 
 export default function Button({ href, children, external = false, icon = 'arrow-right', variant = 'default' }: ButtonProps) {
-  const baseClasses = "group relative inline-flex items-center gap-3 bg-[#cbb37c]/25 dark:bg-[#d4be8a]/10 border border-[#cbb37c]/40 dark:border-[#d4be8a]/30 rounded-lg hover:border-[#cbb37c] dark:hover:border-[#d4be8a] hover:shadow-[0_12px_40px_-12px_rgba(203,179,124,0.6)] dark:hover:shadow-[0_12px_40px_-12px_rgba(212,190,138,0.5)] hover:scale-105 hover:-translate-y-0.5 transition-all duration-300 ease-out overflow-hidden";
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const checkDark = () => setIsDark(document.documentElement.classList.contains('dark'));
+    checkDark();
+    const observer = new MutationObserver(checkDark);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
+  }, []);
+
+  const baseClasses = "group relative inline-flex items-center gap-3 bg-[#cbb37c]/30 dark:bg-[#d4be8a]/10 border border-[#cbb37c]/50 dark:border-[#d4be8a]/30 rounded-lg hover:border-[#cbb37c] dark:hover:border-[#d4be8a] hover:shadow-[0_12px_40px_-12px_rgba(203,179,124,0.6)] dark:hover:shadow-[0_12px_40px_-12px_rgba(212,190,138,0.5)] hover:scale-105 hover:-translate-y-0.5 transition-all duration-300 ease-out overflow-hidden";
   
   const sizeClasses = variant === 'large' 
     ? "px-5 py-2 text-[1.5rem] sm:text-[1.75rem]" 
     : "px-6 py-3 text-[0.9375rem]";
   
-  const textClasses = "relative z-10 text-[#1a1918] dark:text-[#e8e6e2] group-hover:!text-white transition-colors duration-300 font-medium";
+  const textClasses = "relative z-20 transition-colors duration-300 font-normal";
   
-  const iconClasses = "relative z-10 group-hover:translate-x-1.5 transition-all duration-300";
+  const iconClasses = "relative z-20 group-hover:translate-x-1.5 transition-all duration-300";
 
   const renderIcon = () => {
     if (icon === 'external') {
@@ -46,8 +59,10 @@ export default function Button({ href, children, external = false, icon = 'arrow
   const content = (
     <>
       {/* Fill animation from left to right */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#cbb37c] to-[#b8a066] dark:from-[#d4be8a] dark:to-[#c0aa76] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out" />
-      <span className={textClasses}>{children}</span>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#cbb37c] to-[#b8a066] dark:from-[#d4be8a] dark:to-[#c0aa76] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0" />
+      <span className={textClasses} style={{ color: isDark ? '#e8e6e2' : '#1a1510' }}>
+        {children}
+      </span>
       {renderIcon()}
     </>
   );

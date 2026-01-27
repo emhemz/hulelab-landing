@@ -160,7 +160,7 @@ export default function Header() {
 
           {/* Dropdown Menu - macOS Dock style */}
           <div 
-            className={`absolute top-full right-0 pt-3 flex flex-col gap-3 transition-all duration-300 ease-out origin-top-right ${
+            className={`absolute top-full right-0 pt-3 flex flex-col gap-3 transition-opacity duration-150 ease-out origin-top-right ${
               menuOpen 
                 ? 'opacity-100 pointer-events-auto' 
                 : 'opacity-0 pointer-events-none'
