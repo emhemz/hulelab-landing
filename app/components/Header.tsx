@@ -240,17 +240,17 @@ export default function Header() {
                 className="px-5 py-3 rounded-xl transition-all duration-300 flex items-center justify-between gap-8 group-hover:scale-110 group-hover:rotate-2"
                 style={{
                   background: darkMode
-                    ? 'linear-gradient(135deg, rgba(30,30,30,0.6) 0%, rgba(30,30,30,0.4) 50%, rgba(30,30,30,0.5) 100%)'
+                    ? 'linear-gradient(135deg, rgba(50,50,50,0.7) 0%, rgba(40,40,40,0.6) 50%, rgba(45,45,45,0.65) 100%)'
                     : (scrolled
                         ? 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.92) 100%)'
                         : 'linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0.45) 100%)'),
                   backdropFilter: 'blur(20px) saturate(180%)',
                   WebkitBackdropFilter: 'blur(20px) saturate(180%)',
                   border: darkMode 
-                    ? '1px solid rgba(255,255,255,0.08)'
+                    ? '1px solid rgba(255,255,255,0.15)'
                     : '1px solid rgba(255,255,255,0.6)',
                   boxShadow: darkMode
-                    ? '0 4px 16px -4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)'
+                    ? '0 4px 16px -4px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08)'
                     : '0 4px 16px -4px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.8)',
                 }}
               >
