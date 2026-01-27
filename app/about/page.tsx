@@ -200,7 +200,7 @@ export default function AboutPage() {
           </section>
 
           {/* What we're building - Featured section with image */}
-          <section className="reveal mb-32 md:mb-40 relative overflow-hidden rounded-2xl border border-black/5 dark:border-white/5" style={{ backgroundColor: isDark ? 'transparent' : '#ffffff' }}>
+          <section className="reveal mb-32 md:mb-40 relative overflow-hidden rounded-2xl border-[3px] border-black/30 shadow-md dark:border dark:border-white/10 dark:shadow-none" style={{ backgroundColor: isDark ? 'transparent' : '#ffffff' }}>
             {/* Background image - only in dark mode */}
             <div className="absolute inset-0" style={{ display: isDark ? 'block' : 'none' }}>
               <img 
