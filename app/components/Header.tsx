@@ -177,11 +177,10 @@ export default function Header() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="group relative"
+                  className="group"
                   style={{
                     animation: menuOpen ? `slideIn 0.4s ease-out ${index * 0.1}s both` : 'none',
-                    background: 'transparent',
-                    border: 'none',
+                    display: 'contents',
                   }}
                   onClick={() => setMenuOpen(false)}
                 >
@@ -234,12 +233,10 @@ export default function Header() {
             {/* Theme toggle button */}
             <button
               onClick={toggleTheme}
-              className="group relative"
+              className="group"
               style={{
                 animation: menuOpen ? `slideIn 0.4s ease-out ${navLinks.length * 0.1}s both` : 'none',
-                background: 'transparent',
-                border: 'none',
-                padding: 0,
+                display: 'contents',
               }}
             >
               <div 
