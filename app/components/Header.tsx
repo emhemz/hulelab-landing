@@ -116,20 +116,20 @@ export default function Header() {
             style={{
               background: darkMode
                 ? (scrolled 
-                    ? 'linear-gradient(135deg, rgba(30,30,30,0.8) 0%, rgba(30,30,30,0.6) 50%, rgba(30,30,30,0.7) 100%)'
-                    : 'linear-gradient(135deg, rgba(30,30,30,0.6) 0%, rgba(30,30,30,0.4) 50%, rgba(30,30,30,0.5) 100%)')
+                    ? 'linear-gradient(135deg, rgba(60,60,60,0.85) 0%, rgba(50,50,50,0.75) 50%, rgba(55,55,55,0.82) 100%)'
+                    : 'linear-gradient(135deg, rgba(50,50,50,0.7) 0%, rgba(40,40,40,0.6) 50%, rgba(45,45,45,0.65) 100%)')
                 : (scrolled 
                     ? 'linear-gradient(135deg, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.72) 50%, rgba(255,255,255,0.82) 100%)'
                     : 'linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.28) 50%, rgba(255,255,255,0.38) 100%)'),
               backdropFilter: scrolled ? 'blur(24px) saturate(200%)' : 'blur(16px) saturate(160%)',
               WebkitBackdropFilter: scrolled ? 'blur(24px) saturate(200%)' : 'blur(16px) saturate(160%)',
               border: darkMode
-                ? (scrolled ? '1px solid rgba(255,255,255,0.1)' : '1px solid rgba(255,255,255,0.08)')
+                ? (scrolled ? '1px solid rgba(255,255,255,0.15)' : '1px solid rgba(255,255,255,0.15)')
                 : (scrolled ? '1px solid rgba(0,0,0,0.06)' : '1px solid rgba(255,255,255,0.5)'),
               boxShadow: darkMode
                 ? (scrolled 
-                    ? '0 4px 24px -4px rgba(0,0,0,0.25), 0 2px 6px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.08)'
-                    : '0 2px 16px -2px rgba(0,0,0,0.2), 0 1px 2px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.05)')
+                    ? '0 4px 24px -4px rgba(0,0,0,0.4), 0 2px 6px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.12)'
+                    : '0 2px 16px -2px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.08)')
                 : (scrolled 
                     ? '0 4px 24px -4px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.95)'
                     : '0 2px 16px -2px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.03), inset 0 1px 0 rgba(255,255,255,0.7)'),
