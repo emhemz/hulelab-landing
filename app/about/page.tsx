@@ -79,7 +79,7 @@ export default function AboutPage() {
             
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
               {/* Neuroscience */}
-              <div className="group p-8 rounded-2xl border-2 border-[#cbb37c]/50 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-[0_8px_30px_rgba(203,179,124,0.25)] dark:shadow-none hover:border-[#cbb37c]/70 hover:shadow-[0_12px_40px_rgba(203,179,124,0.35)] dark:hover:border-[#cbb37c]/30 dark:hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
+              <div className="group p-8 rounded-2xl border-2 border-[#cbb37c]/50 dark:border dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-[0_8px_30px_rgba(203,179,124,0.25)] dark:shadow-none hover:border-[#cbb37c]/70 hover:shadow-[0_12px_40px_rgba(203,179,124,0.35)] dark:hover:border-[#cbb37c]/30 dark:hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
                   <div className="w-12 h-12 rounded-full border-2 border-[#cbb37c]/30 flex items-center justify-center group-hover:border-[#cbb37c] transition-colors duration-500">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#cbb37c]">
@@ -101,7 +101,7 @@ export default function AboutPage() {
               </div>
 
               {/* Entrepreneurship */}
-              <div className="group p-8 rounded-2xl border-2 border-[#cbb37c]/50 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-[0_8px_30px_rgba(203,179,124,0.25)] dark:shadow-none hover:border-[#cbb37c]/70 hover:shadow-[0_12px_40px_rgba(203,179,124,0.35)] dark:hover:border-[#cbb37c]/30 dark:hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
+              <div className="group p-8 rounded-2xl border-2 border-[#cbb37c]/50 dark:border dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-[0_8px_30px_rgba(203,179,124,0.25)] dark:shadow-none hover:border-[#cbb37c]/70 hover:shadow-[0_12px_40px_rgba(203,179,124,0.35)] dark:hover:border-[#cbb37c]/30 dark:hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
                   <div className="w-12 h-12 rounded-full border-2 border-[#cbb37c]/30 flex items-center justify-center group-hover:border-[#cbb37c] transition-colors duration-500">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#cbb37c]">
@@ -120,7 +120,7 @@ export default function AboutPage() {
               </div>
 
               {/* Design */}
-              <div className="group p-8 rounded-2xl border-2 border-[#cbb37c]/50 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-[0_8px_30px_rgba(203,179,124,0.25)] dark:shadow-none hover:border-[#cbb37c]/70 hover:shadow-[0_12px_40px_rgba(203,179,124,0.35)] dark:hover:border-[#cbb37c]/30 dark:hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
+              <div className="group p-8 rounded-2xl border-2 border-[#cbb37c]/50 dark:border dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-[0_8px_30px_rgba(203,179,124,0.25)] dark:shadow-none hover:border-[#cbb37c]/70 hover:shadow-[0_12px_40px_rgba(203,179,124,0.35)] dark:hover:border-[#cbb37c]/30 dark:hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
                   <div className="w-12 h-12 rounded-full border-2 border-[#cbb37c]/30 flex items-center justify-center group-hover:border-[#cbb37c] transition-colors duration-500">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#cbb37c]">
@@ -142,7 +142,7 @@ export default function AboutPage() {
               </div>
 
               {/* Engineering */}
-              <div className="group p-8 rounded-2xl border-2 border-[#cbb37c]/50 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-[0_8px_30px_rgba(203,179,124,0.25)] dark:shadow-none hover:border-[#cbb37c]/70 hover:shadow-[0_12px_40px_rgba(203,179,124,0.35)] dark:hover:border-[#cbb37c]/30 dark:hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
+              <div className="group p-8 rounded-2xl border-2 border-[#cbb37c]/50 dark:border dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-[0_8px_30px_rgba(203,179,124,0.25)] dark:shadow-none hover:border-[#cbb37c]/70 hover:shadow-[0_12px_40px_rgba(203,179,124,0.35)] dark:hover:border-[#cbb37c]/30 dark:hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
                   <div className="w-12 h-12 rounded-full border-2 border-[#cbb37c]/30 flex items-center justify-center group-hover:border-[#cbb37c] transition-colors duration-500">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#cbb37c]">
@@ -162,7 +162,7 @@ export default function AboutPage() {
               </div>
 
               {/* Elite Performance */}
-              <div className="group p-8 rounded-2xl border-2 border-[#cbb37c]/50 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-[0_8px_30px_rgba(203,179,124,0.25)] dark:shadow-none hover:border-[#cbb37c]/70 hover:shadow-[0_12px_40px_rgba(203,179,124,0.35)] dark:hover:border-[#cbb37c]/30 dark:hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
+              <div className="group p-8 rounded-2xl border-2 border-[#cbb37c]/50 dark:border dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-[0_8px_30px_rgba(203,179,124,0.25)] dark:shadow-none hover:border-[#cbb37c]/70 hover:shadow-[0_12px_40px_rgba(203,179,124,0.35)] dark:hover:border-[#cbb37c]/30 dark:hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
                   <div className="w-12 h-12 rounded-full border-2 border-[#cbb37c]/30 flex items-center justify-center group-hover:border-[#cbb37c] transition-colors duration-500">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#cbb37c]">
