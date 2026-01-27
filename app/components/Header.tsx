@@ -184,10 +184,11 @@ export default function Header() {
                   onClick={() => setMenuOpen(false)}
                 >
                   <div 
-                    className={`px-5 py-3 rounded-xl transition-all duration-300 flex items-center justify-between gap-8 group-hover:scale-110 group-hover:rotate-2 ${
+                    className={`px-5 py-3 transition-all duration-300 flex items-center justify-between gap-8 group-hover:scale-110 group-hover:rotate-2 ${
                       isActive ? 'pr-3' : ''
                     }`}
                     style={{
+                      borderRadius: '0.75rem',
                       background: darkMode
                         ? (isActive
                             ? 'linear-gradient(135deg, rgba(60,60,60,0.85) 0%, rgba(50,50,50,0.75) 50%, rgba(55,55,55,0.82) 100%)'
@@ -237,8 +238,9 @@ export default function Header() {
               }}
             >
               <div 
-                className="px-5 py-3 rounded-xl transition-all duration-300 flex items-center justify-between gap-8 group-hover:scale-110 group-hover:rotate-2"
+                className="px-5 py-3 transition-all duration-300 flex items-center justify-between gap-8 group-hover:scale-110 group-hover:rotate-2"
                 style={{
+                  borderRadius: '0.75rem',
                   background: darkMode
                     ? 'linear-gradient(135deg, rgba(50,50,50,0.7) 0%, rgba(40,40,40,0.6) 50%, rgba(45,45,45,0.65) 100%)'
                     : (scrolled
