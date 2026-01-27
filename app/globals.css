@@ -67,20 +67,6 @@ article:hover {
   color: var(--muted);
 }
 
-/* Dark mode navigation/header glassmorphism */
-.dark nav button,
-.dark nav a {
-  background: rgba(30, 30, 30, 0.6) !important;
-  border-color: rgba(255, 255, 255, 0.1) !important;
-  backdrop-filter: blur(20px) saturate(180%) !important;
-}
-
-.dark nav button:hover,
-.dark nav a:hover {
-  background: rgba(40, 40, 40, 0.8) !important;
-  border-color: rgba(212, 190, 138, 0.3) !important;
-}
-
 /* Dark mode hamburger icon visibility - only target the 3 lines in hamburger button */
 .dark .hamburger-button > div {
   background: rgba(212, 190, 138, 0.8) !important;
