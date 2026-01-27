@@ -180,6 +180,8 @@ export default function Header() {
                   className="group relative"
                   style={{
                     animation: menuOpen ? `slideIn 0.4s ease-out ${index * 0.1}s both` : 'none',
+                    background: 'transparent',
+                    border: 'none',
                   }}
                   onClick={() => setMenuOpen(false)}
                 >
@@ -235,6 +237,9 @@ export default function Header() {
               className="group relative"
               style={{
                 animation: menuOpen ? `slideIn 0.4s ease-out ${navLinks.length * 0.1}s both` : 'none',
+                background: 'transparent',
+                border: 'none',
+                padding: 0,
               }}
             >
               <div 
