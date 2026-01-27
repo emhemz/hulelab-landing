@@ -60,13 +60,13 @@ export default function AboutPage() {
                   That requires a different approach. One that draws on neuroscience, design, engineering, and the lived experience of high performance.
                 </p>
               </div>
-              <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-sm dark:shadow-2xl">
                 <img 
                   src={`${BASE_PATH}/ChatGPT Image Jan 14, 2026, 04_08_41 PM.png`} 
                   alt="Abstract architectural space" 
-                  className="absolute inset-0 w-full h-full object-cover object-center brightness-125 dark:opacity-40 dark:brightness-100"
+                  className="absolute inset-0 w-full h-full object-cover object-center dark:opacity-40 dark:brightness-100"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-white/5 to-transparent dark:from-black/60 dark:to-black/20" />
+                <div className="absolute inset-0 hidden dark:block dark:bg-gradient-to-t dark:from-black/60 dark:to-black/20" />
               </div>
             </div>
           </header>
