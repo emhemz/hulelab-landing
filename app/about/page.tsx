@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Header from "../components/Header";
 import Button from "../components/Button";
@@ -25,6 +25,15 @@ function useReveal() {
 
 export default function AboutPage() {
   const containerRef = useReveal();
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const checkDark = () => setIsDark(document.documentElement.classList.contains('dark'));
+    checkDark();
+    const observer = new MutationObserver(checkDark);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>
@@ -191,9 +200,9 @@ export default function AboutPage() {
           </section>
 
           {/* What we're building - Featured section with image */}
-          <section className="reveal mb-32 md:mb-40 relative overflow-hidden rounded-2xl border border-black/5 dark:border-white/5 bg-white dark:bg-transparent">
+          <section className="reveal mb-32 md:mb-40 relative overflow-hidden rounded-2xl border border-black/5 dark:border-white/5" style={{ backgroundColor: isDark ? 'transparent' : '#ffffff' }}>
             {/* Background image - only in dark mode */}
-            <div className="absolute inset-0 hidden dark:block">
+            <div className="absolute inset-0" style={{ display: isDark ? 'block' : 'none' }}>
               <img 
                 src={`${BASE_PATH}/ChatGPT Image Jan 14, 2026, 04_08_36 PM.png`} 
                 alt="Abstract space" 
