@@ -91,7 +91,7 @@ export default function ProjectsPage() {
           </section>
 
           {/* Philosophy */}
-          <section className="mb-24 md:mb-32 relative overflow-hidden rounded-2xl p-8 md:p-12 bg-white dark:bg-white/5 backdrop-blur-sm border-2 border-[#d4cdc1] dark:border-white/5 shadow-xl dark:shadow-none">
+          <section className="mb-24 md:mb-32 relative overflow-hidden rounded-2xl p-8 md:p-12 bg-gradient-to-br from-[#cbb37c]/5 to-transparent dark:from-[#cbb37c]/10 dark:to-transparent backdrop-blur-sm border-2 border-[#cbb37c]/10 dark:border-white/5 shadow-xl dark:shadow-none">
             <h2 className="text-[1.5rem] sm:text-[1.75rem] mb-6 dark:text-fg">
               Our Approach
             </h2>

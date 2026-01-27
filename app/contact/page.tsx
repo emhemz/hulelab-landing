@@ -92,9 +92,9 @@ export default function ContactPage() {
               <img 
                 src={`${BASE_PATH}/ChatGPT Image Jan 14, 2026, 04_08_43 PM.png`} 
                 alt="Abstract architectural space" 
-                className="absolute inset-0 w-full h-full object-cover object-center dark:opacity-30"
+                className="absolute inset-0 w-full h-full object-cover object-center opacity-80 dark:opacity-30"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent dark:from-black/80 dark:via-black/40 dark:to-black/20" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent dark:from-black/80 dark:via-black/40 dark:to-black/20" />
               <div className="absolute bottom-8 left-8 right-8">
                 <p className="text-white dark:text-white font-medium text-[1.125rem] leading-[1.7] max-w-[500px] drop-shadow-lg">
                   We're building tools for how people actually learn. If that resonates with you, we'd love to hear from you.

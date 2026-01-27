@@ -201,7 +201,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </h1>
 
             {/* Content */}
-            <div className="prose prose-custom max-w-none">
+            <div className="max-w-none">
               {post.content.split('\n\n').map((paragraph, i) => (
                 <p key={i} className="text-[#6b6966] dark:text-fg/70 leading-[1.8] mb-6 text-[1.0625rem]">
                   {paragraph}

@@ -190,8 +190,8 @@ export default function Header() {
                     style={{
                       background: darkMode
                         ? (isActive
-                            ? 'linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.06) 100%)'
-                            : 'transparent')
+                            ? 'linear-gradient(135deg, rgba(30,30,30,0.8) 0%, rgba(30,30,30,0.6) 50%, rgba(30,30,30,0.7) 100%)'
+                            : 'linear-gradient(135deg, rgba(30,30,30,0.6) 0%, rgba(30,30,30,0.4) 50%, rgba(30,30,30,0.5) 100%)')
                         : (scrolled || isActive
                             ? 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.92) 100%)'
                             : 'linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0.45) 100%)'),
@@ -199,13 +199,13 @@ export default function Header() {
                       WebkitBackdropFilter: 'blur(20px) saturate(180%)',
                       border: isActive 
                         ? (darkMode ? '1px solid rgba(212,190,138,0.3)' : '1px solid rgba(203,179,124,0.3)')
-                        : (darkMode ? 'none' : '1px solid rgba(255,255,255,0.6)'),
+                        : (darkMode ? '1px solid rgba(255,255,255,0.08)' : '1px solid rgba(255,255,255,0.6)'),
                       boxShadow: isActive 
                         ? (darkMode 
                             ? '0 8px 32px -8px rgba(212,190,138,0.25), inset 0 1px 0 rgba(255,255,255,0.08)'
                             : '0 8px 32px -8px rgba(203,179,124,0.4), inset 0 1px 0 rgba(255,255,255,0.9)')
                         : (darkMode
-                            ? '0 4px 16px -4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.05)'
+                            ? '0 4px 16px -4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)'
                             : '0 4px 16px -4px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.8)'),
                     }}
                   >
@@ -240,17 +240,17 @@ export default function Header() {
                 className="px-5 py-3 rounded-xl transition-all duration-300 flex items-center justify-between gap-8 group-hover:scale-110 group-hover:rotate-2"
                 style={{
                   background: darkMode
-                    ? 'transparent'
+                    ? 'linear-gradient(135deg, rgba(30,30,30,0.6) 0%, rgba(30,30,30,0.4) 50%, rgba(30,30,30,0.5) 100%)'
                     : (scrolled
                         ? 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.92) 100%)'
                         : 'linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0.45) 100%)'),
                   backdropFilter: 'blur(20px) saturate(180%)',
                   WebkitBackdropFilter: 'blur(20px) saturate(180%)',
                   border: darkMode 
-                    ? 'none'
+                    ? '1px solid rgba(255,255,255,0.08)'
                     : '1px solid rgba(255,255,255,0.6)',
                   boxShadow: darkMode
-                    ? '0 4px 16px -4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.05)'
+                    ? '0 4px 16px -4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)'
                     : '0 4px 16px -4px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.8)',
                 }}
               >
