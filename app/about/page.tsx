@@ -55,9 +55,9 @@ export default function AboutPage() {
                 <img 
                   src={`${BASE_PATH}/ChatGPT Image Jan 14, 2026, 04_08_41 PM.png`} 
                   alt="Abstract architectural space" 
-                  className="absolute inset-0 w-full h-full object-cover object-center opacity-70 dark:opacity-40"
+                  className="absolute inset-0 w-full h-full object-cover object-center brightness-125 dark:opacity-40 dark:brightness-100"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent dark:from-black/60 dark:to-black/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white/5 to-transparent dark:from-black/60 dark:to-black/20" />
               </div>
             </div>
           </header>
@@ -70,7 +70,7 @@ export default function AboutPage() {
             
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
               {/* Neuroscience */}
-              <div className="group p-8 rounded-2xl border border-[#cbb37c]/30 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] dark:shadow-none hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
+              <div className="group p-8 rounded-2xl border-2 border-[#cbb37c]/50 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-[0_8px_30px_rgba(203,179,124,0.25)] dark:shadow-none hover:border-[#cbb37c]/70 hover:shadow-[0_12px_40px_rgba(203,179,124,0.35)] dark:hover:border-[#cbb37c]/30 dark:hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
                   <div className="w-12 h-12 rounded-full border-2 border-[#cbb37c]/30 flex items-center justify-center group-hover:border-[#cbb37c] transition-colors duration-500">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#cbb37c]">
@@ -92,7 +92,7 @@ export default function AboutPage() {
               </div>
 
               {/* Entrepreneurship */}
-              <div className="group p-8 rounded-2xl border border-[#cbb37c]/30 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] dark:shadow-none hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
+              <div className="group p-8 rounded-2xl border-2 border-[#cbb37c]/50 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-[0_8px_30px_rgba(203,179,124,0.25)] dark:shadow-none hover:border-[#cbb37c]/70 hover:shadow-[0_12px_40px_rgba(203,179,124,0.35)] dark:hover:border-[#cbb37c]/30 dark:hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
                   <div className="w-12 h-12 rounded-full border-2 border-[#cbb37c]/30 flex items-center justify-center group-hover:border-[#cbb37c] transition-colors duration-500">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#cbb37c]">
@@ -111,7 +111,7 @@ export default function AboutPage() {
               </div>
 
               {/* Design */}
-              <div className="group p-8 rounded-2xl border border-[#cbb37c]/30 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] dark:shadow-none hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
+              <div className="group p-8 rounded-2xl border-2 border-[#cbb37c]/50 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-[0_8px_30px_rgba(203,179,124,0.25)] dark:shadow-none hover:border-[#cbb37c]/70 hover:shadow-[0_12px_40px_rgba(203,179,124,0.35)] dark:hover:border-[#cbb37c]/30 dark:hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
                   <div className="w-12 h-12 rounded-full border-2 border-[#cbb37c]/30 flex items-center justify-center group-hover:border-[#cbb37c] transition-colors duration-500">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#cbb37c]">
@@ -133,7 +133,7 @@ export default function AboutPage() {
               </div>
 
               {/* Engineering */}
-              <div className="group p-8 rounded-2xl border border-[#cbb37c]/30 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] dark:shadow-none hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
+              <div className="group p-8 rounded-2xl border-2 border-[#cbb37c]/50 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-[0_8px_30px_rgba(203,179,124,0.25)] dark:shadow-none hover:border-[#cbb37c]/70 hover:shadow-[0_12px_40px_rgba(203,179,124,0.35)] dark:hover:border-[#cbb37c]/30 dark:hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
                   <div className="w-12 h-12 rounded-full border-2 border-[#cbb37c]/30 flex items-center justify-center group-hover:border-[#cbb37c] transition-colors duration-500">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#cbb37c]">
@@ -153,7 +153,7 @@ export default function AboutPage() {
               </div>
 
               {/* Elite Performance */}
-              <div className="group p-8 rounded-2xl border border-[#cbb37c]/30 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] dark:shadow-none hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
+              <div className="group p-8 rounded-2xl border-2 border-[#cbb37c]/50 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-[0_8px_30px_rgba(203,179,124,0.25)] dark:shadow-none hover:border-[#cbb37c]/70 hover:shadow-[0_12px_40px_rgba(203,179,124,0.35)] dark:hover:border-[#cbb37c]/30 dark:hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
                 <div className="mb-6">
                   <div className="w-12 h-12 rounded-full border-2 border-[#cbb37c]/30 flex items-center justify-center group-hover:border-[#cbb37c] transition-colors duration-500">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#cbb37c]">
@@ -191,15 +191,15 @@ export default function AboutPage() {
           </section>
 
           {/* What we're building - Featured section with image */}
-          <section className="reveal mb-32 md:mb-40 relative overflow-hidden rounded-2xl border border-black/5 dark:border-white/5">
-            {/* Background image */}
-            <div className="absolute inset-0">
+          <section className="reveal mb-32 md:mb-40 relative overflow-hidden rounded-2xl border border-black/5 dark:border-white/5 bg-white dark:bg-transparent">
+            {/* Background image - only in dark mode */}
+            <div className="absolute inset-0 hidden dark:block">
               <img 
                 src={`${BASE_PATH}/ChatGPT Image Jan 14, 2026, 04_08_36 PM.png`} 
                 alt="Abstract space" 
-                className="w-full h-full object-cover opacity-10 dark:opacity-5"
+                className="w-full h-full object-cover opacity-5"
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-white via-white/95 to-white/80 dark:from-[#0f0f0f] dark:via-[#0f0f0f]/95 dark:to-[#0f0f0f]/80" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#0f0f0f] via-[#0f0f0f]/95 to-[#0f0f0f]/80" />
             </div>
             
             <div className="relative p-10 md:p-16">
