@@ -73,9 +73,9 @@ function PostPreview({ post, index }: { post: typeof posts[0]; index: number }) 
       href={`/blog/${post.slug}`}
       className="group reveal block h-full"
     >
-      <article className="relative h-full p-8 md:p-10 transition-all duration-500 ease-out rounded-2xl border border-black/5 bg-white/50 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.25)] hover:-translate-y-1">
+      <article className="relative h-full p-8 md:p-10 transition-all duration-500 ease-out rounded-2xl border border-[#1a1918]/5 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm hover:border-[#cbb37c]/30 dark:hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.25)] dark:hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] hover:-translate-y-1">
         {/* Number badge */}
-        <div className="absolute top-8 md:top-10 right-8 md:right-10 text-[4rem] font-serif leading-none text-[#1a1918]/5 group-hover:text-[#cbb37c]/15 transition-colors duration-500 select-none">
+        <div className="absolute top-8 md:top-10 right-8 md:right-10 text-[4rem] font-serif leading-none text-[#1a1918]/5 dark:text-white/5 group-hover:text-[#cbb37c]/15 dark:group-hover:text-[#cbb37c]/15 transition-colors duration-500 select-none">
           0{index + 1}
         </div>
         
@@ -89,17 +89,17 @@ function PostPreview({ post, index }: { post: typeof posts[0]; index: number }) 
           </div>
 
           {/* Title */}
-          <h2 className="text-[1.75rem] sm:text-[2rem] mb-5 leading-[1.15] tracking-tight group-hover:text-[#cbb37c] transition-colors duration-500">
+          <h2 className="text-[1.75rem] sm:text-[2rem] mb-5 leading-[1.15] tracking-tight dark:text-fg group-hover:text-[#cbb37c] dark:group-hover:text-accent transition-colors duration-500">
             {post.title}
           </h2>
 
           {/* Excerpt */}
-          <p className="text-[#6b6966] text-[1.0625rem] leading-[1.8] mb-8 group-hover:text-[#1a1918] transition-colors duration-500">
+          <p className="text-[#6b6966] dark:text-fg/70 text-[1.0625rem] leading-[1.8] mb-8 group-hover:text-[#1a1918] dark:group-hover:text-fg transition-colors duration-500">
             {post.excerpt}
           </p>
 
           {/* Read more link */}
-          <div className="inline-flex items-center gap-2 text-[0.9375rem] text-[#1a1918] group-hover:text-[#cbb37c] transition-colors duration-500 font-medium">
+          <div className="inline-flex items-center gap-2 text-[0.9375rem] text-[#1a1918] dark:text-fg group-hover:text-[#cbb37c] dark:group-hover:text-accent transition-colors duration-500 font-medium">
             <span>Read article</span>
             <svg 
               width="14" 
@@ -138,10 +138,10 @@ export default function BlogPage() {
         <div ref={containerRef} className="max-w-[1400px] mx-auto px-10 sm:px-16 pt-32 md:pt-44 pb-32">
           {/* Page title */}
           <header className="mb-16 md:mb-24">
-            <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[4rem] leading-[1] tracking-[-0.04em] mb-5">
+            <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[4rem] leading-[1] tracking-[-0.04em] mb-5 dark:text-fg">
               Blog
             </h1>
-            <p className="text-[#6b6966] text-[1.0625rem] leading-[1.8] max-w-[540px]">
+            <p className="text-[#6b6966] dark:text-fg/70 text-[1.0625rem] leading-[1.8] max-w-[540px]">
               Thoughts on learning, tools, and the future.
             </p>
           </header>
@@ -154,9 +154,9 @@ export default function BlogPage() {
           </div>
 
           {/* Footer */}
-          <footer className="reveal mt-32 md:mt-40 pt-10 border-t border-black/5">
+          <footer className="reveal mt-32 md:mt-40 pt-10 border-t border-black/5 dark:border-white/5">
             <div className="flex items-center justify-between">
-              <span className="text-[0.6875rem] tracking-[0.08em] uppercase text-[#6b6966]/40">
+              <span className="text-[0.6875rem] tracking-[0.08em] uppercase text-[#6b6966]/40 dark:text-fg/40">
                 Human Learning Lab
               </span>
               <Link href="/" className="link-hover text-[0.875rem]">
