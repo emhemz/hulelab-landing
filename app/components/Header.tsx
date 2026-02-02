@@ -4,8 +4,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
-const BASE_PATH = process.env.NODE_ENV === 'production' ? '/hulelab-landing' : '';
-
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -91,7 +89,7 @@ export default function Header() {
           }}
         >
           <img 
-            src={`${BASE_PATH}/logo.svg`}
+            src="/logo.svg"
             alt="Human Learning Lab" 
             width={20} 
             height={20}

@@ -4,8 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import Header from "./components/Header";
 import Button from "./components/Button";
 
-const BASE_PATH = process.env.NODE_ENV === 'production' ? '/hulelab-landing' : '';
-
 // Get scroll progress and scrollY
 function useScroll() {
   const [state, setState] = useState({ progress: 0, scrollY: 0, scrolled: false });
@@ -222,7 +220,7 @@ function WorkCard({
       {imageSrc && (
         <div className="relative h-96 overflow-hidden">
           <img 
-            src={`${BASE_PATH}${imageSrc}`}
+            src={imageSrc}
             alt={title} 
             className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
           />
@@ -306,7 +304,7 @@ const icons = {
 function Logo({ className = "", size = 32 }: { className?: string; size?: number }) {
   return (
     <img 
-      src={`${BASE_PATH}/logo.svg`}
+      src="/logo.svg"
       alt="Human Learning Lab" 
       width={size} 
       height={size} 
@@ -340,7 +338,7 @@ function LunaSection() {
           <div className="mb-6">
             <div className="flex items-center gap-3">
               <img
-                src={`${BASE_PATH}/LUNA logo (5).png`}
+                src="/LUNA logo (5).png"
                 alt="Luna logo"
                 className="w-12 h-12 sm:w-14 sm:h-14"
               />
@@ -399,7 +397,7 @@ function LunaSection() {
             
             {/* Image */}
             <img
-              src={`${BASE_PATH}/luna.png`}
+              src="/luna.png"
               alt="Luna app - podcast player for learning"
               width={500}
               height={600}
@@ -462,7 +460,7 @@ export default function Home() {
                 {/* Background image - architectural space - only in light mode */}
                 <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[45%] h-[60%] opacity-[0.08] dark:opacity-0 pointer-events-none overflow-hidden rounded-l-3xl blur-sm transition-opacity duration-500">
                   <img 
-                    src={`${BASE_PATH}/ChatGPT Image Jan 14, 2026, 04_01_38 PM.png`}
+                    src="/ChatGPT Image Jan 14, 2026, 04_01_38 PM.png"
                     alt="" 
                     className="w-full h-full object-cover"
                   />
@@ -566,7 +564,7 @@ export default function Home() {
             {/* Hero image - NO OVERLAY */}
             <div className="relative h-64 overflow-hidden">
               <img 
-                src={`${BASE_PATH}/ChatGPT Image Jan 14, 2026, 04_08_38 PM.png`}
+                src="/ChatGPT Image Jan 14, 2026, 04_08_38 PM.png"
                 alt="Our Philosophy" 
                 className="w-full h-full object-cover"
               />
