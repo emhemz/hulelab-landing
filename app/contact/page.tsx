@@ -4,8 +4,6 @@ import Link from "next/link";
 import Header from "../components/Header";
 import Button from "../components/Button";
 
-const BASE_PATH = process.env.NODE_ENV === 'production' ? '/hulelab-landing' : '';
-
 export default function ContactPage() {
   return (
     <>
@@ -90,7 +88,7 @@ export default function ContactPage() {
           <section className="mb-24 md:mb-32">
             <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-xl">
               <img 
-                src={`${BASE_PATH}/ChatGPT Image Jan 14, 2026, 04_08_43 PM.png`} 
+                src="/ChatGPT Image Jan 14, 2026, 04_08_43 PM.png" 
                 alt="Abstract architectural space" 
                 className="absolute inset-0 w-full h-full object-cover object-center opacity-80 dark:opacity-30"
               />

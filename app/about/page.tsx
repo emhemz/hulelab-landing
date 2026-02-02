@@ -5,8 +5,6 @@ import Link from "next/link";
 import Header from "../components/Header";
 import Button from "../components/Button";
 
-const BASE_PATH = process.env.NODE_ENV === 'production' ? '/hulelab-landing' : '';
-
 // Reveal sections on scroll
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -62,7 +60,7 @@ export default function AboutPage() {
               </div>
               <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-sm dark:shadow-2xl">
                 <img 
-                  src={`${BASE_PATH}/ChatGPT Image Jan 14, 2026, 04_08_41 PM.png`} 
+                  src="/ChatGPT Image Jan 14, 2026, 04_08_41 PM.png" 
                   alt="Abstract architectural space" 
                   className="absolute inset-0 w-full h-full object-cover object-center dark:opacity-40 dark:brightness-100"
                 />
@@ -204,7 +202,7 @@ export default function AboutPage() {
             {/* Background image - only in dark mode */}
             <div className="absolute inset-0" style={{ display: isDark ? 'block' : 'none' }}>
               <img 
-                src={`${BASE_PATH}/ChatGPT Image Jan 14, 2026, 04_08_36 PM.png`} 
+                src="/ChatGPT Image Jan 14, 2026, 04_08_36 PM.png" 
                 alt="Abstract space" 
                 className="w-full h-full object-cover opacity-5"
               />

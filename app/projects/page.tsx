@@ -1,8 +1,6 @@
 import Link from "next/link";
 import Header from "../components/Header";
 
-const BASE_PATH = process.env.NODE_ENV === 'production' ? '/hulelab-landing' : '';
-
 export default function ProjectsPage() {
   return (
     <>
@@ -82,7 +80,7 @@ export default function ProjectsPage() {
               </div>
               <div className="relative w-full h-[500px] flex items-center justify-center">
                 <img 
-                  src={`${BASE_PATH}/LUNA logo (5).png`} 
+                  src="/LUNA logo (5).png" 
                   alt="Luna logo" 
                   className="w-56 h-56 object-contain"
                 />
