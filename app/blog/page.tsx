@@ -73,39 +73,39 @@ function PostPreview({ post, index }: { post: typeof posts[0]; index: number }) 
       href={`/blog/${post.slug}`}
       className="group reveal block h-full"
     >
-      <article className="relative h-full py-6">
+      <article className="relative h-full p-8 md:p-10 transition-all duration-500 ease-out rounded-2xl border border-[#1a1918]/5 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm hover:border-[#cbb37c]/30 dark:hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.25)] dark:hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] hover:-translate-y-1">
         {/* Number badge */}
-        <div className="absolute top-6 right-0 text-[3rem] font-serif leading-none text-[#1a1918]/5 dark:text-white/5 transition-colors duration-500 select-none">
+        <div className="absolute top-8 md:top-10 right-8 md:right-10 text-[4rem] font-serif leading-none text-[#1a1918]/5 dark:text-white/5 group-hover:text-[#cbb37c]/15 dark:group-hover:text-[#cbb37c]/15 transition-colors duration-500 select-none">
           0{index + 1}
         </div>
         
         <div className="relative">
           {/* Date */}
           <div className="mb-6 flex items-center gap-3">
-            <span className="text-[0.6875rem] tracking-[0.2em] uppercase text-[#cbb37c]/70 font-medium">
+            <span className="text-[0.6875rem] tracking-[0.2em] uppercase text-[#cbb37c]/70 group-hover:text-[#cbb37c] transition-colors duration-500 font-medium">
               {post.date}
             </span>
-            <div className="h-px flex-1 max-w-[60px] bg-gradient-to-r from-[#cbb37c]/20 via-[#cbb37c]/40 to-transparent" />
+            <div className="h-px flex-1 max-w-[60px] bg-gradient-to-r from-[#cbb37c]/20 via-[#cbb37c]/40 to-transparent group-hover:from-[#cbb37c]/40 transition-colors duration-500" />
           </div>
 
           {/* Title */}
-          <h2 className="text-[1.75rem] sm:text-[2rem] mb-5 leading-[1.15] tracking-tight dark:text-fg">
+          <h2 className="text-[1.75rem] sm:text-[2rem] mb-5 leading-[1.15] tracking-tight dark:text-fg group-hover:text-[#cbb37c] dark:group-hover:text-accent transition-colors duration-500">
             {post.title}
           </h2>
 
           {/* Excerpt */}
-          <p className="text-[#6b6966] dark:text-fg/70 text-[1.0625rem] leading-[1.8] mb-8">
+          <p className="text-[#6b6966] dark:text-fg/70 text-[1.0625rem] leading-[1.8] mb-8 group-hover:text-[#1a1918] dark:group-hover:text-fg transition-colors duration-500">
             {post.excerpt}
           </p>
 
           {/* Read more link */}
-          <div className="inline-flex items-center gap-2 text-[0.9375rem] text-[#cbb37c] dark:text-accent font-medium">
+          <div className="inline-flex items-center gap-2 text-[0.9375rem] text-[#1a1918] dark:text-fg group-hover:text-[#cbb37c] dark:group-hover:text-accent transition-colors duration-500 font-medium">
             <span>Read article</span>
             <svg 
               width="14" 
               height="14" 
               viewBox="0 0 14 14" 
-              className="opacity-60"
+              className="opacity-60 group-hover:opacity-100 transition-all duration-500 group-hover:translate-x-1"
             >
               <path 
                 d="M1 7h12M9 2l5 5-5 5" 
