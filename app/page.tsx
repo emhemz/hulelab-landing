@@ -213,7 +213,7 @@ function WorkCard({
 }) {
   return (
     <article 
-      className="group relative overflow-hidden rounded-xl border border-[#1a1918]/5 transition-all duration-700 ease-out hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.3)] hover:-translate-y-1"
+      className="group relative overflow-hidden rounded-xl border border-[#1a1918]/5 dark:border-white/[0.02] transition-all duration-700 ease-out hover:border-[#cbb37c]/30 dark:hover:border-white/[0.08] hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.3)] hover:-translate-y-1"
       style={{ transitionDelay: `${index * 50}ms` }}
     >
       {/* Image at top if provided */}
@@ -256,14 +256,6 @@ function WorkCard({
           }`}>
             {text}
           </p>
-          
-          {/* Hover indicator */}
-          <div className={`flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0 ${
-            imageSrc ? 'mt-3' : 'mt-5'
-          }`}>
-            <div className="h-px w-8 bg-gradient-to-r from-[#cbb37c]/60 to-transparent" />
-            <span className="text-[0.75rem] text-[#cbb37c] dark:text-accent tracking-wide">Explore</span>
-          </div>
         </div>
       </div>
     </article>
@@ -488,13 +480,10 @@ export default function Home() {
                 
                 {/* Description with better layout */}
                 <div className="space-y-6 max-w-[560px] relative z-10">
-                  <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.7] text-[#1a1918] font-medium">
-                    <strong>The future belongs not to those who know the most,</strong>
+                  <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.65] text-[#1a1918] dark:text-fg font-medium">
+                    <strong>The future belongs not to those who know the most, but to those who learn best.</strong>
                   </p>
-                  <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.7] text-[#1a1918] font-medium">
-                    <strong>but to those who learn best.</strong>
-                  </p>
-                  <p className="text-[1.0625rem] sm:text-[1.125rem] leading-[1.8] text-[#6b6966]">
+                  <p className="text-[1.0625rem] sm:text-[1.125rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
                     Human Learning Lab builds learning systems that give people and organizations a stronger strategic position over time.
                   </p>
                   
@@ -519,26 +508,26 @@ export default function Home() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Learning card - full height */}
+              {/* Strategic Positioning card - full height */}
               <WorkCard
-                title="Learning"
-                text="How people acquire knowledge and skill. What helps retention. What leads to real understanding."
+                title="Strategic Positioning"
+                text="Learning as a strategic capability. An expanded opportunity space."
                 index={0}
                 icon={icons.learning}
                 imageSrc="/ChatGPT Image Jan 14, 2026, 04_08_30 PM.png"
               />
               
-              {/* Products and Practice stacked vertically */}
+              {/* Product & Technology and LARPA stacked vertically */}
               <div className="flex flex-col gap-6">
                 <WorkCard
-                  title="Products"
-                  text="Software that reflects how learning actually works. Built slowly, tested carefully."
+                  title="Product & Technology"
+                  text="Proprietary software for learning. Designed around the human learner."
                   index={1}
                   icon={icons.products}
                 />
                 <WorkCard
-                  title="Method"
-                  text="Careful observation. Slow iteration. Building on what we learn. Testing with real users."
+                  title="LARPA"
+                  text="A place to bring a learning idea. Team, capital, and responsibility to build it all the way through."
                   index={2}
                   icon={icons.method}
                 />
@@ -582,13 +571,11 @@ export default function Home() {
                   <span className="text-[0.7rem] tracking-[0.2em] uppercase text-[#cbb37c]/70 font-medium">Philosophy</span>
                 </div>
                 
-                <h2 className="text-[1.75rem] sm:text-[2rem] md:text-[2.5rem] mb-5 font-serif tracking-tight leading-tight max-w-[600px] dark:text-fg">
+                <h2 className="text-[1.75rem] sm:text-[2rem] md:text-[2.5rem] mb-6 font-serif tracking-tight leading-tight max-w-[600px] dark:text-fg">
                   Our Philosophy
                 </h2>
-                <p className="text-[1rem] leading-[1.8] text-[#6b6966] dark:text-fg/70 max-w-[540px]">
-                  Good tools come from years of observation and iteration. We're not 
-                  optimizing for speed. We're trying to understand something real, 
-                  and to build things that reflect that understanding.
+                <p className="text-[1rem] leading-[1.8] text-[#6b6966] dark:text-fg/70 max-w-[580px]">
+                  We build on the science of how the human brain learns. Our systems are shaped by research, observation, and real use. We adopt new technology when it expands human capability, not when it distracts from it. We believe learning is a strategic advantage. Those who learn well strengthen their position over time.
                 </p>
               </div>
             </div>
@@ -602,11 +589,25 @@ export default function Home() {
                 <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] mb-6 font-serif tracking-tight leading-tight">
                   Get in touch
                 </h2>
-                <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] mb-8">
-                  We're always interested in conversations about learning, tools, and the future of education.
-                </p>
-                <Button href="mailto:hello@humanlearninglab.com" external icon="arrow">
-                  hello@humanlearninglab.com
+                <div className="space-y-4 mb-8 max-w-[520px]">
+                  <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
+                    We're always open to conversations about learning, technology, and how humans grow.
+                  </p>
+                  <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
+                    But we're also looking to grow the circle.
+                  </p>
+                  <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
+                    If you care deeply about how people learn, if you're building, researching, designing, or thinking in this space, and if you want to contribute to something bigger than yourself, we'd love to hear from you.
+                  </p>
+                  <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
+                    Human Learning Lab is a place for people who want to help learning matter more. Through ideas, tools, collaboration, and shared responsibility.
+                  </p>
+                  <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
+                    Reach out. Let's see if there's something we can build together.
+                  </p>
+                </div>
+                <Button href="mailto:learnaholic@humanlearninglab.com" external icon="arrow">
+                  <strong>learnaholic@humanlearninglab.com</strong>
                 </Button>
               </div>
               
