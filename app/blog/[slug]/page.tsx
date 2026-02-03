@@ -162,7 +162,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <Header />
 
       <main className="relative z-10 min-h-screen">
-        <div className="max-w-[900px] mx-auto px-10 sm:px-16 pt-32 md:pt-44 pb-32">
+        <div className="max-w-[1400px] mx-auto px-10 sm:px-16 pt-32 md:pt-44 pb-32">
           {/* Back to blog button */}
           <Link 
             href="/blog"
@@ -201,7 +201,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </h1>
 
             {/* Content */}
-            <div className="max-w-none">
+            <div className="max-w-[800px]">
               {post.content.split('\n\n').map((paragraph, i) => (
                 <p key={i} className="text-[#6b6966] dark:text-fg/70 leading-[1.8] mb-6 text-[1.0625rem]">
                   {paragraph}
