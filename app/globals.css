@@ -62,10 +62,7 @@ img[alt="Time"] {
   color: var(--fg);
 }
 
-.dark p,
-.dark span {
-  color: var(--muted);
-}
+/* Removed global dark p styling - let components control their own text colors */
 
 /* Dark mode hamburger icon visibility - only target the 3 lines in hamburger button */
 .dark .hamburger-button > div {
