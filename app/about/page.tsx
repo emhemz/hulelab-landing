@@ -51,12 +51,17 @@ export default function AboutPage() {
                 <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[4rem] leading-[0.95] tracking-[-0.04em] mb-8 dark:text-fg">
                   About Us
                 </h1>
-                <p className="text-[1.125rem] leading-[1.8] text-[#6b6966] dark:text-fg/70 mb-6">
-                  Learning is often treated as a problem of content delivery. We think that's backwards. The challenge isn't access to information—it's turning information into understanding, and understanding into capability.
-                </p>
-                <p className="text-[1.125rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
-                  That requires a different approach. One that draws on neuroscience, design, engineering, and the lived experience of high performance.
-                </p>
+                <div className="space-y-5">
+                  <p className="text-[1.125rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
+                    The real challenge isn't access to information, it's making learning personal, relevant, and situated. We know people learn fastest when new knowledge builds on what they already understand, when it connects to experiences they recognize, and when the distance between where they are and what they need to learn is right. That's why we believe in learning tools that get to know the learner and adapt accordingly.
+                  </p>
+                  <p className="text-[1.125rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
+                    When learning is shaped around the human, it happens faster, deeper, and with greater impact. We are convinced that the field of learning holds enormous potential for positive change. That belief is what drives us.
+                  </p>
+                  <p className="text-[1.125rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
+                    Human Learning Lab exists to help create better learning experiences at scale and to help position the Nordic region as a place that takes learning seriously.
+                  </p>
+                </div>
               </div>
               <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-sm dark:shadow-2xl">
                 <img 
@@ -94,7 +99,7 @@ export default function AboutPage() {
                   Neuroscience
                 </h3>
                 <p className="text-[#6b6966] dark:text-fg/70 leading-[1.7] text-[0.9375rem]">
-                  We understand how the brain encodes, consolidates, and retrieves information. This isn't theoretical—it shapes every decision we make about how our tools work.
+                  We build on a deep understanding of how the brain learns, adapts, and retains knowledge. This shapes how we design systems, not as theory, but as practice.
                 </p>
               </div>
 
@@ -155,7 +160,7 @@ export default function AboutPage() {
                   Engineering
                 </h3>
                 <p className="text-[#6b6966] dark:text-fg/70 leading-[1.7] text-[0.9375rem]">
-                  Deep technical expertise in building systems that work reliably at scale. We care about performance, not just features.
+                  Deep technical expertise in building systems that work reliably at scale. We actively track advances in AI and machine learning, and apply them when they improve robustness, performance, and learning outcomes.
                 </p>
               </div>
 
@@ -175,6 +180,25 @@ export default function AboutPage() {
                   Experience at the highest levels of competitive sport. We know what it takes to improve through deliberate practice, feedback, and sustained effort over years.
                 </p>
               </div>
+
+              {/* Learning */}
+              <div className="group p-8 rounded-2xl border-2 border-[#cbb37c]/50 dark:border dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-[0_8px_30px_rgba(203,179,124,0.25)] dark:shadow-none hover:border-[#cbb37c]/70 hover:shadow-[0_12px_40px_rgba(203,179,124,0.35)] dark:hover:border-[#cbb37c]/30 dark:hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] transition-all duration-500 hover:-translate-y-1">
+                <div className="mb-6">
+                  <div className="w-12 h-12 rounded-full border-2 border-[#cbb37c]/30 flex items-center justify-center group-hover:border-[#cbb37c] transition-colors duration-500">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-[#cbb37c]">
+                      <path d="M12 2a10 10 0 0 1 7.07 17.07" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                      <path d="M12 2a10 10 0 0 0-7.07 17.07" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                      <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.5"/>
+                    </svg>
+                  </div>
+                </div>
+                <h3 className="text-[1.125rem] font-medium tracking-tight text-[#1a1918] dark:text-fg mb-4">
+                  Learning
+                </h3>
+                <p className="text-[#6b6966] dark:text-fg/70 leading-[1.7] text-[0.9375rem]">
+                  Learning defines us. We work systematically to become a faster-learning team because learning speed shapes understanding, and understanding shapes better decisions over time.
+                </p>
+              </div>
             </div>
           </section>
 
@@ -188,10 +212,16 @@ export default function AboutPage() {
               </div>
               <div className="space-y-6">
                 <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
-                  Building effective learning tools requires understanding how the mind works, what motivates behavior change, and how to craft experiences that feel natural rather than forced.
+                  The pace of change is accelerating. What worked well last year may no longer be enough today. As technology evolves, new possibilities emerge, for how we learn, adapt, and make decisions.
                 </p>
                 <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
-                  It also requires the discipline to build slowly, test rigorously, and accept that real insight takes time. We're not looking for quick wins. We're building for the long term.
+                  Learning cannot be static. It must be continuously updated, tested, and rethought. Building effective learning tools therefore requires more than speed or scale. It requires a deep understanding of how the human mind works, what drives real change, and how to design learning experiences that remain relevant as the world shifts.
+                </p>
+                <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
+                  It also requires discipline. The ability to move with change without chasing every trend. To build carefully, test rigorously, and accept that real understanding still takes time.
+                </p>
+                <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
+                  We are not trying to preserve what once worked. We are building the capacity to learn, again and again, as the world continues to change.
                 </p>
               </div>
             </div>

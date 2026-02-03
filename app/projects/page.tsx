@@ -89,16 +89,16 @@ export default function ProjectsPage() {
           </section>
 
           {/* Philosophy */}
-          <section className="mb-24 md:mb-32 relative overflow-hidden rounded-2xl p-8 md:p-12 bg-gradient-to-br from-[#cbb37c]/5 to-transparent dark:from-[#cbb37c]/10 dark:to-transparent backdrop-blur-sm border-2 border-[#cbb37c]/10 dark:border-white/5 shadow-xl dark:shadow-none">
+          <section className="mb-24 md:mb-32 relative overflow-hidden rounded-2xl p-8 md:p-12 bg-gradient-to-br from-[#cbb37c]/5 to-transparent dark:from-[#cbb37c]/10 dark:to-transparent backdrop-blur-sm border border-[#cbb37c]/10 dark:border-white/[0.03] shadow-xl dark:shadow-none">
             <h2 className="text-[1.5rem] sm:text-[1.75rem] mb-6 dark:text-fg">
               Our Approach
             </h2>
             <div className="space-y-6 text-[#6b6966] dark:text-fg/70 leading-[1.8] text-[1.0625rem] max-w-[700px]">
               <p>
-                We build slowly. Each project starts with observation and research. We test with real users, iterate based on feedback, and only launch when we're confident the tool actually helps people learn.
+                We build deliberately. Each project starts with observation and research. We test with real users, iterate based on feedback, and only launch when we're confident the tool genuinely helps people learn.
               </p>
               <p>
-                We're not interested in quick features or flashy demos. We're building tools that work over months and years of use.
+                We're not interested in quick features or flashy demos. We're building tools designed to work over months and years of real use.
               </p>
             </div>
           </section>
