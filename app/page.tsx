@@ -489,12 +489,13 @@ export default function Home() {
                 {/* Description with better layout */}
                 <div className="space-y-6 max-w-[560px] relative z-10">
                   <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.7] text-[#1a1918] font-medium">
-                    We explore how people learn. We build tools based on what we find.
+                    <strong>The future belongs not to those who know the most,</strong>
+                  </p>
+                  <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.7] text-[#1a1918] font-medium">
+                    <strong>but to those who learn best.</strong>
                   </p>
                   <p className="text-[1.0625rem] sm:text-[1.125rem] leading-[1.8] text-[#6b6966]">
-                    Most software treats learning as information transfer. We think it's 
-                    something deeper—a slow process of change that deserves more patience 
-                    and better tools.
+                    Human Learning Lab builds learning systems that give people and organizations a stronger strategic position over time.
                   </p>
                   
                   {/* CTA hint */}
