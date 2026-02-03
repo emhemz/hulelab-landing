@@ -16,15 +16,17 @@ const inter = Inter({
   weight: ["400", "500"],
 });
 
+const basePath = process.env.NODE_ENV === 'production' ? '/hulelab-landing' : '';
+
 export const metadata: Metadata = {
   title: "Human Learning Lab",
   description: "We explore how people learn. We build tools based on what we find.",
   icons: {
     icon: [
-      { url: '/logo.svg', type: 'image/svg+xml' },
+      { url: `${basePath}/logo.svg`, type: 'image/svg+xml' },
     ],
-    apple: '/logo.svg',
-    shortcut: '/logo.svg',
+    apple: `${basePath}/logo.svg`,
+    shortcut: `${basePath}/logo.svg`,
   },
 };
 
