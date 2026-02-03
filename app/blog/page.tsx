@@ -73,7 +73,7 @@ function PostPreview({ post, index }: { post: typeof posts[0]; index: number }) 
       href={`/blog/${post.slug}`}
       className="group reveal block h-full"
     >
-      <article className="relative h-full p-8 md:p-10 transition-all duration-500 ease-out rounded-2xl border border-[#1a1918]/5 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm hover:border-[#cbb37c]/30 dark:hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.25)] dark:hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] hover:-translate-y-1">
+      <article className="blog-card relative h-full p-8 md:p-10 transition-all duration-500 ease-out rounded-2xl border border-[#1a1918]/5 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm hover:border-[#cbb37c]/30 dark:hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.25)] dark:hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] hover:-translate-y-1">
         {/* Number badge */}
         <div className="absolute top-8 md:top-10 right-8 md:right-10 text-[4rem] font-serif leading-none text-[#1a1918]/5 dark:text-white/5 group-hover:text-[#cbb37c]/15 dark:group-hover:text-[#cbb37c]/15 transition-colors duration-500 select-none">
           0{index + 1}

@@ -33,21 +33,21 @@ img[alt="Time"] {
   filter: none;
 }
 
-/* Adjust cards in light and dark mode */
-article {
+/* Adjust cards in light and dark mode - only for blog listing cards */
+.blog-card {
   background: rgba(255, 255, 255, 0.8);
 }
 
-.dark article {
+.dark .blog-card {
   background: rgba(255, 255, 255, 0.02);
   border-color: rgba(255, 255, 255, 0.08) !important;
 }
 
-article:hover {
+.blog-card:hover {
   background: rgba(255, 255, 255, 0.95);
 }
 
-.dark article:hover {
+.dark .blog-card:hover {
   background: rgba(255, 255, 255, 0.04);
   border-color: rgba(212, 190, 138, 0.3) !important;
 }
