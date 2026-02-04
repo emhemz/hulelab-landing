@@ -216,7 +216,7 @@ function WorkCard({
 }) {
   const content = (
     <article 
-      className="group relative overflow-hidden rounded-xl border border-[#1a1918]/5 dark:border-white/[0.03] bg-white/80 dark:bg-white/[0.02] transition-all duration-700 ease-out hover:border-[#cbb37c]/30 dark:hover:border-white/[0.1] hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.3)] hover:-translate-y-1 h-full"
+      className="group relative overflow-hidden rounded-xl border border-[#1a1918]/10 dark:border-white/[0.03] bg-white/80 dark:bg-white/[0.02] transition-all duration-700 ease-out hover:border-[#cbb37c]/30 dark:hover:border-white/[0.1] hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.3)] hover:-translate-y-1 h-full"
       style={{ transitionDelay: `${index * 50}ms` }}
     >
       {/* Image at top if provided */}
@@ -439,6 +439,23 @@ export default function Home() {
 
   return (
     <>
+      {/* Fix hero text colors */}
+      <style>{`
+        html:not(.dark) .hero-text-primary {
+          color: #1a1918 !important;
+        }
+        html:not(.dark) .hero-text-secondary {
+          color: #6b6966 !important;
+        }
+        html.dark .hero-text-primary,
+        html.dark .hero-text-secondary {
+          color: #ffffff !important;
+        }
+        html.dark .hero-text-secondary {
+          opacity: 0.8;
+        }
+      `}</style>
+      
       {/* Background layers */}
       <ScrollAtmosphere progress={progress} />
       <ParallaxShapes progress={progress} />
@@ -493,10 +510,10 @@ export default function Home() {
                 
                 {/* Description with better layout */}
                 <div className="space-y-6 max-w-[560px] relative z-10">
-                  <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.65] text-[#1a1918] dark:text-white font-medium">
+                  <p className="hero-text-primary text-[1.125rem] sm:text-[1.25rem] leading-[1.65] font-medium">
                     <strong>The future belongs not to those who know the most, but to those who learn best.</strong>
                   </p>
-                  <p className="text-[1.0625rem] sm:text-[1.125rem] leading-[1.8] text-[#6b6966] dark:text-white/80">
+                  <p className="hero-text-secondary text-[1.0625rem] sm:text-[1.125rem] leading-[1.8]">
                     Human Learning Lab builds learning systems that give people and organizations a stronger strategic position over time.
                   </p>
                   
@@ -564,7 +581,7 @@ export default function Home() {
 
           {/* Our Philosophy - CLEAN VERSION */}
           <section 
-            className="reveal mb-40 md:mb-56 relative overflow-hidden rounded-2xl border-2 border-[#e8e6e2] dark:border-white/5" 
+            className="reveal mb-40 md:mb-56 relative overflow-hidden rounded-2xl border border-[#1a1918]/10 dark:border-white/5" 
             style={{ backgroundColor: isDark ? 'rgba(255,255,255,0.05)' : '#FFFFFF' }}
           >
             {/* Hero image - NO OVERLAY */}

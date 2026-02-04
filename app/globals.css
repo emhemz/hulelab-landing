@@ -52,17 +52,7 @@ img[alt="Time"] {
   border-color: rgba(212, 190, 138, 0.3) !important;
 }
 
-/* Dark mode text colors */
-.dark h1,
-.dark h2,
-.dark h3,
-.dark h4,
-.dark h5,
-.dark h6 {
-  color: var(--fg);
-}
-
-/* Removed global dark p styling - let components control their own text colors */
+/* Removed global dark text styling - let components control their own text colors with Tailwind */
 
 /* Dark mode hamburger icon visibility - only target the 3 lines in hamburger button */
 .dark .hamburger-button > div {
@@ -95,12 +85,7 @@ img[alt="Time"] {
   opacity: 0.3;
 }
 
-/* Dark mode accent colors */
-.dark [class*="text-[#cbb37c]"],
-.dark [class*="border-[#cbb37c]"] {
-  color: #d4be8a;
-  border-color: #d4be8a;
-}
+/* Removed global dark accent color override - use dark: prefixes in Tailwind instead */
 
 /* Improve dark mode link hover states */
 .dark .link-hover {
@@ -141,7 +126,6 @@ h1, h2, h3 {
   font-weight: 400;
   letter-spacing: -0.03em;
   line-height: 1.1;
-  color: var(--fg);
 }
 
 ::selection {

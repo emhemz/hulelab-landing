@@ -6,6 +6,7 @@ import Header from "../components/Header";
 export default function ProductTechnologyPage() {
   return (
     <main className="relative min-h-screen bg-[#f5f3f0] dark:bg-[#0f0f0f]">
+      
       {/* Grain texture */}
       <div className="grain" />
       
@@ -13,7 +14,7 @@ export default function ProductTechnologyPage() {
 
       {/* Hero Section */}
       <div className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
-        <div className="max-w-[800px] mx-auto px-10 sm:px-12">
+        <div id="product-content" className="max-w-[800px] mx-auto px-10 sm:px-12">
           {/* Back button */}
           <Link
             href="/#what-we-work-on"
@@ -33,17 +34,17 @@ export default function ProductTechnologyPage() {
           </div>
 
           {/* Title */}
-          <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] font-serif tracking-tight leading-[1.1] mb-12 text-[#1a1918] dark:text-white">
+          <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] font-serif tracking-tight leading-[1.1] mb-12">
             Product & Technology
           </h1>
 
           {/* Content */}
           <div className="space-y-6 text-[1.0625rem] leading-[1.8]">
-            <p className="text-[#6b6966] dark:text-white/80">
+            <p>
               Proprietary software for learning. Designed around the human learner.
             </p>
             
-            <p className="text-[#6b6966] dark:text-white/70">
+            <p>
               [Add your content here - this is a placeholder page]
             </p>
           </div>
