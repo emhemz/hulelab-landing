@@ -31,40 +31,12 @@ const posts = [
     image: "/when-speed-outruns-understanding.png",
   },
   {
-    slug: "the-forgetting-curve",
-    date: "January 2026",
-    title: "The Forgetting Curve",
-    excerpt: "We forget almost everything we learn. Understanding why is the first step to building better tools for retention.",
-  },
-  {
-    slug: "active-recall",
-    date: "January 2026",
-    title: "Active Recall",
-    excerpt: "The most effective learning strategy isn't re-reading or highlighting. It's forcing yourself to retrieve information.",
-  },
-  {
-    slug: "consumption-vs-learning",
-    date: "January 2026",
-    title: "Consumption vs. Learning",
-    excerpt: "We consume more content than ever before. But it's easy to forget the difference between consuming and learning.",
-  },
-  {
-    slug: "the-spacing-effect",
-    date: "January 2026",
-    title: "The Spacing Effect",
-    excerpt: "Learning the same amount of material spread over time is far more effective than cramming. Here's why.",
-  },
-  {
-    slug: "context-and-memory",
-    date: "January 2026",
-    title: "Context and Memory",
-    excerpt: "Where you learn something affects how well you remember it. Context is more powerful than we think.",
-  },
-  {
-    slug: "ai-in-ten-years",
-    date: "January 2026",
-    title: "AI in Ten Years",
-    excerpt: "In 10 years, AI will be less visible but more integrated. The best tools disappear into the background.",
+    slug: "when-intelligence-scales-faster-than-judgment",
+    date: "December 1, 2025",
+    title: "When Intelligence Scales Faster Than Judgment",
+    excerpt: "Artificial intelligence is now outperforming humans on tasks we once associated with intelligence. But intelligence, measured this way, is only part of the story.",
+    author: "Christian Løken",
+    image: "/ChatGPT Image Feb 3, 2026, 01_18_13 PM.png",
   },
 ];
 
@@ -84,7 +56,7 @@ function PostPreview({ post, index }: { post: typeof posts[0]; index: number }) 
               alt={post.title}
               className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#f5f3f0] dark:from-[#0f0f0f] via-transparent to-transparent opacity-60" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#f5f3f0] dark:from-[#0f0f0f] via-transparent to-transparent opacity-60 dark:opacity-30 dark:group-hover:opacity-70 transition-opacity duration-500" />
           </div>
         )}
         
@@ -98,12 +70,12 @@ function PostPreview({ post, index }: { post: typeof posts[0]; index: number }) 
           </div>
 
           {/* Title */}
-          <h2 className="text-[1.5rem] sm:text-[1.75rem] mb-4 leading-[1.2] tracking-tight dark:text-fg group-hover:text-[#cbb37c] dark:group-hover:text-accent transition-colors duration-500">
+          <h2 className="text-[1.5rem] sm:text-[1.75rem] mb-4 leading-[1.2] tracking-tight text-[#1a1918] dark:text-fg transition-colors duration-500">
             {post.title}
           </h2>
 
           {/* Excerpt */}
-          <p className="text-[#6b6966] dark:text-fg/70 text-[0.9375rem] leading-[1.7] mb-6 group-hover:text-[#1a1918] dark:group-hover:text-fg transition-colors duration-500">
+          <p className="text-[#6b6966] dark:text-fg/70 text-[0.9375rem] leading-[1.7] mb-6 transition-colors duration-500">
             {post.excerpt}
           </p>
 
@@ -115,7 +87,7 @@ function PostPreview({ post, index }: { post: typeof posts[0]; index: number }) 
           )}
 
           {/* Read more link */}
-          <div className="inline-flex items-center gap-2 text-[0.875rem] text-[#1a1918] dark:text-fg group-hover:text-[#cbb37c] dark:group-hover:text-accent transition-colors duration-500 font-medium">
+          <div className="inline-flex items-center gap-2 text-[0.875rem] text-[#1a1918] dark:text-fg group-hover:text-[#cbb37c] dark:group-hover:text-[#cbb37c] transition-colors duration-500 font-medium">
             <span>Read article</span>
             <svg 
               width="14" 
