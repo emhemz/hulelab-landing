@@ -200,10 +200,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             {'author' in post && post.author && (
               <div className="bg-gradient-to-br from-[#cbb37c]/5 to-transparent dark:from-[#cbb37c]/10 dark:to-transparent rounded-2xl p-8 border border-[#cbb37c]/20 dark:border-[#cbb37c]/20 mb-16">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-[#cbb37c]/30 to-[#cbb37c]/10 flex items-center justify-center">
-                    <span className="text-2xl font-serif text-[#cbb37c]">
-                      {post.author.charAt(0)}
-                    </span>
+                  <div className="flex-shrink-0 w-16 h-16 rounded-full overflow-hidden border-2 border-[#cbb37c]/30">
+                    <img 
+                      src="/IMG_8291.JPG" 
+                      alt={post.author}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div>
                     <p className="text-[1.125rem] font-medium text-[#1a1918] dark:text-fg mb-1">

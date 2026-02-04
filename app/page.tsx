@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import Header from "./components/Header";
 import Button from "./components/Button";
 
@@ -203,17 +204,19 @@ function WorkCard({
   text, 
   index,
   icon,
-  imageSrc
+  imageSrc,
+  href
 }: { 
   title: string; 
   text: string; 
   index: number;
   icon: React.ReactNode;
   imageSrc?: string;
+  href?: string;
 }) {
-  return (
+  const content = (
     <article 
-      className="group relative overflow-hidden rounded-xl border border-[#1a1918]/5 dark:border-white/[0.03] transition-all duration-700 ease-out hover:border-[#cbb37c]/30 dark:hover:border-white/[0.1] hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.3)] hover:-translate-y-1"
+      className="group relative overflow-hidden rounded-xl border border-[#1a1918]/5 dark:border-white/[0.03] bg-white/80 dark:bg-white/[0.02] transition-all duration-700 ease-out hover:border-[#cbb37c]/30 dark:hover:border-white/[0.1] hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.3)] hover:-translate-y-1 h-full"
       style={{ transitionDelay: `${index * 50}ms` }}
     >
       {/* Image at top if provided */}
@@ -224,13 +227,13 @@ function WorkCard({
             alt={title} 
             className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#f5f3f0] via-[#f5f3f0]/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#f5f3f0] dark:from-[#0f0f0f] via-[#f5f3f0]/30 dark:via-[#0f0f0f]/30 to-transparent" />
         </div>
       )}
       
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#cbb37c]/8 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700" />
-      <div className="absolute inset-0 bg-gradient-to-tl from-white/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700" />
+      <div className="absolute inset-0 bg-gradient-to-tl from-white/60 dark:from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700" />
       
       {/* Accent line - animated from left */}
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#cbb37c] via-[#cbb37c]/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-x-full group-hover:translate-x-0" />
@@ -246,12 +249,12 @@ function WorkCard({
         </div>
         
         <div className="flex-1">
-          <h3 className={`font-medium text-[#1a1918] dark:text-fg group-hover:text-[#cbb37c] dark:group-hover:text-accent transition-colors duration-500 tracking-tight ${
+          <h3 className={`font-medium text-[#1a1918] dark:text-fg transition-colors duration-500 tracking-tight ${
             imageSrc ? 'text-[1rem] sm:text-[1.125rem] mb-2' : 'text-[1.125rem] sm:text-[1.25rem] mb-3'
           }`}>
             {title}
           </h3>
-          <p className={`text-[#6b6966] dark:text-fg/70 group-hover:text-[#1a1918] dark:group-hover:text-fg transition-colors duration-500 ${
+          <p className={`text-[#6b6966] dark:text-fg/70 transition-colors duration-500 ${
             imageSrc ? 'leading-[1.6] text-[0.875rem]' : 'leading-[1.75] text-[0.9375rem]'
           }`}>
             {text}
@@ -260,6 +263,16 @@ function WorkCard({
       </div>
     </article>
   );
+
+  if (href) {
+    return (
+      <Link href={href} className="block">
+        {content}
+      </Link>
+    );
+  }
+
+  return content;
 }
 
 // Icons for work items
@@ -496,7 +509,7 @@ export default function Home() {
               </header>
 
               {/* What We Work On */}
-          <section className="reveal mb-40 md:mb-56 relative">
+          <section id="what-we-work-on" className="reveal mb-40 md:mb-56 relative">
             {/* Section header with decorative element */}
             <div className="flex items-center gap-6 mb-14 md:mb-16">
               <div className="flex flex-col gap-2">
@@ -515,6 +528,7 @@ export default function Home() {
                 index={0}
                 icon={icons.learning}
                 imageSrc="/ChatGPT Image Jan 14, 2026, 04_08_30 PM.png"
+                href="/strategic-positioning"
               />
               
               {/* Product & Technology and LARPA stacked vertically */}
@@ -524,12 +538,14 @@ export default function Home() {
                   text="Proprietary software for learning. Designed around the human learner."
                   index={1}
                   icon={icons.products}
+                  href="/product-technology"
                 />
                 <WorkCard
                   title="LARPA"
                   text="A place to bring a learning idea. Team, capital, and responsibility to build it all the way through."
                   index={2}
                   icon={icons.method}
+                  href="/larpa"
                 />
               </div>
             </div>
