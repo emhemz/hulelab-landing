@@ -53,7 +53,7 @@ export default function AboutPage() {
                 </h1>
                 <div className="space-y-5">
                   <p className="text-[1.125rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
-                    The real challenge isn't access to information, it's making learning personal, relevant, and situated. We know people learn fastest when new knowledge builds on what they already understand, when it connects to experiences they recognize, and when the distance between where they are and what they need to learn is right. That's why we believe in learning tools that get to know the learner and adapt accordingly.
+                    The real challenge isn't access to information, it is how you make new information relevant to you and build on what you know. We know people learn fastest when new knowledge builds on what they already understand, when it connects to experiences they recognize, and when the distance between where they are and what they need to learn is right. That's why we believe in learning tools that get to know the learner and adapt accordingly.
                   </p>
                   <p className="text-[1.125rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
                     When learning is shaped around the human, it happens faster, deeper, and with greater impact. We are convinced that the field of learning holds enormous potential for positive change. That belief is what drives us.
