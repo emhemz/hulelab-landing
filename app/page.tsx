@@ -639,8 +639,8 @@ export default function Home() {
                     Reach out. Let's see if there's something we can build together.
                   </p>
                 </div>
-                <Button href="mailto:learnaholic@humanlearninglab.com" external icon="arrow">
-                  <strong>learnaholic@humanlearninglab.com</strong>
+                <Button href="mailto:christian@hulelab.com" external icon="arrow">
+                  <strong>christian@hulelab.com</strong>
                 </Button>
               </div>
               

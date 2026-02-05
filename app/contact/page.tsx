@@ -28,8 +28,8 @@ export default function ContactPage() {
                   <h2 className="text-[0.8125rem] font-medium tracking-[0.06em] uppercase text-[#6b6966] dark:text-fg/60 mb-4">
                     Email
                   </h2>
-                  <Button href="mailto:hello@humanlearninglab.com" external variant="large">
-                    hello@humanlearninglab.com
+                  <Button href="mailto:christian@hulelab.com" external variant="large">
+                    christian@hulelab.com
                   </Button>
                 </div>
 
