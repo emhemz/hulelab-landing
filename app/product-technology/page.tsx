@@ -39,15 +39,34 @@ export default function ProductTechnologyPage() {
           </h1>
 
           {/* Content */}
-          <div className="space-y-6 text-[1.0625rem] leading-[1.8]">
-            <p>
-              Proprietary software for learning. Designed around the human learner.
-            </p>
+          <div className="space-y-8 text-center max-w-[600px] mx-auto pt-12">
+            <div className="space-y-4">
+              <h2 className="text-[2rem] sm:text-[2.5rem] font-serif tracking-tight leading-[1.1] text-[#1a1918]">
+                Coming Soon
+              </h2>
+              <p className="text-[1.125rem] leading-[1.8] text-[#6b6966]">
+                We're working on something interesting here. More details will be shared soon.
+              </p>
+            </div>
             
-            <p>
-              [Add your content here - this is a placeholder page]
-            </p>
+            <div className="pt-8">
+              <p className="text-[0.9375rem] text-[#cbb37c] font-medium">
+                Thanks for your interest — we appreciate it.
+              </p>
+            </div>
           </div>
+
+          {/* Footer */}
+          <footer className="mt-32 pt-10 border-t border-black/5">
+            <div className="flex items-center justify-between">
+              <span className="text-[0.6875rem] tracking-[0.08em] uppercase text-[#6b6966]/40">
+                Human Learning Lab
+              </span>
+              <Link href="/" className="text-[0.875rem] text-[#6b6966] hover:text-[#cbb37c] transition-colors duration-300">
+                Home
+              </Link>
+            </div>
+          </footer>
         </div>
       </div>
     </main>

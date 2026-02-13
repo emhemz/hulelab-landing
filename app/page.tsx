@@ -256,9 +256,29 @@ function WorkCard({
           </h3>
           <p className={`text-[#6b6966] transition-colors duration-500 ${
             imageSrc ? 'leading-[1.6] text-[0.875rem]' : 'leading-[1.75] text-[0.9375rem]'
-          }`}>
+          } mb-4`}>
             {text}
           </p>
+          {href && (
+            <div className="inline-flex items-center gap-2 text-[0.875rem] text-[#cbb37c]/70 group-hover:text-[#cbb37c] transition-all duration-300 font-medium">
+              <span>Read more</span>
+              <svg 
+                width="14" 
+                height="14" 
+                viewBox="0 0 14 14" 
+                className="opacity-60 group-hover:opacity-100 transition-all duration-500 group-hover:translate-x-1"
+              >
+                <path 
+                  d="M1 7h12M9 2l5 5-5 5" 
+                  stroke="currentColor" 
+                  strokeWidth="1.5" 
+                  fill="none" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+          )}
         </div>
       </div>
     </article>
@@ -521,34 +541,28 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Strategic Positioning card - full height */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <WorkCard
                 title="Strategic Positioning"
                 text="Learning as a strategic capability. An expanded opportunity space."
                 index={0}
                 icon={icons.learning}
-                imageSrc="/ChatGPT Image Jan 14, 2026, 04_08_30 PM.png"
                 href="/strategic-positioning"
               />
-              
-              {/* Product & Technology and LARPA stacked vertically */}
-              <div className="flex flex-col gap-6">
-                <WorkCard
-                  title="Product & Technology"
-                  text="Proprietary software for learning. Designed around the human learner."
-                  index={1}
-                  icon={icons.products}
-                  href="/product-technology"
-                />
-                <WorkCard
-                  title="LARPA"
-                  text="A place to bring a learning idea. Team, capital, and responsibility to build it all the way through."
-                  index={2}
-                  icon={icons.method}
-                  href="/larpa"
-                />
-              </div>
+              <WorkCard
+                title="Product & Technology"
+                text="Proprietary software for learning. Designed around the human learner."
+                index={1}
+                icon={icons.products}
+                href="/product-technology"
+              />
+              <WorkCard
+                title="LARPA"
+                text="A place to bring a learning idea. Team, capital, and responsibility to build it all the way through."
+                index={2}
+                icon={icons.method}
+                href="/larpa"
+              />
             </div>
           </section>
 
