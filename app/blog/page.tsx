@@ -47,7 +47,7 @@ function PostPreview({ post, index }: { post: typeof posts[0]; index: number }) 
       href={`/blog/${post.slug}`}
       className="group reveal block h-full"
     >
-      <article className="blog-card relative h-full overflow-hidden transition-all duration-500 ease-out rounded-2xl border border-[#1a1918]/5 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-sm hover:border-[#cbb37c]/30 dark:hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.25)] dark:hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.2)] hover:-translate-y-1">
+      <article className="blog-card relative h-full overflow-hidden transition-all duration-500 ease-out rounded-2xl border border-[#1a1918]/5 bg-white/50 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.25)] hover:-translate-y-1">
         {/* Featured Image */}
         {'image' in post && post.image && (
           <div className="relative h-36 overflow-hidden">
@@ -56,7 +56,7 @@ function PostPreview({ post, index }: { post: typeof posts[0]; index: number }) 
               alt={post.title}
               className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#f5f3f0] dark:from-[#0f0f0f] via-transparent to-transparent opacity-60 dark:opacity-30 dark:group-hover:opacity-70 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#f5f3f0] via-transparent to-transparent opacity-60 transition-opacity duration-500" />
           </div>
         )}
         
@@ -70,24 +70,24 @@ function PostPreview({ post, index }: { post: typeof posts[0]; index: number }) 
           </div>
 
           {/* Title */}
-          <h2 className="text-[1.5rem] sm:text-[1.75rem] mb-4 leading-[1.2] tracking-tight text-[#1a1918] dark:text-fg transition-colors duration-500">
+          <h2 className="text-[1.5rem] sm:text-[1.75rem] mb-4 leading-[1.2] tracking-tight text-[#1a1918] transition-colors duration-500">
             {post.title}
           </h2>
 
           {/* Excerpt */}
-          <p className="text-[#6b6966] dark:text-fg/70 text-[0.9375rem] leading-[1.7] mb-6 transition-colors duration-500">
+          <p className="text-[#6b6966] text-[0.9375rem] leading-[1.7] mb-6 transition-colors duration-500">
             {post.excerpt}
           </p>
 
           {/* Author if exists */}
           {'author' in post && post.author && (
-            <p className="text-[0.8125rem] text-[#6b6966] dark:text-fg/60 mb-6">
+            <p className="text-[0.8125rem] text-[#6b6966] mb-6">
               {post.author}
             </p>
           )}
 
           {/* Read more link */}
-          <div className="inline-flex items-center gap-2 text-[0.875rem] text-[#1a1918] dark:text-fg group-hover:text-[#cbb37c] dark:group-hover:text-[#cbb37c] transition-colors duration-500 font-medium">
+          <div className="inline-flex items-center gap-2 text-[0.875rem] text-[#1a1918] group-hover:text-[#cbb37c] transition-colors duration-500 font-medium">
             <span>Read article</span>
             <svg 
               width="14" 
@@ -126,10 +126,10 @@ export default function BlogPage() {
         <div ref={containerRef} className="max-w-[1400px] mx-auto px-10 sm:px-16 pt-32 md:pt-44 pb-32">
           {/* Page title */}
           <header className="mb-16 md:mb-24">
-            <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[4rem] leading-[1] tracking-[-0.04em] mb-5 dark:text-fg">
+            <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[4rem] leading-[1] tracking-[-0.04em] mb-5">
               Blog
             </h1>
-            <p className="text-[#6b6966] dark:text-fg/70 text-[1.0625rem] leading-[1.8] max-w-[540px]">
+            <p className="text-[#6b6966] text-[1.0625rem] leading-[1.8] max-w-[540px]">
               Thoughts on learning, tools, and the future.
             </p>
           </header>
@@ -142,9 +142,9 @@ export default function BlogPage() {
           </div>
 
           {/* Footer */}
-          <footer className="reveal mt-32 md:mt-40 pt-10 border-t border-black/5 dark:border-white/5">
+          <footer className="reveal mt-32 md:mt-40 pt-10 border-t border-black/5">
             <div className="flex items-center justify-between">
-              <span className="text-[0.6875rem] tracking-[0.08em] uppercase text-[#6b6966]/40 dark:text-fg/40">
+              <span className="text-[0.6875rem] tracking-[0.08em] uppercase text-[#6b6966]/40">
                 Human Learning Lab
               </span>
               <Link href="/" className="link-hover text-[0.875rem]">

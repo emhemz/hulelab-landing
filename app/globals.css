@@ -8,92 +8,19 @@
   --subtle: #e8e6e2;
 }
 
-:root.dark {
-  --bg: #0f0f0f;
-  --fg: #e8e6e2;
-  --muted: #9b9894;
-  --accent: #d4be8a;
-  --subtle: #2a2a2a;
-}
-
-/* Adjust images in dark mode */
-.dark img[alt="Learning"],
-.dark img[alt="Time"] {
-  opacity: 0.8;
-}
-
 /* Brighten images in light mode */
 img[alt="Learning"],
 img[alt="Time"] {
   filter: brightness(1.1);
 }
 
-.dark img[alt="Learning"],
-.dark img[alt="Time"] {
-  filter: none;
-}
-
-/* Adjust cards in light and dark mode - only for blog listing cards */
+/* Blog listing cards */
 .blog-card {
   background: rgba(255, 255, 255, 0.8);
 }
 
-.dark .blog-card {
-  background: rgba(255, 255, 255, 0.02);
-  border-color: rgba(255, 255, 255, 0.08) !important;
-}
-
 .blog-card:hover {
   background: rgba(255, 255, 255, 0.95);
-}
-
-.dark .blog-card:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(212, 190, 138, 0.3) !important;
-}
-
-/* Removed global dark text styling - let components control their own text colors with Tailwind */
-
-/* Dark mode hamburger icon visibility - only target the 3 lines in hamburger button */
-.dark .hamburger-button > div {
-  background: rgba(212, 190, 138, 0.8) !important;
-}
-
-.dark .hamburger-button:hover > div {
-  background: rgba(212, 190, 138, 1) !important;
-}
-
-/* Dark mode section numbers - less visible */
-.dark article > div:first-child {
-  opacity: 0.15 !important;
-}
-
-.dark article:hover > div:first-child {
-  opacity: 0.25 !important;
-}
-
-/* Dark mode grain - more subtle */
-.dark .grain {
-  opacity: 0.03;
-}
-
-/* Dark mode background gradients - more subtle */
-.dark .bg-gradient-to-t,
-.dark .bg-gradient-to-b,
-.dark .bg-gradient-to-r,
-.dark .bg-gradient-to-l {
-  opacity: 0.3;
-}
-
-/* Removed global dark accent color override - use dark: prefixes in Tailwind instead */
-
-/* Improve dark mode link hover states */
-.dark .link-hover {
-  color: var(--muted);
-}
-
-.dark .link-hover:hover {
-  color: var(--accent);
 }
 
 * {

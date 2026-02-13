@@ -5,7 +5,7 @@ import Header from "../components/Header";
 
 export default function LarpaPage() {
   return (
-    <main className="relative min-h-screen bg-[#f5f3f0] dark:bg-[#0f0f0f]">
+    <main className="relative min-h-screen bg-[#f5f3f0]">
       
       {/* Grain texture */}
       <div className="grain" />
@@ -18,7 +18,7 @@ export default function LarpaPage() {
           {/* Back button */}
           <Link
             href="/#what-we-work-on"
-            className="inline-flex items-center gap-2 text-[0.875rem] mb-12 px-5 py-2.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-md text-[#1a1918] dark:text-white hover:bg-[#cbb37c]/20 dark:hover:bg-[#cbb37c]/20 transition-all duration-300 font-medium shadow-lg"
+            className="inline-flex items-center gap-2 text-[0.875rem] mb-12 px-5 py-2.5 rounded-full bg-white/90 backdrop-blur-md text-[#1a1918] hover:bg-[#cbb37c]/20 transition-all duration-300 font-medium shadow-lg"
           >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M10 12L6 8l4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

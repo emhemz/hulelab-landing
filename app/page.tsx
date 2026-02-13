@@ -216,7 +216,7 @@ function WorkCard({
 }) {
   const content = (
     <article 
-      className="group relative overflow-hidden rounded-xl border border-[#1a1918]/10 dark:border-white/[0.03] bg-white/80 dark:bg-white/[0.02] transition-all duration-700 ease-out hover:border-[#cbb37c]/30 dark:hover:border-white/[0.1] hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.3)] hover:-translate-y-1 h-full"
+      className="group relative overflow-hidden rounded-xl border border-[#1a1918]/10 bg-white/80 transition-all duration-700 ease-out hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.3)] hover:-translate-y-1 h-full"
       style={{ transitionDelay: `${index * 50}ms` }}
     >
       {/* Image at top if provided */}
@@ -227,13 +227,13 @@ function WorkCard({
             alt={title} 
             className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#f5f3f0] dark:from-[#0f0f0f] via-[#f5f3f0]/30 dark:via-[#0f0f0f]/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#f5f3f0] via-[#f5f3f0]/30 to-transparent" />
         </div>
       )}
       
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#cbb37c]/8 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700" />
-      <div className="absolute inset-0 bg-gradient-to-tl from-white/60 dark:from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700" />
+      <div className="absolute inset-0 bg-gradient-to-tl from-white/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700" />
       
       {/* Accent line - animated from left */}
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#cbb37c] via-[#cbb37c]/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-x-full group-hover:translate-x-0" />
@@ -249,12 +249,12 @@ function WorkCard({
         </div>
         
         <div className="flex-1">
-          <h3 className={`font-medium text-[#1a1918] dark:text-fg transition-colors duration-500 tracking-tight ${
+          <h3 className={`font-medium text-[#1a1918] transition-colors duration-500 tracking-tight ${
             imageSrc ? 'text-[1rem] sm:text-[1.125rem] mb-2' : 'text-[1.125rem] sm:text-[1.25rem] mb-3'
           }`}>
             {title}
           </h3>
-          <p className={`text-[#6b6966] dark:text-fg/70 transition-colors duration-500 ${
+          <p className={`text-[#6b6966] transition-colors duration-500 ${
             imageSrc ? 'leading-[1.6] text-[0.875rem]' : 'leading-[1.75] text-[0.9375rem]'
           }`}>
             {text}
@@ -347,15 +347,15 @@ function LunaSection() {
                 alt="Luna logo"
                 className="w-12 h-12 sm:w-14 sm:h-14"
               />
-              <h2 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] font-serif tracking-tight leading-none dark:text-fg">
+              <h2 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] font-serif tracking-tight leading-none">
                 Luna
               </h2>
             </div>
-            <p className="text-[0.95rem] text-[#cbb37c]/80 dark:text-[#d4be8a]/80 mt-2 ml-[3.75rem] sm:ml-[4.25rem]">
+            <p className="text-[0.95rem] text-[#cbb37c]/80 mt-2 ml-[3.75rem] sm:ml-[4.25rem]">
               :learn from podcasts
             </p>
           </div>
-          <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] dark:text-fg/70 mb-8 max-w-[460px]">
+          <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] mb-8 max-w-[460px]">
             A podcast player built for learning. Designed to help you remember, 
             revisit, and build on what you hear.
           </p>
@@ -427,32 +427,16 @@ function LunaSection() {
 export default function Home() {
   const { progress } = useScroll();
   const containerRef = useReveal();
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    const checkDark = () => setIsDark(document.documentElement.classList.contains('dark'));
-    checkDark();
-    const observer = new MutationObserver(checkDark);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <>
       {/* Fix hero text colors */}
       <style>{`
-        html:not(.dark) .hero-text-primary {
+        .hero-text-primary {
           color: #1a1918 !important;
         }
-        html:not(.dark) .hero-text-secondary {
+        .hero-text-secondary {
           color: #6b6966 !important;
-        }
-        html.dark .hero-text-primary,
-        html.dark .hero-text-secondary {
-          color: #ffffff !important;
-        }
-        html.dark .hero-text-secondary {
-          opacity: 0.8;
         }
       `}</style>
       
@@ -475,12 +459,12 @@ export default function Home() {
               {/* Hero */}
               <header id="about" className="min-h-[85vh] flex flex-col justify-center mb-40 md:mb-56 relative">
                 {/* Large decorative number */}
-                <div className="absolute -left-4 sm:-left-8 top-0 text-[12rem] sm:text-[16rem] font-serif leading-none text-[#cbb37c]/5 dark:opacity-0 select-none pointer-events-none">
+                <div className="absolute -left-4 sm:-left-8 top-0 text-[12rem] sm:text-[16rem] font-serif leading-none text-[#cbb37c]/5 select-none pointer-events-none">
                   01
                 </div>
                 
-                {/* Background image - architectural space - only in light mode */}
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[45%] h-[60%] opacity-[0.08] dark:opacity-0 pointer-events-none overflow-hidden rounded-l-3xl blur-sm transition-opacity duration-500">
+                {/* Background image - architectural space */}
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[45%] h-[60%] opacity-[0.08] pointer-events-none overflow-hidden rounded-l-3xl blur-sm transition-opacity duration-500">
                   <img 
                     src="/ChatGPT Image Jan 14, 2026, 04_01_38 PM.png"
                     alt="" 
@@ -581,8 +565,8 @@ export default function Home() {
 
           {/* Our Philosophy - CLEAN VERSION */}
           <section 
-            className="reveal mb-40 md:mb-56 relative overflow-hidden rounded-2xl border border-[#1a1918]/10 dark:border-white/5" 
-            style={{ backgroundColor: isDark ? 'rgba(255,255,255,0.05)' : '#FFFFFF' }}
+            className="reveal mb-40 md:mb-56 relative overflow-hidden rounded-2xl border border-[#1a1918]/10" 
+            style={{ backgroundColor: '#FFFFFF' }}
           >
             {/* Hero image - NO OVERLAY */}
             <div className="relative h-64 overflow-hidden">
@@ -596,7 +580,7 @@ export default function Home() {
             {/* Content */}
             <div 
               className="relative p-8 md:p-12" 
-              style={{ backgroundColor: isDark ? 'transparent' : '#FFFFFF' }}
+              style={{ backgroundColor: '#FFFFFF' }}
             >
               <div className="relative">
                 <div className="flex items-center gap-4 mb-6">
@@ -604,10 +588,10 @@ export default function Home() {
                   <span className="text-[0.7rem] tracking-[0.2em] uppercase text-[#cbb37c]/70 font-medium">Philosophy</span>
                 </div>
                 
-                <h2 className="text-[1.75rem] sm:text-[2rem] md:text-[2.5rem] mb-6 font-serif tracking-tight leading-tight max-w-[600px] dark:text-fg">
+                <h2 className="text-[1.75rem] sm:text-[2rem] md:text-[2.5rem] mb-6 font-serif tracking-tight leading-tight max-w-[600px]">
                   Our Philosophy
                 </h2>
-                <p className="text-[1rem] leading-[1.8] text-[#6b6966] dark:text-fg/70 max-w-[580px]">
+                <p className="text-[1rem] leading-[1.8] text-[#6b6966] max-w-[580px]">
                   We build on the science of how the human brain learns. Our systems are shaped by research, observation, and real use. We adopt new technology when it expands human capability, not when it distracts from it. We believe learning is a strategic advantage. Those who learn well strengthen their position over time.
                 </p>
               </div>
@@ -623,19 +607,19 @@ export default function Home() {
                   Get in touch
                 </h2>
                 <div className="space-y-4 mb-8 max-w-[520px]">
-                  <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
+                  <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
                     We're always open to conversations about learning, technology, and how humans grow.
                   </p>
-                  <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
+                  <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
                     But we're also looking to grow the circle.
                   </p>
-                  <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
+                  <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
                     If you care deeply about how people learn, if you're building, researching, designing, or thinking in this space, and if you want to contribute to something bigger than yourself, we'd love to hear from you.
                   </p>
-                  <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
+                  <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
                     Human Learning Lab is a place for people who want to help learning matter more. Through ideas, tools, collaboration, and shared responsibility.
                   </p>
-                  <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] dark:text-fg/70">
+                  <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
                     Reach out. Let's see if there's something we can build together.
                   </p>
                 </div>

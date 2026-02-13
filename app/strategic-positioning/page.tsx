@@ -5,7 +5,7 @@ import Header from "../components/Header";
 
 export default function StrategicPositioningPage() {
   return (
-    <main className="relative min-h-screen bg-[#f5f3f0] dark:bg-[#0f0f0f]">
+    <main className="relative min-h-screen bg-[#f5f3f0]">
       
       {/* Grain texture */}
       <div className="grain" />
@@ -13,12 +13,12 @@ export default function StrategicPositioningPage() {
       <Header />
 
       {/* Content */}
-      <article className="relative bg-[#f5f3f0] dark:bg-[#0f0f0f]">
+      <article className="relative bg-[#f5f3f0]">
         <div id="strategic-content" className="max-w-[800px] mx-auto px-10 sm:px-12 pt-32 pb-20 md:pt-40 md:pb-28">
           {/* Back button */}
           <Link
             href="/#what-we-work-on"
-            className="inline-flex items-center gap-2 text-[0.875rem] mb-12 px-5 py-2.5 rounded-full bg-white/90 dark:bg-white/10 backdrop-blur-md text-[#1a1918] dark:text-white hover:bg-[#cbb37c]/20 dark:hover:bg-[#cbb37c]/20 transition-all duration-300 font-medium shadow-lg"
+            className="inline-flex items-center gap-2 text-[0.875rem] mb-12 px-5 py-2.5 rounded-full bg-white/90 backdrop-blur-md text-[#1a1918] hover:bg-[#cbb37c]/20 transition-all duration-300 font-medium shadow-lg"
           >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M10 12L6 8l4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -33,17 +33,17 @@ export default function StrategicPositioningPage() {
           </div>
 
           {/* Title */}
-          <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] font-serif tracking-tight leading-[1.1] mb-12 text-[#1a1918] dark:text-white">
+          <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] font-serif tracking-tight leading-[1.1] mb-12 text-[#1a1918]">
             Strategic Positioning
           </h1>
 
           {/* Content */}
           <div className="space-y-6 text-[1.0625rem] leading-[1.8]">
-            <p className="text-[#6b6966] dark:text-white">
+            <p className="text-[#6b6966]">
               Learning as a strategic capability. An expanded opportunity space.
             </p>
             
-            <p className="text-[#6b6966] dark:text-white/90">
+            <p className="text-[#6b6966]">
               [Add your content here - this is a placeholder page]
             </p>
           </div>

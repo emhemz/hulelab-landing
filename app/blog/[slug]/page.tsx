@@ -68,15 +68,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       {/* Subtle grain */}
       <div className="grain" />
 
-      {/* Force solid text colors and prevent dark styling in light mode */}
+      {/* Force solid text colors */}
       <style>{`
-        html:not(.dark) #blog-article {
+        #blog-article {
           background-color: #ffffff !important;
           color: #1a1918 !important;
-        }
-        html.dark #blog-article {
-          background-color: #0f0f0f !important;
-          color: #e8e6e2 !important;
         }
         #blog-article * {
           opacity: 1 !important;
@@ -89,37 +85,37 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           color: inherit !important;
         }
         
-        /* Force footer and back button colors in light mode */
-        html:not(.dark) .blog-back-button {
+        /* Footer and back button colors */
+        .blog-back-button {
           color: #1a1918 !important;
           background: rgba(255, 255, 255, 0.95) !important;
           backdrop-filter: blur(16px) !important;
         }
-        html:not(.dark) .blog-back-button:hover {
+        .blog-back-button:hover {
           color: #cbb37c !important;
         }
-        html:not(.dark) .blog-back-button svg {
+        .blog-back-button svg {
           color: #1a1918 !important;
         }
-        html:not(.dark) .blog-back-button:hover svg {
+        .blog-back-button:hover svg {
           color: #cbb37c !important;
         }
-        html:not(.dark) .blog-footer-link {
+        .blog-footer-link {
           color: #6b6966 !important;
         }
-        html:not(.dark) .blog-footer-link:hover {
+        .blog-footer-link:hover {
           color: #cbb37c !important;
         }
-        html:not(.dark) .blog-footer-text {
+        .blog-footer-text {
           color: rgba(107, 105, 102, 0.4) !important;
         }
-        html:not(.dark) #blog-footer {
+        #blog-footer {
           background-color: #ffffff !important;
         }
-        html:not(.dark) .blog-footer-link svg {
+        .blog-footer-link svg {
           color: #6b6966 !important;
         }
-        html:not(.dark) .blog-footer-link:hover svg {
+        .blog-footer-link:hover svg {
           color: #cbb37c !important;
         }
       `}</style>
@@ -135,7 +131,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <div className="max-w-[1400px] mx-auto px-10 sm:px-16">
               <Link 
                 href="/blog"
-                className="blog-back-button inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/95 dark:bg-black/70 backdrop-blur-md border border-[#1a1918]/10 dark:border-white/20 text-[0.875rem] dark:text-fg hover:border-[#cbb37c]/30 transition-all duration-300 group shadow-lg font-medium"
+                className="blog-back-button inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/95 backdrop-blur-md border border-[#1a1918]/10 text-[0.875rem] hover:border-[#cbb37c]/30 transition-all duration-300 group shadow-lg font-medium"
               >
                 <svg 
                   width="16" 
@@ -168,12 +164,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
 
         {/* Article Content */}
-        <article id="blog-article" className="relative bg-white dark:bg-[#0f0f0f]">
+        <article id="blog-article" className="relative bg-white">
           <div className="max-w-[800px] mx-auto px-10 sm:px-12 pt-16 pb-16">
             {/* Meta and Title */}
             <div className="mb-12">
               <div className="mb-6 flex items-center gap-4">
-                <span className="text-[0.6875rem] tracking-[0.2em] uppercase text-[#cbb37c] dark:text-[#d4be8a] font-medium">
+                <span className="text-[0.6875rem] tracking-[0.2em] uppercase text-[#cbb37c] font-medium">
                   {post.date}
                 </span>
                 <div className="h-px flex-1 max-w-[60px] bg-gradient-to-r from-[#cbb37c]/40 to-transparent" />
@@ -198,7 +194,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
             {/* Author Card */}
             {'author' in post && post.author && (
-              <div className="bg-gradient-to-br from-[#cbb37c]/5 to-transparent dark:from-[#cbb37c]/10 dark:to-transparent rounded-2xl p-8 border border-[#cbb37c]/20 dark:border-[#cbb37c]/20 mb-16">
+              <div className="bg-gradient-to-br from-[#cbb37c]/5 to-transparent rounded-2xl p-8 border border-[#cbb37c]/20 mb-16">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-16 h-16 rounded-full overflow-hidden border-2 border-[#cbb37c]/30">
                     <img 
@@ -208,11 +204,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     />
                   </div>
                   <div>
-                    <p className="text-[1.125rem] font-medium text-[#1a1918] dark:text-fg mb-1">
+                    <p className="text-[1.125rem] font-medium text-[#1a1918] mb-1">
                       {post.author}
                     </p>
                     {'role' in post && post.role && (
-                      <p className="text-[0.9375rem] text-[#6b6966] dark:text-fg/70">
+                      <p className="text-[0.9375rem] text-[#6b6966]">
                         {post.role}
                       </p>
                     )}
@@ -225,12 +221,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </article>
 
         {/* Footer */}
-        <footer id="blog-footer" className="bg-white dark:bg-[#0f0f0f] border-t border-[#1a1918]/10 dark:border-white/10">
+        <footer id="blog-footer" className="bg-white border-t border-[#1a1918]/10">
           <div className="max-w-[800px] mx-auto px-10 sm:px-12 py-12">
             <div className="flex items-center justify-between mb-8">
               <Link 
                 href="/blog" 
-                className="blog-footer-link inline-flex items-center gap-2 text-[0.875rem] dark:text-fg/70 dark:hover:text-accent transition-colors duration-300 font-medium group"
+                className="blog-footer-link inline-flex items-center gap-2 text-[0.875rem] transition-colors duration-300 font-medium group"
               >
                 <svg 
                   width="16" 
@@ -249,16 +245,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               </Link>
               <Link 
                 href="/" 
-                className="blog-footer-link text-[0.875rem] dark:text-fg/70 dark:hover:text-accent transition-colors duration-300 font-medium"
+                className="blog-footer-link text-[0.875rem] transition-colors duration-300 font-medium"
               >
                 Home
               </Link>
             </div>
-            <div className="flex items-center justify-between pt-6 border-t border-[#1a1918]/5 dark:border-white/5">
-              <span className="blog-footer-text text-[0.6875rem] tracking-[0.08em] uppercase dark:text-fg/40">
+            <div className="flex items-center justify-between pt-6 border-t border-[#1a1918]/5">
+              <span className="blog-footer-text text-[0.6875rem] tracking-[0.08em] uppercase">
                 Human Learning Lab
               </span>
-              <span className="blog-footer-text text-[0.6875rem] tracking-[0.08em] uppercase dark:text-fg/40">
+              <span className="blog-footer-text text-[0.6875rem] tracking-[0.08em] uppercase">
                 Oslo
               </span>
             </div>
