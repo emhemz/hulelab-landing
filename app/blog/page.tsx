@@ -50,7 +50,7 @@ function PostPreview({ post, index }: { post: typeof posts[0]; index: number }) 
       <article className="blog-card relative h-full overflow-hidden transition-all duration-500 ease-out rounded-2xl border border-[#1a1918]/5 bg-white/50 backdrop-blur-sm hover:border-[#cbb37c]/30 hover:shadow-[0_20px_60px_-20px_rgba(203,179,124,0.25)] hover:-translate-y-1">
         {/* Featured Image */}
         {'image' in post && post.image && (
-          <div className="relative h-36 overflow-hidden">
+          <div className="relative h-32 overflow-hidden">
             <img 
               src={post.image} 
               alt={post.title}
@@ -60,34 +60,27 @@ function PostPreview({ post, index }: { post: typeof posts[0]; index: number }) 
           </div>
         )}
         
-        <div className="relative p-6 md:p-7">
+        <div className="relative p-5">
           {/* Date */}
-          <div className="mb-5 flex items-center gap-3">
+          <div className="mb-3 flex items-center gap-3">
             <span className="text-[0.6875rem] tracking-[0.2em] uppercase text-[#cbb37c]/70 group-hover:text-[#cbb37c] transition-colors duration-500 font-medium">
               {post.date}
             </span>
-            <div className="h-px flex-1 max-w-[60px] bg-gradient-to-r from-[#cbb37c]/20 via-[#cbb37c]/40 to-transparent group-hover:from-[#cbb37c]/40 transition-colors duration-500" />
+            <div className="h-px flex-1 max-w-[50px] bg-gradient-to-r from-[#cbb37c]/20 via-[#cbb37c]/40 to-transparent group-hover:from-[#cbb37c]/40 transition-colors duration-500" />
           </div>
 
           {/* Title */}
-          <h2 className="text-[1.5rem] sm:text-[1.75rem] mb-4 leading-[1.2] tracking-tight text-[#1a1918] transition-colors duration-500">
+          <h2 className="text-[1.25rem] sm:text-[1.375rem] mb-3 leading-[1.2] tracking-tight text-[#1a1918] transition-colors duration-500">
             {post.title}
           </h2>
 
           {/* Excerpt */}
-          <p className="text-[#6b6966] text-[0.9375rem] leading-[1.7] mb-6 transition-colors duration-500">
+          <p className="text-[#6b6966] text-[0.875rem] leading-[1.6] mb-4 transition-colors duration-500 line-clamp-2">
             {post.excerpt}
           </p>
 
-          {/* Author if exists */}
-          {'author' in post && post.author && (
-            <p className="text-[0.8125rem] text-[#6b6966] mb-6">
-              {post.author}
-            </p>
-          )}
-
           {/* Read more link */}
-          <div className="inline-flex items-center gap-2 text-[0.875rem] text-[#1a1918] group-hover:text-[#cbb37c] transition-colors duration-500 font-medium">
+          <div className="inline-flex items-center gap-2 text-[0.8125rem] text-[#1a1918] group-hover:text-[#cbb37c] transition-colors duration-500 font-medium">
             <span>Read article</span>
             <svg 
               width="14" 
@@ -123,14 +116,19 @@ export default function BlogPage() {
       <Header />
 
       <main className="relative z-10 min-h-screen">
-        <div ref={containerRef} className="max-w-[1400px] mx-auto px-10 sm:px-16 pt-32 md:pt-44 pb-32">
+        <div ref={containerRef} className="max-w-[1400px] mx-auto px-10 sm:px-16 pt-28 md:pt-36 pb-32">
           {/* Page title */}
-          <header className="mb-16 md:mb-24">
-            <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[4rem] leading-[1] tracking-[-0.04em] mb-5">
+          <header className="mb-12 md:mb-16">
+            <div className="mb-6">
+              <span className="text-[0.6875rem] tracking-[0.2em] uppercase text-[#cbb37c]/70 font-medium">
+                Writing
+              </span>
+            </div>
+            <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[4rem] leading-[1] tracking-[-0.04em] mb-6">
               Blog
             </h1>
-            <p className="text-[#6b6966] text-[1.0625rem] leading-[1.8] max-w-[540px]">
-              Thoughts on learning, tools, and the future.
+            <p className="text-[#6b6966] text-[1.0625rem] leading-[1.8] max-w-[680px]">
+              We explore how people learn, how technology shapes understanding, and what it takes to build systems that help humans think better. These are observations from the work we do.
             </p>
           </header>
 

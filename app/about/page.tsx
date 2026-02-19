@@ -219,7 +219,7 @@ export default function AboutPage() {
           </section>
 
           {/* What we're building - Featured section with image */}
-          <section className="reveal mb-32 md:mb-40 relative overflow-hidden rounded-2xl border-[3px] border-black/30 shadow-md" style={{ backgroundColor: '#ffffff' }}>
+          <section className="reveal mb-32 md:mb-40 relative overflow-hidden rounded-2xl border border-[#1a1918]/10" style={{ backgroundColor: '#ffffff' }}>
             <div className="relative p-10 md:p-16">
               <div className="max-w-[700px]">
                 <span className="inline-block px-3 py-1 rounded-full bg-[#cbb37c]/10 border border-[#cbb37c]/20 mb-6">

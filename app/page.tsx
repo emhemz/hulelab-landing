@@ -124,19 +124,6 @@ function ScrollAtmosphere({ progress }: { progress: number }) {
 function ParallaxShapes({ progress }: { progress: number }) {
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-      {/* Large gradient orb - top right */}
-      <div
-        className="absolute rounded-full blur-3xl"
-        style={{
-          width: "600px",
-          height: "600px",
-          right: "-10%",
-          top: `${-10 - progress * 30}%`,
-          background: "radial-gradient(circle, rgba(203,179,124,0.08) 0%, transparent 65%)",
-          transition: "top 0.15s ease-out",
-        }}
-      />
-      
       {/* Medium orb - left side */}
       <div
         className="absolute rounded-full blur-2xl"
@@ -179,19 +166,6 @@ function ParallaxShapes({ progress }: { progress: number }) {
           backgroundSize: "30px 30px",
           transition: "bottom 0.15s ease-out",
           opacity: 0.4,
-        }}
-      />
-      
-      {/* Vertical accent line */}
-      <div
-        className="absolute"
-        style={{
-          width: "2px",
-          height: "400px",
-          right: "25%",
-          top: `${15 - progress * 45}%`,
-          background: "linear-gradient(to bottom, transparent, rgba(203,179,124,0.15), transparent)",
-          transition: "top 0.15s ease-out",
         }}
       />
     </div>
@@ -530,7 +504,7 @@ export default function Home() {
               </header>
 
               {/* What We Work On */}
-          <section id="what-we-work-on" className="reveal mb-40 md:mb-56 relative">
+          <section id="what-we-work-on" className="reveal mb-24 md:mb-32 relative">
             {/* Section header with decorative element */}
             <div className="flex items-center gap-6 mb-14 md:mb-16">
               <div className="flex flex-col gap-2">
@@ -567,7 +541,7 @@ export default function Home() {
           </section>
 
           {/* Divider with shadow */}
-          <div className="reveal mb-32 md:mb-44 flex justify-start">
+          <div className="reveal mb-16 md:mb-24 flex justify-start">
             <div className="relative w-32">
               <div className="h-px bg-gradient-to-r from-[#1a1918]/20 to-transparent" />
               <div className="absolute top-0 left-0 h-px w-16 bg-gradient-to-r from-[#cbb37c]/40 to-transparent blur-sm" />

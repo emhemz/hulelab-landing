@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Source_Serif_4, Inter } from "next/font/google";
+import { Source_Serif_4, DM_Sans } from "next/font/google";
 import "./globals.css";
 
 const sourceSerif = Source_Serif_4({
@@ -9,7 +9,7 @@ const sourceSerif = Source_Serif_4({
   weight: ["400", "500"],
 });
 
-const inter = Inter({
+const dmSans = DM_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
   display: "swap",
@@ -35,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${sourceSerif.variable} ${inter.variable}`}>
+      <body className={`${sourceSerif.variable} ${dmSans.variable}`}>
         {children}
       </body>
     </html>

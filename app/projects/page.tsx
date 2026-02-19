@@ -30,7 +30,7 @@ export default function ProjectsPage() {
                   Luna
                 </h2>
                 <p className="text-[#6b6966] leading-[1.8] text-[1.0625rem]">
-                  A podcast player built for learning. Designed to help you remember, revisit, and build on what you hear. Luna treats podcasts as learning material, not just entertainment.
+                  The podcast player built for active learning. Highlight moments, read AI transcripts, share discoveries, and let Luna AI guide your learning journey. Built on neurobiology to turn passive listening into lasting knowledge.
                 </p>
                 <div className="space-y-4">
                   <h3 className="text-[0.8125rem] font-medium tracking-[0.06em] uppercase text-[#1a1918] mt-8 mb-3">
@@ -39,26 +39,30 @@ export default function ProjectsPage() {
                   <ul className="space-y-3 text-[#6b6966] leading-[1.7]">
                     <li className="flex items-start gap-3">
                       <span className="text-[#cbb37c] mt-1">→</span>
-                      <span>Spaced repetition for podcast content</span>
+                      <span>Highlight key moments with automatic timestamps</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-[#cbb37c] mt-1">→</span>
-                      <span>Smart bookmarking and note-taking</span>
+                      <span>AI transcriptions for 1M+ podcasts — read while you listen</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-[#cbb37c] mt-1">→</span>
-                      <span>Adaptive playback for better retention</span>
+                      <span>Luna AI Assistant — your personal learning guide</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#cbb37c] mt-1">→</span>
+                      <span>40% better retention with dual-coding learning</span>
                     </li>
                   </ul>
                 </div>
                 <div className="pt-6">
                   <a 
-                    href="https://www.lunacast.ai/" 
+                    href="https://luna-landing-opal.vercel.app/" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#cbb37c]/10 hover:bg-[#cbb37c]/20 border border-[#cbb37c]/20 hover:border-[#cbb37c]/40 transition-all duration-300 group"
                   >
-                    <span className="text-[0.9375rem] font-medium text-[#1a1918]">Visit Luna</span>
+                    <span className="text-[0.9375rem] font-medium text-[#1a1918]">Learn more about Luna</span>
                     <svg 
                       width="16" 
                       height="16" 
