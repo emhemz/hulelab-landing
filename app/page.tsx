@@ -451,52 +451,45 @@ export default function Home() {
           
               {/* Hero */}
               <header id="about" className="min-h-[85vh] flex flex-col justify-center mb-40 md:mb-56 relative">
-                {/* Large decorative number */}
-                <div className="absolute -left-4 sm:-left-8 top-0 text-[12rem] sm:text-[16rem] font-serif leading-none text-[#cbb37c]/5 select-none pointer-events-none">
-                  01
-                </div>
+                {/* Decorative elements */}
+                <div className="absolute right-0 top-0 w-96 h-96 bg-[#cbb37c]/5 rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute left-1/4 bottom-0 w-64 h-64 bg-[#cbb37c]/3 rounded-full blur-3xl pointer-events-none" />
                 
-                {/* Background image - architectural space */}
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[45%] h-[60%] opacity-[0.08] pointer-events-none overflow-hidden rounded-l-3xl blur-sm transition-opacity duration-500">
-                  <img 
-                    src="/ChatGPT Image Jan 14, 2026, 04_01_38 PM.png"
-                    alt="" 
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#f5f3f0] via-[#f5f3f0]/70 to-transparent" />
-                </div>
-                
-                {/* Logo with title - more dramatic */}
+                {/* Logo with title */}
                 <div className="relative z-10 mb-16 md:mb-20">
-                  <div className="flex items-start gap-6 mb-3">
-                    <Logo size={56} className="mt-3 opacity-90 hover:opacity-100 transition-opacity" />
-                    <h1 className="text-[3rem] sm:text-[4rem] md:text-[5rem] leading-[0.95] tracking-[-0.05em] font-serif">
+                  <div className="flex items-center gap-5 mb-8">
+                    <div className="relative">
+                      <div className="absolute inset-0 bg-[#cbb37c]/10 rounded-2xl blur-xl" />
+                      <Logo size={64} className="relative opacity-95 hover:opacity-100 transition-opacity" />
+                    </div>
+                    <div className="h-16 w-px bg-gradient-to-b from-transparent via-[#cbb37c]/30 to-transparent" />
+                    <h1 className="text-[3.5rem] sm:text-[4.5rem] md:text-[5.5rem] leading-[0.9] tracking-[-0.04em] font-serif text-[#1a1918]">
                       Human<br />
                       Learning Lab
                     </h1>
                   </div>
                   
                   {/* Subtitle badge */}
-                  <div className="inline-flex items-center gap-2 px-4 py-2 mt-6 bg-gradient-to-r from-[#cbb37c]/10 to-transparent border-l-2 border-[#cbb37c]/40">
+                  <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/80 backdrop-blur-sm rounded-xl border border-[#cbb37c]/20 shadow-sm">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#cbb37c] animate-pulse" />
-                    <span className="text-[0.75rem] tracking-[0.15em] uppercase text-[#cbb37c]/80 font-medium">
+                    <span className="text-[0.8125rem] tracking-[0.12em] uppercase text-[#cbb37c] font-medium">
                       Research • Tools • Practice
                     </span>
                   </div>
                 </div>
                 
-                {/* Description with better layout */}
-                <div className="space-y-6 max-w-[560px] relative z-10">
-                  <p className="hero-text-primary text-[1.125rem] sm:text-[1.25rem] leading-[1.65] font-medium">
-                    <strong>The future belongs not to those who know the most, but to those who learn best.</strong>
+                {/* Description */}
+                <div className="space-y-6 max-w-[620px] relative z-10">
+                  <p className="hero-text-primary text-[1.25rem] sm:text-[1.375rem] leading-[1.6] font-medium text-[#1a1918]">
+                    The future belongs not to those who know the most, but to those who learn best.
                   </p>
-                  <p className="hero-text-secondary text-[1.0625rem] sm:text-[1.125rem] leading-[1.8]">
+                  <p className="hero-text-secondary text-[1.0625rem] sm:text-[1.125rem] leading-[1.8] text-[#6b6966]">
                     Human Learning Lab builds learning systems that give people and organizations a stronger strategic position over time.
                   </p>
                   
                   {/* CTA hint */}
-                  <div className="flex items-center gap-3 pt-4">
-                    <div className="h-px w-12 bg-gradient-to-r from-[#cbb37c]/60 to-transparent" />
+                  <div className="flex items-center gap-3 pt-6">
+                    <div className="h-px w-16 bg-gradient-to-r from-[#cbb37c]/60 to-transparent" />
                     <span className="text-[0.8125rem] text-[#6b6966]/60 tracking-wide">Scroll to explore</span>
                   </div>
                 </div>
@@ -550,76 +543,148 @@ export default function Home() {
           {/* Luna */}
           <LunaSection />
 
-          {/* Our Philosophy - CLEAN VERSION */}
-          <section 
-            className="reveal mb-40 md:mb-56 relative overflow-hidden rounded-2xl border border-[#1a1918]/10" 
-            style={{ backgroundColor: '#FFFFFF' }}
-          >
-            {/* Hero image - NO OVERLAY */}
-            <div className="relative h-64 overflow-hidden">
-              <img 
-                src="/ChatGPT Image Jan 14, 2026, 04_08_38 PM.png"
-                alt="Our Philosophy" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            
-            {/* Content */}
-            <div 
-              className="relative p-8 md:p-12" 
-              style={{ backgroundColor: '#FFFFFF' }}
-            >
-              <div className="relative">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-px bg-gradient-to-r from-[#cbb37c] to-transparent" />
-                  <span className="text-[0.7rem] tracking-[0.2em] uppercase text-[#cbb37c]/70 font-medium">Philosophy</span>
-                </div>
-                
-                <h2 className="text-[1.75rem] sm:text-[2rem] md:text-[2.5rem] mb-6 font-serif tracking-tight leading-tight max-w-[600px]">
+          {/* Our Philosophy - Full Width Card with Icons */}
+          <section className="reveal mb-40 md:mb-56">
+            <div className="relative overflow-hidden rounded-2xl p-12 md:p-16 bg-gradient-to-br from-[#cbb37c]/8 to-white/80 backdrop-blur-sm border border-[#cbb37c]/20">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-12 h-px bg-gradient-to-r from-[#cbb37c] to-transparent" />
+                <span className="text-[0.7rem] tracking-[0.2em] uppercase text-[#cbb37c]/70 font-medium">Philosophy</span>
+              </div>
+              
+              <div className="max-w-[900px] mb-12">
+                <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] mb-8 font-serif tracking-tight leading-[1.1] text-[#1a1918]">
                   Our Philosophy
                 </h2>
-                <p className="text-[1rem] leading-[1.8] text-[#6b6966] max-w-[580px]">
+                <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
                   We build on the science of how the human brain learns. Our systems are shaped by research, observation, and real use. We adopt new technology when it expands human capability, not when it distracts from it. We believe learning is a strategic advantage. Those who learn well strengthen their position over time.
                 </p>
+              </div>
+
+              {/* Key Principles with Icons */}
+              <div className="grid md:grid-cols-4 gap-8 pt-8 border-t border-[#cbb37c]/20">
+                <div className="flex flex-col items-start gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-[#cbb37c]/15 flex items-center justify-center">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#cbb37c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="3" />
+                      <path d="M12 1v6m0 6v6M1 12h6m6 0h6" />
+                      <path d="M4.2 4.2l4.2 4.2m7.2 0l4.2-4.2m-4.2 11.6l4.2 4.2m-15.6 0l4.2-4.2" />
+                    </svg>
+                  </div>
+                  <span className="text-[0.9375rem] font-medium text-[#1a1918]">Science-based</span>
+                </div>
+
+                <div className="flex flex-col items-start gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-[#cbb37c]/15 flex items-center justify-center">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#cbb37c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                      <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg>
+                  </div>
+                  <span className="text-[0.9375rem] font-medium text-[#1a1918]">Research-informed</span>
+                </div>
+
+                <div className="flex flex-col items-start gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-[#cbb37c]/15 flex items-center justify-center">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#cbb37c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="3" y="3" width="7" height="7" rx="1" />
+                      <rect x="14" y="3" width="7" height="7" rx="1" />
+                      <rect x="3" y="14" width="7" height="7" rx="1" />
+                      <rect x="14" y="14" width="7" height="7" rx="1" />
+                    </svg>
+                  </div>
+                  <span className="text-[0.9375rem] font-medium text-[#1a1918]">Technology-enabled</span>
+                </div>
+
+                <div className="flex flex-col items-start gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-[#cbb37c]/15 flex items-center justify-center">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#cbb37c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M2 20l4-4m0 0L2 12l4 4zm0 0l4-4m-4 4l4 4" />
+                      <path d="M18 4l-1.5 1.5M14 4l1.5 1.5M15.5 5.5v3" />
+                      <polyline points="12 2 12 6 8 10 8 14 16 14 16 10 12 6" />
+                    </svg>
+                  </div>
+                  <span className="text-[0.9375rem] font-medium text-[#1a1918]">Strategic advantage</span>
+                </div>
               </div>
             </div>
           </section>
 
-          {/* Contact section - more engaging */}
+          {/* Contact section - Card Design */}
           <section className="reveal mb-40 md:mb-56 relative">
-            <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-              <div>
-                <span className="text-[0.7rem] tracking-[0.2em] uppercase text-[#cbb37c]/70 font-medium mb-6 block">Connect</span>
-                <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] mb-6 font-serif tracking-tight leading-tight">
-                  Get in touch
-                </h2>
-                <div className="space-y-4 mb-8 max-w-[520px]">
-                  <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
-                    We're always open to conversations about learning, technology, and how humans grow.
-                  </p>
-                  <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
-                    But we're also looking to grow the circle.
-                  </p>
-                  <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
-                    If you care deeply about how people learn, if you're building, researching, designing, or thinking in this space, and if you want to contribute to something bigger than yourself, we'd love to hear from you.
-                  </p>
-                  <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
-                    Human Learning Lab is a place for people who want to help learning matter more. Through ideas, tools, collaboration, and shared responsibility.
-                  </p>
-                  <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
-                    Reach out. Let's see if there's something we can build together.
-                  </p>
+            <div className="relative overflow-hidden rounded-2xl p-12 md:p-16 bg-gradient-to-br from-white/80 to-[#cbb37c]/8 backdrop-blur-sm border border-[#cbb37c]/20">
+              <div className="grid md:grid-cols-[1.3fr_1fr] gap-12 md:gap-16 items-center">
+                <div>
+                  <span className="text-[0.7rem] tracking-[0.2em] uppercase text-[#cbb37c]/70 font-medium mb-6 block">Connect</span>
+                  <h2 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] mb-8 font-serif tracking-tight leading-[1.05] text-[#1a1918]">
+                    Get in touch
+                  </h2>
+                  <div className="space-y-5 mb-10 max-w-[520px]">
+                    <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
+                      We're always open to conversations about learning, technology, and how humans grow.
+                    </p>
+                    <p className="text-[1.0625rem] leading-[1.8] text-[#1a1918] font-medium">
+                      If you're building, researching, or thinking in this space — we'd love to hear from you.
+                    </p>
+                  </div>
+                  <a 
+                    href="mailto:christian@hulelab.no" 
+                    className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-br from-[#cbb37c]/8 to-[#cbb37c]/5 hover:from-[#cbb37c]/12 hover:to-[#cbb37c]/8 border border-[#cbb37c] text-[#1a1918] hover:border-[#cbb37c]/80 transition-all duration-300 font-medium group"
+                  >
+                    <span className="text-[1.0625rem]">christian@hulelab.no</span>
+                    <svg 
+                      width="18" 
+                      height="18" 
+                      viewBox="0 0 16 16" 
+                      className="transition-transform duration-300 group-hover:translate-x-1 text-[#cbb37c]"
+                    >
+                      <path d="M6 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </a>
                 </div>
-                <Button href="mailto:christian@hulelab.com" external icon="arrow">
-                  <strong>christian@hulelab.com</strong>
-                </Button>
-              </div>
-              
-              {/* Visual element */}
-              <div className="hidden md:flex items-center justify-center relative">
-                <div className="w-72 h-72 bg-gradient-to-br from-[#cbb37c]/10 via-[#cbb37c]/5 to-transparent rounded-full blur-2xl" />
-                <div className="absolute w-48 h-48 border-2 border-[#cbb37c]/20 rounded-full" />
-                <div className="absolute w-32 h-32 border border-[#cbb37c]/10 rounded-full" />
+                
+                {/* Icon Grid */}
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="flex flex-col items-center justify-center p-6 rounded-xl bg-white/60 backdrop-blur-sm border border-[#cbb37c]/10">
+                    <div className="w-12 h-12 rounded-lg bg-[#cbb37c]/15 flex items-center justify-center mb-3">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cbb37c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                      </svg>
+                    </div>
+                    <span className="text-[0.875rem] font-medium text-[#1a1918]">Collaborate</span>
+                  </div>
+
+                  <div className="flex flex-col items-center justify-center p-6 rounded-xl bg-white/60 backdrop-blur-sm border border-[#cbb37c]/10">
+                    <div className="w-12 h-12 rounded-lg bg-[#cbb37c]/15 flex items-center justify-center mb-3">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cbb37c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                        <line x1="12" y1="17" x2="12.01" y2="17" />
+                      </svg>
+                    </div>
+                    <span className="text-[0.875rem] font-medium text-[#1a1918]">Ask Questions</span>
+                  </div>
+
+                  <div className="flex flex-col items-center justify-center p-6 rounded-xl bg-white/60 backdrop-blur-sm border border-[#cbb37c]/10">
+                    <div className="w-12 h-12 rounded-lg bg-[#cbb37c]/15 flex items-center justify-center mb-3">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cbb37c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M12 20h9" />
+                        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                      </svg>
+                    </div>
+                    <span className="text-[0.875rem] font-medium text-[#1a1918]">Pitch Ideas</span>
+                  </div>
+
+                  <div className="flex flex-col items-center justify-center p-6 rounded-xl bg-white/60 backdrop-blur-sm border border-[#cbb37c]/10">
+                    <div className="w-12 h-12 rounded-lg bg-[#cbb37c]/15 flex items-center justify-center mb-3">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cbb37c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                      </svg>
+                    </div>
+                    <span className="text-[0.875rem] font-medium text-[#1a1918]">Join Us</span>
+                  </div>
+                </div>
               </div>
             </div>
           </section>

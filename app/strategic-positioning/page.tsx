@@ -242,9 +242,9 @@ export default function StrategicPositioningPage() {
               </div>
               <a 
                 href="mailto:christian@hulelab.no" 
-                className="inline-flex items-center gap-3 px-7 py-4 rounded-xl bg-white hover:bg-[#cbb37c]/20 hover:backdrop-blur-md border border-white hover:border-[#cbb37c] transition-all duration-300 group hover:scale-105"
+                className="inline-flex items-center gap-3 px-7 py-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white text-white hover:border-white/80 transition-all duration-300 group"
               >
-                <span className="text-[1.0625rem] font-medium text-[#1a1918]">Book a conversation</span>
+                <span className="text-[1.0625rem] font-medium">Book a conversation</span>
                 <svg 
                   width="18" 
                   height="18" 
@@ -258,7 +258,6 @@ export default function StrategicPositioningPage() {
                     fill="none" 
                     strokeLinecap="round" 
                     strokeLinejoin="round"
-                    className="text-[#cbb37c]"
                   />
                 </svg>
               </a>

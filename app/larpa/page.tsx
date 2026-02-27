@@ -194,14 +194,14 @@ export default function LarpaPage() {
 
                 <a 
                   href="mailto:christian@hulelab.no" 
-                  className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-[#cbb37c] hover:bg-[#cbb37c]/90 text-white transition-all duration-300 font-medium shadow-lg hover:shadow-xl hover:scale-105 group"
+                  className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-br from-[#cbb37c]/8 to-[#cbb37c]/5 hover:from-[#cbb37c]/12 hover:to-[#cbb37c]/8 border border-[#cbb37c] text-[#1a1918] hover:border-[#cbb37c]/80 transition-all duration-300 font-medium group"
                 >
                   <span className="text-[1.0625rem]">Submit Your Idea</span>
                   <svg 
                     width="18" 
                     height="18" 
                     viewBox="0 0 16 16" 
-                    className="transition-transform duration-300 group-hover:translate-x-1"
+                    className="transition-transform duration-300 group-hover:translate-x-1 text-[#cbb37c]"
                   >
                     <path d="M6 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
