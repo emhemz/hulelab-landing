@@ -172,21 +172,6 @@ export default function ProductTechnologyPage() {
                     Aura is embedded across our systems and evolves with the learner.
                   </p>
                 </div>
-                <Link 
-                  href="#" 
-                  className="inline-flex items-center gap-2 text-[0.9375rem] text-[#1a1918] hover:text-[#cbb37c] transition-colors duration-300 font-medium group"
-                >
-                  <span className="text-[#cbb37c]">→</span>
-                  <span>Learn about Aura</span>
-                  <svg 
-                    width="14" 
-                    height="14" 
-                    viewBox="0 0 14 14" 
-                    className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1"
-                  >
-                    <path d="M6 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </Link>
               </div>
               <div className="relative h-[400px] rounded-2xl overflow-hidden order-1 md:order-2">
                 <img 
@@ -298,29 +283,6 @@ export default function ProductTechnologyPage() {
                   Root makes institutional intelligence visible, measurable, and continuously evolving.
                 </p>
               </div>
-              
-              <Link 
-                href="#" 
-                className="inline-flex items-center gap-3 px-7 py-4 rounded-xl bg-white hover:bg-[#cbb37c]/20 hover:backdrop-blur-md border border-white hover:border-[#cbb37c] transition-all duration-300 group hover:scale-105"
-              >
-                <span className="text-[1.0625rem] font-medium text-[#1a1918]">Explore Root</span>
-                <svg 
-                  width="18" 
-                  height="18" 
-                  viewBox="0 0 16 16" 
-                  className="transition-transform duration-300 group-hover:translate-x-1"
-                >
-                  <path 
-                    d="M6 4l4 4-4 4" 
-                    stroke="currentColor" 
-                    strokeWidth="1.5" 
-                    fill="none" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round"
-                    className="text-[#cbb37c]"
-                  />
-                </svg>
-              </Link>
             </div>
           </section>
 

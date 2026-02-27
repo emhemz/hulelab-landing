@@ -85,21 +85,6 @@ export default function StrategicPositioningPage() {
                     Through 1:1 coaching, meta-learning frameworks, and structured cognitive development, we help you build systems that increase clarity, velocity, and long-term growth.
                   </p>
                 </div>
-                <Link 
-                  href="#" 
-                  className="inline-flex items-center gap-2 text-[0.9375rem] text-[#1a1918] hover:text-[#cbb37c] transition-colors duration-300 font-medium group"
-                >
-                  <span className="text-[#cbb37c]">→</span>
-                  <span>Explore EDGE Sessions</span>
-                  <svg 
-                    width="14" 
-                    height="14" 
-                    viewBox="0 0 14 14" 
-                    className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1"
-                  >
-                    <path d="M6 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </Link>
               </div>
             </div>
           </section>
@@ -146,8 +131,10 @@ export default function StrategicPositioningPage() {
                   From executive advisory to full implementation, we design systems that make capability compound.
                 </p>
                 <div className="flex flex-wrap gap-6">
-                  <Link 
-                    href="#" 
+                  <a 
+                    href="https://www.learnedge.co/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-[0.9375rem] text-[#1a1918] hover:text-[#cbb37c] transition-colors duration-300 font-medium group"
                   >
                     <span className="text-[#cbb37c]">→</span>
@@ -160,22 +147,7 @@ export default function StrategicPositioningPage() {
                     >
                       <path d="M6 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
-                  </Link>
-                  <Link 
-                    href="#" 
-                    className="inline-flex items-center gap-2 text-[0.9375rem] text-[#1a1918] hover:text-[#cbb37c] transition-colors duration-300 font-medium group"
-                  >
-                    <span className="text-[#cbb37c]">→</span>
-                    <span>Explore enterprise programs</span>
-                    <svg 
-                      width="14" 
-                      height="14" 
-                      viewBox="0 0 14 14" 
-                      className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1"
-                    >
-                      <path d="M6 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </Link>
+                  </a>
                 </div>
               </div>
               <div className="relative h-[500px] rounded-2xl overflow-hidden">
@@ -243,38 +215,6 @@ export default function StrategicPositioningPage() {
                   <p>
                     Our ambition is to help create more effective, motivated, and future-ready learning environments.
                   </p>
-                </div>
-                <div className="flex flex-wrap gap-6">
-                  <Link 
-                    href="#" 
-                    className="inline-flex items-center gap-2 text-[0.9375rem] text-[#1a1918] hover:text-[#cbb37c] transition-colors duration-300 font-medium group"
-                  >
-                    <span className="text-[#cbb37c]">→</span>
-                    <span>Explore Education Initiatives</span>
-                    <svg 
-                      width="14" 
-                      height="14" 
-                      viewBox="0 0 14 14" 
-                      className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1"
-                    >
-                      <path d="M6 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </Link>
-                  <Link 
-                    href="#" 
-                    className="inline-flex items-center gap-2 text-[0.9375rem] text-[#1a1918] hover:text-[#cbb37c] transition-colors duration-300 font-medium group"
-                  >
-                    <span className="text-[#cbb37c]">→</span>
-                    <span>Explore EDGE for Schools</span>
-                    <svg 
-                      width="14" 
-                      height="14" 
-                      viewBox="0 0 14 14" 
-                      className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1"
-                    >
-                      <path d="M6 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </Link>
                 </div>
               </div>
             </div>
@@ -351,8 +291,8 @@ export default function StrategicPositioningPage() {
                   If you are ready to strengthen your strategic position, we are ready to build with you.
                 </p>
               </div>
-              <Link 
-                href="/contact" 
+              <a 
+                href="mailto:christian@hulelab.no" 
                 className="inline-flex items-center gap-3 px-7 py-4 rounded-xl bg-white hover:bg-[#cbb37c]/20 hover:backdrop-blur-md border border-white hover:border-[#cbb37c] transition-all duration-300 group hover:scale-105"
               >
                 <span className="text-[1.0625rem] font-medium text-[#1a1918]">Book a conversation</span>
@@ -372,7 +312,7 @@ export default function StrategicPositioningPage() {
                     className="text-[#cbb37c]"
                   />
                 </svg>
-              </Link>
+              </a>
             </div>
           </section>
 

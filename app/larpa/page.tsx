@@ -166,21 +166,20 @@ export default function LarpaPage() {
                   </p>
                 </div>
 
-                <Link 
-                  href="/contact" 
-                  className="inline-flex items-center gap-2 text-[0.9375rem] text-[#1a1918] hover:text-[#cbb37c] transition-colors duration-300 font-medium group"
+                <a 
+                  href="mailto:christian@hulelab.no" 
+                  className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-[#cbb37c] hover:bg-[#cbb37c]/90 text-white transition-all duration-300 font-medium shadow-lg hover:shadow-xl hover:scale-105 group"
                 >
-                  <span className="text-[#cbb37c]">→</span>
-                  <span>Submit Your Idea</span>
+                  <span className="text-[1.0625rem]">Submit Your Idea</span>
                   <svg 
-                    width="14" 
-                    height="14" 
-                    viewBox="0 0 14 14" 
-                    className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1"
+                    width="18" 
+                    height="18" 
+                    viewBox="0 0 16 16" 
+                    className="transition-transform duration-300 group-hover:translate-x-1"
                   >
                     <path d="M6 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                </Link>
+                </a>
               </div>
             </div>
           </section>
@@ -378,38 +377,16 @@ export default function LarpaPage() {
               </div>
               
               <div className="flex flex-wrap gap-6">
-                <Link 
-                  href="#" 
+                <a 
+                  href="mailto:christian@hulelab.no" 
                   className="inline-flex items-center gap-3 px-7 py-4 rounded-xl bg-white hover:bg-[#cbb37c]/20 hover:backdrop-blur-md border border-white hover:border-[#cbb37c] transition-all duration-300 group hover:scale-105"
                 >
-                  <span className="text-[1.0625rem] font-medium text-[#1a1918]">Explore Active Initiatives</span>
+                  <span className="text-[1.0625rem] font-medium text-[#1a1918]">Partner With LARPA</span>
                   <svg 
                     width="18" 
                     height="18" 
                     viewBox="0 0 16 16" 
-                    className="transition-transform duration-300 group-hover:translate-x-1"
-                  >
-                    <path 
-                      d="M6 4l4 4-4 4" 
-                      stroke="currentColor" 
-                      strokeWidth="1.5" 
-                      fill="none" 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round"
-                      className="text-[#cbb37c]"
-                    />
-                  </svg>
-                </Link>
-                <Link 
-                  href="/contact" 
-                  className="inline-flex items-center gap-3 px-7 py-4 rounded-xl bg-transparent hover:bg-white/10 border border-white/50 hover:border-white transition-all duration-300 group"
-                >
-                  <span className="text-[1.0625rem] font-medium text-white">Partner With LARPA</span>
-                  <svg 
-                    width="18" 
-                    height="18" 
-                    viewBox="0 0 16 16" 
-                    className="transition-transform duration-300 group-hover:translate-x-1 text-white"
+                    className="transition-transform duration-300 group-hover:translate-x-1 text-[#cbb37c]"
                   >
                     <path 
                       d="M6 4l4 4-4 4" 
@@ -420,7 +397,7 @@ export default function LarpaPage() {
                       strokeLinejoin="round"
                     />
                   </svg>
-                </Link>
+                </a>
               </div>
             </div>
           </section>
