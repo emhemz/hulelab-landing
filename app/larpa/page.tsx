@@ -53,48 +53,74 @@ export default function LarpaPage() {
           </div>
 
           {/* Hero Image */}
-          <div className="relative mb-32 md:mb-40 h-[350px] md:h-[450px] overflow-hidden rounded-3xl">
+          <div className="relative mb-32 md:mb-40 h-[400px] md:h-[500px] overflow-hidden rounded-3xl">
             <img 
               src="/larpa/Hero-bilde-larpa.png" 
               alt="" 
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#1a1918]/40 via-transparent to-[#cbb37c]/30" />
           </div>
 
           {/* The Mission */}
-          <section className="mb-32 md:mb-40 max-w-[900px]">
-            <h2 className="text-[2rem] sm:text-[2.5rem] font-serif tracking-tight leading-[1.1] text-[#1a1918] mb-8">
-              The Mission
-            </h2>
-            <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] mb-6">
-              LARPA focuses on advancing:
-            </p>
-            <ul className="space-y-3 text-[1.0625rem] leading-[1.8] text-[#6b6966] mb-8">
-              <li className="flex items-start gap-3">
-                <span className="text-[#cbb37c] mt-1">–</span>
-                <span>Human learning capacity</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-[#cbb37c] mt-1">–</span>
-                <span>Organizational intelligence</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-[#cbb37c] mt-1">–</span>
-                <span>AI-driven learning systems</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-[#cbb37c] mt-1">–</span>
-                <span>Institutional learning infrastructure</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-[#cbb37c] mt-1">–</span>
-                <span>New models for measuring capability</span>
-              </li>
-            </ul>
-            <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
-              We work at the intersection of neuroscience, artificial intelligence, and institutional design.
-            </p>
+          <section className="mb-32 md:mb-40">
+            <div className="relative overflow-hidden rounded-2xl p-12 md:p-16 bg-gradient-to-br from-[#cbb37c]/8 to-white/80 backdrop-blur-sm border border-[#cbb37c]/20">
+              <div className="max-w-[1000px]">
+                <h2 className="text-[2rem] sm:text-[2.5rem] font-serif tracking-tight leading-[1.1] text-[#1a1918] mb-4">
+                  The Mission
+                </h2>
+                <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] mb-10">
+                  LARPA focuses on advancing:
+                </p>
+                <div className="grid md:grid-cols-2 gap-x-16 gap-y-5 mb-10">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[#cbb37c]/15 flex items-center justify-center">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 2C8 2 11 3.5 11 7c0 2-1 3.5-3 4.5M8 2C8 2 5 3.5 5 7c0 2 1 3.5 3 4.5M8 2v9.5m0 0v2.5" stroke="#cbb37c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                    <span className="text-[1rem] leading-[1.7] text-[#6b6966] pt-0.5">Human learning capacity</span>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[#cbb37c]/15 flex items-center justify-center">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <rect x="2" y="2" width="12" height="12" rx="2" stroke="#cbb37c" strokeWidth="1.5" fill="none"/>
+                        <path d="M5 8h6M8 5v6" stroke="#cbb37c" strokeWidth="1.5" strokeLinecap="round"/>
+                      </svg>
+                    </div>
+                    <span className="text-[1rem] leading-[1.7] text-[#6b6966] pt-0.5">Organizational intelligence</span>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[#cbb37c]/15 flex items-center justify-center">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="6" stroke="#cbb37c" strokeWidth="1.5" fill="none"/>
+                        <path d="M8 5v3l2 2" stroke="#cbb37c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                    <span className="text-[1rem] leading-[1.7] text-[#6b6966] pt-0.5">AI-driven learning systems</span>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[#cbb37c]/15 flex items-center justify-center">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M3 4h10M4 7h8M5 10h6M6 13h4" stroke="#cbb37c" strokeWidth="1.5" strokeLinecap="round"/>
+                      </svg>
+                    </div>
+                    <span className="text-[1rem] leading-[1.7] text-[#6b6966] pt-0.5">Institutional learning infrastructure</span>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[#cbb37c]/15 flex items-center justify-center">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M2 11l3-3 3 3 6-6M14 5v3m0-3h-3" stroke="#cbb37c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                    <span className="text-[1rem] leading-[1.7] text-[#6b6966] pt-0.5">New models for measuring capability</span>
+                  </div>
+                </div>
+                <p className="text-[1.0625rem] leading-[1.8] text-[#1a1918] font-medium">
+                  We work at the intersection of neuroscience, artificial intelligence, and institutional design.
+                </p>
+              </div>
+            </div>
           </section>
 
           {/* Divider */}
@@ -190,42 +216,76 @@ export default function LarpaPage() {
           </div>
 
           {/* What We Offer */}
-          <section className="mb-32 md:mb-40 max-w-[900px] mx-auto">
-            <h2 className="text-[2rem] sm:text-[2.5rem] font-serif tracking-tight leading-[1.1] text-[#1a1918] mb-8">
-              What We Offer
-            </h2>
-            <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] mb-6">
-              Selected initiatives may receive:
-            </p>
-            <ul className="space-y-3 text-[1.0625rem] leading-[1.8] text-[#6b6966] mb-8">
-              <li className="flex items-start gap-3">
-                <span className="text-[#cbb37c] mt-1">–</span>
-                <span>Financial backing</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-[#cbb37c] mt-1">–</span>
-                <span>Technical support</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-[#cbb37c] mt-1">–</span>
-                <span>Access to infrastructure</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-[#cbb37c] mt-1">–</span>
-                <span>Research collaboration</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-[#cbb37c] mt-1">–</span>
-                <span>Integration into our technology ecosystem</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-[#cbb37c] mt-1">–</span>
-                <span>Strategic guidance and execution support</span>
-              </li>
-            </ul>
-            <div className="space-y-4 text-[1.0625rem] leading-[1.8] text-[#6b6966]">
-              <p>We do not fund ideas passively.</p>
-              <p className="text-[1.125rem] font-medium text-[#1a1918]">We build them.</p>
+          <section className="mb-32 md:mb-40">
+            <div className="relative overflow-hidden rounded-2xl p-12 md:p-16 bg-gradient-to-br from-white/80 to-[#cbb37c]/8 backdrop-blur-sm border border-[#cbb37c]/20">
+              <div className="max-w-[1000px]">
+                <h2 className="text-[2rem] sm:text-[2.5rem] font-serif tracking-tight leading-[1.1] text-[#1a1918] mb-4">
+                  What We Offer
+                </h2>
+                <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] mb-10">
+                  Selected initiatives may receive:
+                </p>
+                <div className="grid md:grid-cols-2 gap-x-16 gap-y-5 mb-10">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[#cbb37c]/15 flex items-center justify-center">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="6" stroke="#cbb37c" strokeWidth="1.5" fill="none"/>
+                        <path d="M8 5v3M8 11h.01" stroke="#cbb37c" strokeWidth="1.5" strokeLinecap="round"/>
+                      </svg>
+                    </div>
+                    <span className="text-[1rem] leading-[1.7] text-[#6b6966] pt-0.5">Financial backing</span>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[#cbb37c]/15 flex items-center justify-center">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M6 3h4M5 6h6M4 9h8M3 12h10" stroke="#cbb37c" strokeWidth="1.5" strokeLinecap="round"/>
+                      </svg>
+                    </div>
+                    <span className="text-[1rem] leading-[1.7] text-[#6b6966] pt-0.5">Technical support</span>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[#cbb37c]/15 flex items-center justify-center">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <rect x="2" y="2" width="12" height="12" rx="2" stroke="#cbb37c" strokeWidth="1.5" fill="none"/>
+                        <path d="M2 6h12M6 2v12" stroke="#cbb37c" strokeWidth="1.5"/>
+                      </svg>
+                    </div>
+                    <span className="text-[1rem] leading-[1.7] text-[#6b6966] pt-0.5">Access to infrastructure</span>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[#cbb37c]/15 flex items-center justify-center">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <circle cx="4" cy="8" r="2" stroke="#cbb37c" strokeWidth="1.5" fill="none"/>
+                        <circle cx="12" cy="8" r="2" stroke="#cbb37c" strokeWidth="1.5" fill="none"/>
+                        <path d="M6 8h4" stroke="#cbb37c" strokeWidth="1.5" strokeLinecap="round"/>
+                      </svg>
+                    </div>
+                    <span className="text-[1rem] leading-[1.7] text-[#6b6966] pt-0.5">Research collaboration</span>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[#cbb37c]/15 flex items-center justify-center">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="6" stroke="#cbb37c" strokeWidth="1.5" fill="none"/>
+                        <path d="M8 8L12 4M8 8l-4 4M8 8l4 4M8 8L4 4" stroke="#cbb37c" strokeWidth="1.5" strokeLinecap="round"/>
+                      </svg>
+                    </div>
+                    <span className="text-[1rem] leading-[1.7] text-[#6b6966] pt-0.5">Integration into our technology ecosystem</span>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[#cbb37c]/15 flex items-center justify-center">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 2L3 6v6l5 3 5-3V6l-5-4z" stroke="#cbb37c" strokeWidth="1.5" fill="none" strokeLinejoin="round"/>
+                        <path d="M8 8v5M3 6l5 2 5-2" stroke="#cbb37c" strokeWidth="1.5" strokeLinecap="round"/>
+                      </svg>
+                    </div>
+                    <span className="text-[1rem] leading-[1.7] text-[#6b6966] pt-0.5">Strategic guidance and execution support</span>
+                  </div>
+                </div>
+                <div className="pt-2">
+                  <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">We do not fund ideas passively.</p>
+                  <p className="text-[1.125rem] font-medium text-[#1a1918] pt-2">We build them.</p>
+                </div>
+              </div>
             </div>
           </section>
 
