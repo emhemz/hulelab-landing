@@ -55,7 +55,7 @@ export default function LarpaPage() {
           {/* Hero Image */}
           <div className="relative mb-32 md:mb-40 h-[350px] md:h-[450px] overflow-hidden rounded-3xl">
             <img 
-              src="/ChatGPT Image Jan 14, 2026, 04_08_41 PM.png" 
+              src="/larpa/Hero-bilde-larpa.png" 
               alt="" 
               className="w-full h-full object-cover"
             />
@@ -107,7 +107,7 @@ export default function LarpaPage() {
             <div className="grid md:grid-cols-[1fr_1.2fr] gap-12 md:gap-20 items-start">
               <div className="relative h-[500px] rounded-2xl overflow-hidden">
                 <img 
-                  src="/ChatGPT Image Jan 14, 2026, 04_08_38 PM.png" 
+                  src="/larpa/Bring Us Your Idea-larpa.png" 
                   alt="" 
                   className="w-full h-full object-cover"
                 />
@@ -271,7 +271,7 @@ export default function LarpaPage() {
               </div>
               <div className="relative h-[450px] rounded-2xl overflow-hidden">
                 <img 
-                  src="/ChatGPT Image Jan 14, 2026, 04_08_43 PM.png" 
+                  src="/larpa/Challenges & Prize Programs-larpa.png" 
                   alt="" 
                   className="w-full h-full object-cover"
                 />
@@ -289,7 +289,7 @@ export default function LarpaPage() {
           <section className="mb-32 md:mb-40 relative overflow-hidden rounded-3xl border border-[#1a1918]/10">
             <div className="absolute inset-0 opacity-[0.05]">
               <img 
-                src="/ChatGPT Image Jan 14, 2026, 04_01_38 PM.png" 
+                src="/larpa/Research & Institutional Development-larpa.png" 
                 alt="" 
                 className="w-full h-full object-cover"
               />
@@ -355,7 +355,7 @@ export default function LarpaPage() {
           <section className="relative mb-20 overflow-hidden rounded-3xl">
             <div className="absolute inset-0">
               <img 
-                src="/ChatGPT Image Jan 14, 2026, 04_08_36 PM.png" 
+                src="/larpa/Why LARPA Exists-larpa.png" 
                 alt="" 
                 className="w-full h-full object-cover"
               />

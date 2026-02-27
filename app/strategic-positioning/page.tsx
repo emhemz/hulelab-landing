@@ -49,22 +49,12 @@ export default function StrategicPositioningPage() {
             </div>
           </div>
 
-          {/* Hero Image */}
-          <div className="relative mb-32 md:mb-40 h-[400px] md:h-[500px] overflow-hidden rounded-3xl">
-            <img 
-              src="/ChatGPT Image Jan 14, 2026, 04_08_30 PM.png" 
-              alt="" 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-br from-[#1a1918]/30 via-transparent to-[#cbb37c]/20" />
-          </div>
-
           {/* For Individuals */}
           <section className="mb-32 md:mb-40">
             <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
               <div className="relative h-[400px] rounded-2xl overflow-hidden order-2 md:order-1">
                 <img 
-                  src="/ChatGPT Image Jan 14, 2026, 04_08_38 PM.png" 
+                  src="/strategic/For Individuals-strategic.png" 
                   alt="" 
                   className="w-full h-full object-cover"
                 />
@@ -152,7 +142,7 @@ export default function StrategicPositioningPage() {
               </div>
               <div className="relative h-[500px] rounded-2xl overflow-hidden">
                 <img 
-                  src="/ChatGPT Image Jan 14, 2026, 04_01_38 PM.png" 
+                  src="/strategic/For Organizations-left-strategic.png" 
                   alt="" 
                   className="w-full h-full object-cover"
                 />
@@ -162,104 +152,63 @@ export default function StrategicPositioningPage() {
           </section>
 
           {/* For Schools */}
-          <section className="mb-32 md:mb-40 relative overflow-hidden rounded-3xl border border-[#1a1918]/10">
-            {/* Background with image overlay */}
-            <div className="absolute inset-0 opacity-[0.04]">
-              <img 
-                src="/ChatGPT Image Jan 14, 2026, 04_08_41 PM.png" 
-                alt="" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            
-            <div className="relative p-10 md:p-16 bg-white/85 backdrop-blur-md">
-              <div className="max-w-[800px]">
+          <section className="mb-32 md:mb-40">
+            <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+              <div className="relative h-[450px] rounded-2xl overflow-hidden order-2 md:order-1">
+                <img 
+                  src="/strategic/For Schools-strategic.png" 
+                  alt="" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#cbb37c]/20 to-transparent" />
+              </div>
+              <div className="order-1 md:order-2">
                 <span className="text-[0.8125rem] tracking-[0.08em] uppercase text-[#cbb37c] font-medium mb-6 block">
                   For Schools
                 </span>
                 <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] font-serif tracking-tight leading-[1.1] text-[#1a1918] mb-6">
                   Advancing Learning in Education
                 </h2>
-                <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] mb-8">
-                  We collaborate with universities, researchers, and international organizations working at the forefront of learning science.
-                </p>
-                <div className="mb-8">
-                  <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966] mb-4 font-medium">Our work focuses on:</p>
-                  <ul className="space-y-3 text-[1rem] leading-[1.75] text-[#6b6966]">
-                    <li className="flex items-start gap-3">
-                      <span className="text-[#cbb37c] mt-1">–</span>
-                      <span>The science of learning and meta-learning</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-[#cbb37c] mt-1">–</span>
-                      <span>Motivation and learning psychology</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-[#cbb37c] mt-1">–</span>
-                      <span>Structures that increase learning effectiveness</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-[#cbb37c] mt-1">–</span>
-                      <span>Teacher development grounded in research</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-[#cbb37c] mt-1">–</span>
-                      <span>Exploration of next-generation learning models</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="space-y-6 text-[1.0625rem] leading-[1.8] text-[#6b6966] mb-8">
+                <div className="space-y-5 text-[1.0625rem] leading-[1.8] text-[#6b6966]">
                   <p>
-                    We support both students and educators in building deeper learning capacity — not through isolated inspiration, but through structured, research-informed implementation.
+                    We collaborate with universities, researchers, and international organizations working at the forefront of learning science.
                   </p>
-                  <p>
-                    Our ambition is to help create more effective, motivated, and future-ready learning environments.
+                  <p className="font-medium text-[#1a1918]">
+                    We support both students and educators in building deeper learning capacity — through structured, research-informed implementation.
                   </p>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Learning as Strategic Leverage - Split layout */}
-          <section className="mb-32 md:mb-40">
-            <div className="grid md:grid-cols-[1.2fr_1fr] gap-12 md:gap-16 items-center">
-              <div className="relative overflow-hidden rounded-2xl p-10 md:p-12 bg-gradient-to-br from-[#cbb37c]/8 to-white/80 backdrop-blur-sm border border-[#cbb37c]/20">
-                <h2 className="text-[2rem] sm:text-[2.5rem] font-serif tracking-tight leading-[1.1] text-[#1a1918] mb-8">
-                  Learning as Strategic Leverage
-                </h2>
-                <div className="space-y-6 text-[1.0625rem] leading-[1.8] text-[#6b6966]">
-                  <p className="text-[1.25rem] text-[#1a1918] font-medium">Information is everywhere.</p>
-                  <p className="text-[1.25rem] text-[#1a1918] font-medium">Advantage is not.</p>
-                  <p className="pt-4 font-medium">Strategic capacity means:</p>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <span className="text-[#cbb37c] mt-1">–</span>
-                      <span>Understanding faster</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-[#cbb37c] mt-1">–</span>
-                      <span>Adapting earlier</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-[#cbb37c] mt-1">–</span>
-                      <span>Deciding with clarity</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-[#cbb37c] mt-1">–</span>
-                      <span>Building knowledge that compounds over time</span>
-                    </li>
-                  </ul>
-                  <p className="pt-4 text-[1.125rem] text-[#1a1918]">This is not about more content.</p>
-                  <p className="text-[1.125rem] text-[#1a1918] font-medium">It is about building capability.</p>
-                </div>
-              </div>
-              <div className="relative h-[450px] rounded-2xl overflow-hidden">
-                <img 
-                  src="/ChatGPT Image Jan 14, 2026, 04_08_43 PM.png" 
-                  alt="" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-tl from-[#cbb37c]/30 to-transparent" />
+          {/* Learning as Strategic Leverage - Compact */}
+          <section className="mb-32 md:mb-40 max-w-[700px]">
+            <div className="relative overflow-hidden rounded-2xl p-8 md:p-10 bg-gradient-to-br from-[#cbb37c]/8 to-white/80 backdrop-blur-sm border border-[#cbb37c]/20">
+              <h2 className="text-[1.875rem] sm:text-[2.25rem] font-serif tracking-tight leading-[1.1] text-[#1a1918] mb-6">
+                Learning as Strategic Leverage
+              </h2>
+              <div className="space-y-5">
+                <ul className="space-y-2.5 text-[1rem] leading-[1.7] text-[#6b6966]">
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#cbb37c] mt-1">–</span>
+                    <span>Understanding faster</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#cbb37c] mt-1">–</span>
+                    <span>Adapting earlier</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#cbb37c] mt-1">–</span>
+                    <span>Deciding with clarity</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#cbb37c] mt-1">–</span>
+                    <span>Building knowledge that compounds</span>
+                  </li>
+                </ul>
+                <p className="pt-3 text-[1.0625rem] text-[#1a1918] font-medium">
+                  It's about building capability.
+                </p>
               </div>
             </div>
           </section>
@@ -269,7 +218,7 @@ export default function StrategicPositioningPage() {
             {/* Background Image */}
             <div className="absolute inset-0">
               <img 
-                src="/ChatGPT Image Jan 14, 2026, 04_08_36 PM.png" 
+                src="/strategic/For Organizations-right-strategic.png" 
                 alt="" 
                 className="w-full h-full object-cover"
               />
