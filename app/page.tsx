@@ -213,24 +213,24 @@ function WorkCard({
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#cbb37c] via-[#cbb37c]/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-x-full group-hover:translate-x-0" />
       
       {/* Content */}
-      <div className={`relative ${imageSrc ? 'p-5' : 'p-8'} flex items-start gap-5`}>
+      <div className={`relative ${imageSrc ? 'p-5' : 'p-8'}`}>
         {/* Icon with animated background */}
-        <div className="relative flex-shrink-0 mt-1">
+        <div className="relative w-fit mb-6">
           <div className="absolute inset-0 bg-[#cbb37c]/15 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
           <div className="relative text-[#cbb37c]/60 group-hover:text-[#cbb37c] transition-all duration-500">
             {icon}
           </div>
         </div>
         
-        <div className="flex-1">
+        <div>
           <h3 className={`font-medium text-[#1a1918] transition-colors duration-500 tracking-tight ${
-            imageSrc ? 'text-[1rem] sm:text-[1.125rem] mb-2' : 'text-[1.125rem] sm:text-[1.25rem] mb-3'
+            imageSrc ? 'text-[1.125rem] sm:text-[1.25rem] mb-3' : 'text-[1.25rem] sm:text-[1.375rem] mb-4'
           }`}>
             {title}
           </h3>
           <p className={`text-[#6b6966] transition-colors duration-500 ${
-            imageSrc ? 'leading-[1.6] text-[0.875rem]' : 'leading-[1.75] text-[0.9375rem]'
-          } mb-4`}>
+            imageSrc ? 'leading-[1.65] text-[0.9375rem]' : 'leading-[1.75] text-[0.9375rem]'
+          } mb-5`}>
             {text}
           </p>
           {href && (
@@ -272,29 +272,28 @@ function WorkCard({
 // Icons for work items
 const icons = {
   learning: (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 2a10 10 0 0 1 7.07 17.07" />
-      <path d="M12 2a10 10 0 0 0-7.07 17.07" />
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 21l4-4m0 0L3 13l4 4zm0 0l4-4m-4 4l4 4" />
+      <path d="M16 3l1.5 1.5M20 3l-1.5 1.5M18.5 4.5v3" />
       <circle cx="12" cy="12" r="3" />
-      <path d="M12 9v6" />
-      <path d="M9 12h6" />
+      <path d="M12 2v2m0 16v2M2 12h2m16 0h2" />
+      <path d="M5 5l2 2m10-2l-2 2m0 10l2 2M7 17l-2 2" />
     </svg>
   ),
   products: (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="3" y="3" width="18" height="18" rx="2" />
-      <path d="M9 3v18" />
-      <path d="M3 9h6" />
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="3" width="7" height="7" rx="1" />
+      <rect x="14" y="3" width="7" height="7" rx="1" />
+      <rect x="3" y="14" width="7" height="7" rx="1" />
+      <rect x="14" y="14" width="7" height="7" rx="1" />
+      <circle cx="12" cy="12" r="2" fill="currentColor"/>
     </svg>
   ),
   method: (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="3" />
-      <circle cx="12" cy="12" r="8" />
-      <path d="M12 2v2" />
-      <path d="M12 20v2" />
-      <path d="M2 12h2" />
-      <path d="M20 12h2" />
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 2L2 7l10 5 10-5-10-5z" />
+      <path d="M2 17l10 5 10-5" />
+      <path d="M2 12l10 5 10-5" />
     </svg>
   ),
 };
@@ -337,9 +336,9 @@ function LunaSection() {
           <div className="mb-6">
             <div className="flex items-center gap-3">
               <img
-                src="/LUNA logo (5).png"
-                alt="Luna logo"
-                className="w-12 h-12 sm:w-14 sm:h-14"
+                src="/luna_app_logo (2).png"
+                alt="Luna app icon"
+                className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl"
               />
               <h2 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] font-serif tracking-tight leading-none">
                 Luna

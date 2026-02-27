@@ -84,9 +84,9 @@ export default function ProjectsPage() {
               </div>
               <div className="relative w-full h-[500px] flex items-center justify-center">
                 <img 
-                  src="/LUNA logo (5).png" 
-                  alt="Luna logo" 
-                  className="w-56 h-56 object-contain"
+                  src="/luna_app_logo (2).png" 
+                  alt="Luna app icon" 
+                  className="w-56 h-56 object-contain rounded-[3rem] shadow-2xl"
                 />
               </div>
             </div>
