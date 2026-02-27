@@ -31,7 +31,7 @@ export default function ProductTechnologyPage() {
             <div className="space-y-6">
               <div>
                 <span className="text-[0.6875rem] tracking-[0.2em] uppercase text-[#cbb37c]/70 font-medium">
-                  Product & Technology
+                  Technology & Infrastructure
                 </span>
               </div>
               

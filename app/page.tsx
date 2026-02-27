@@ -518,21 +518,21 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <WorkCard
                 title="Strategic Capacity"
-                text="Learning as a strategic capability. An expanded opportunity space."
+                text="Building adaptive strength in individuals and institutions. We help individuals, teams, and schools develop the structures, habits, and systems that turn learning into long-term strategic advantage."
                 index={0}
                 icon={icons.learning}
                 href="/strategic-positioning"
               />
               <WorkCard
-                title="Product & Technology"
-                text="Proprietary software for learning. Designed around the human learner."
+                title="Technology & Infrastructure"
+                text="Products and systems designed for the intelligent age. We build adaptive learning tools and organizational AI infrastructure that transform knowledge into structured, usable intelligence — evolving with the people and institutions that use them."
                 index={1}
                 icon={icons.products}
                 href="/product-technology"
               />
               <WorkCard
                 title="LARPA"
-                text="A place to bring a learning idea. Team, capital, and responsibility to build it all the way through."
+                text="An open engine for breakthrough learning innovation. We launch challenges, support bold ideas, and invest in new approaches that redefine how individuals and institutions build capability."
                 index={2}
                 icon={icons.method}
                 href="/larpa"
