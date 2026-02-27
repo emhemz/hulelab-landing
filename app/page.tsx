@@ -510,14 +510,14 @@ export default function Home() {
               <div className="flex flex-col gap-2">
                 <span className="text-[0.6875rem] tracking-[0.2em] uppercase text-[#cbb37c]/70 font-medium">Focus Areas</span>
                 <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] font-serif tracking-tight leading-none">
-                  What we work on
+                  How We Build Strategic Advantage
                 </h2>
               </div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <WorkCard
-                title="Strategic Positioning"
+                title="Strategic Capacity"
                 text="Learning as a strategic capability. An expanded opportunity space."
                 index={0}
                 icon={icons.learning}
