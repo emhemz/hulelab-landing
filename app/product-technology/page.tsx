@@ -125,12 +125,14 @@ export default function ProductTechnologyPage() {
                     EDGE bridges inspiration and infrastructure.
                   </p>
                 </div>
-                <Link 
-                  href="#" 
+                <a 
+                  href="https://www.learnedge.co/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-[0.9375rem] text-[#1a1918] hover:text-[#cbb37c] transition-colors duration-300 font-medium group"
                 >
                   <span className="text-[#cbb37c]">→</span>
-                  <span>Explore EDGE</span>
+                  <span>Visit EDGE</span>
                   <svg 
                     width="14" 
                     height="14" 
@@ -139,7 +141,7 @@ export default function ProductTechnologyPage() {
                   >
                     <path d="M6 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                </Link>
+                </a>
               </div>
             </div>
           </section>
