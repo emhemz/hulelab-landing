@@ -57,7 +57,7 @@ export default function ProjectsPage() {
                 </div>
                 <div className="pt-6">
                   <a 
-                    href="https://luna-landing-opal.vercel.app/" 
+                    href="https://www.lunacast.ai/" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#cbb37c]/10 hover:bg-[#cbb37c]/20 border border-[#cbb37c]/20 hover:border-[#cbb37c]/40 transition-all duration-300 group"
