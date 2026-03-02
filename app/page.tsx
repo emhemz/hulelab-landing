@@ -609,9 +609,9 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Contact section - Card Design */}
+          {/* Contact section - Simple Layout */}
           <section className="reveal mb-40 md:mb-56 relative">
-            <div className="relative overflow-hidden rounded-2xl p-12 md:p-16 bg-gradient-to-br from-white/80 to-[#cbb37c]/8 backdrop-blur-sm border border-[#cbb37c]/20">
+            <div className="relative">
               <div className="grid md:grid-cols-[1.3fr_1fr] gap-12 md:gap-16 items-center">
                 <div>
                   <span className="text-[0.7rem] tracking-[0.2em] uppercase text-[#cbb37c]/70 font-medium mb-6 block">Connect</span>
@@ -622,13 +622,13 @@ export default function Home() {
                     <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
                       We're always open to conversations about learning, technology, and how humans grow.
                     </p>
-                    <p className="text-[1.0625rem] leading-[1.8] text-[#1a1918] font-medium">
+                    <p className="text-[1.0625rem] leading-[1.8] font-medium text-[#1a1918]">
                       If you're building, researching, or thinking in this space — we'd love to hear from you.
                     </p>
                   </div>
                   <a 
                     href="mailto:christian@hulelab.no" 
-                    className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-br from-[#cbb37c]/8 to-[#cbb37c]/5 hover:from-[#cbb37c]/12 hover:to-[#cbb37c]/8 border border-[#cbb37c] text-[#1a1918] hover:border-[#cbb37c]/80 transition-all duration-300 font-medium group"
+                    className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-br from-[#cbb37c]/8 to-[#cbb37c]/5 hover:from-[#cbb37c]/12 hover:to-[#cbb37c]/8 border border-[#cbb37c] hover:border-[#cbb37c]/80 transition-all duration-300 font-medium group text-[#1a1918]"
                   >
                     <span className="text-[1.0625rem]">christian@hulelab.no</span>
                     <svg 

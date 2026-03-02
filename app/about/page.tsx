@@ -193,6 +193,104 @@ export default function AboutPage() {
             </div>
           </section>
 
+          {/* Team section */}
+          <section className="reveal mb-24 md:mb-32">
+            <h2 className="text-[2rem] sm:text-[2.5rem] mb-14 md:mb-16 tracking-tight">
+              The Team
+            </h2>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+              {[
+                { name: "Christian Løken", role: "CEO", image: "/team/christian.webp" },
+                { name: "Rasmus Køstner", role: "Neurobiologist", image: "/team/rasmus.webp" },
+                { name: "Benjamin Næra", role: "Fullstack Developer", image: "/team/benjamin.webp" },
+                { name: "Emilie Hemsett", role: "UX Designer", image: "/team/emilie.webp" },
+              ].map((member, i) => (
+                <div
+                  key={member.name}
+                  className="group flex flex-col"
+                  style={{ transitionDelay: `${i * 60}ms` }}
+                >
+                  <div className="relative overflow-hidden rounded-xl mb-5 aspect-[3/4] bg-[#edeae4]">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1a1918]/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  </div>
+                  <div>
+                    <h3 className="text-[1rem] sm:text-[1.0625rem] font-medium text-[#1a1918] tracking-tight leading-snug">
+                      {member.name}
+                    </h3>
+                    <p className="text-[0.8125rem] text-[#cbb37c]/80 mt-1 uppercase font-medium" style={{ letterSpacing: "0.08em" }}>
+                      {member.role}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Advisors section */}
+          <section className="reveal mb-24 md:mb-32">
+            <h2 className="text-[2rem] sm:text-[2.5rem] mb-3 tracking-tight">
+              Advisors
+            </h2>
+            <p className="text-[1.0625rem] text-[#6b6966] mb-14 md:mb-16">
+              Experts who help us think better.
+            </p>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+              {[
+                {
+                  name: "Christian Magelssen",
+                  role: "Sports Scientist",
+                  affiliation: "Norwegian School of Sport Sciences",
+                  image: "/team/advisors/magelssen.webp",
+                },
+                {
+                  name: "Hedda Berntsen",
+                  role: "Associate Professor",
+                  affiliation: "University of South-Eastern Norway",
+                  image: "/team/advisors/hedda.webp",
+                },
+                {
+                  name: "Henrik",
+                  role: "PhD",
+                  affiliation: "Cognitive Load Measurement",
+                  image: "/team/advisors/henrik.webp",
+                },
+              ].map((advisor, i) => (
+                <div
+                  key={advisor.name}
+                  className="group flex flex-col"
+                  style={{ transitionDelay: `${i * 60}ms` }}
+                >
+                  <div className="relative overflow-hidden rounded-xl mb-5 aspect-[3/4] bg-[#edeae4]">
+                    <img
+                      src={advisor.image}
+                      alt={advisor.name}
+                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1a1918]/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  </div>
+                  <div>
+                    <h3 className="text-[1rem] sm:text-[1.0625rem] font-medium text-[#1a1918] tracking-tight leading-snug">
+                      {advisor.name}
+                    </h3>
+                    <p className="text-[0.8125rem] text-[#cbb37c]/80 mt-1 uppercase font-medium" style={{ letterSpacing: "0.08em" }}>
+                      {advisor.role}
+                    </p>
+                    <p className="text-[0.75rem] text-[#6b6966]/60 mt-0.5">
+                      {advisor.affiliation}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
           {/* Why this matters - Two column */}
           <section className="reveal mb-24 md:mb-32">
             <div className="grid md:grid-cols-2 gap-12 md:gap-20">
