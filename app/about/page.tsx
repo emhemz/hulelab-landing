@@ -244,22 +244,10 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
               {[
                 {
-                  name: "Christian Magelssen",
-                  role: "Sports Scientist",
-                  affiliation: "Norwegian School of Sport Sciences",
-                  image: "/team/advisors/magelssen.webp",
-                },
-                {
                   name: "Hedda Berntsen",
                   role: "Associate Professor",
                   affiliation: "University of South-Eastern Norway",
                   image: "/team/advisors/hedda.webp",
-                },
-                {
-                  name: "Henrik",
-                  role: "PhD",
-                  affiliation: "Cognitive Load Measurement",
-                  image: "/team/advisors/henrik.webp",
                 },
               ].map((advisor, i) => (
                 <div
