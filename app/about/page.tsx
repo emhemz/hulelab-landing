@@ -199,11 +199,12 @@ export default function AboutPage() {
               The Team
             </h2>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
               {[
                 { name: "Christian Løken", role: "CEO", image: "/team/christian.webp" },
+                { name: "Anders Sverdrup-Dahl", role: "CFO", image: "/team/anders.webp" },
                 { name: "Rasmus Køstner", role: "Neurobiologist", image: "/team/rasmus.webp" },
-                { name: "Benjamin Næra", role: "Fullstack Developer", image: "/team/benjamin.webp" },
+                { name: "Benjamin Nærø", role: "Fullstack Developer", image: "/team/benjamin.webp" },
                 { name: "Emilie Hemsett", role: "UX Designer", image: "/team/emilie.webp" },
               ].map((member, i) => (
                 <div
