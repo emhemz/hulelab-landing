@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Header from "./components/Header";
 import Button from "./components/Button";
+import Footer from "./components/Footer";
 
 // Get scroll progress and scrollY
 function useScroll() {
@@ -627,10 +628,10 @@ export default function Home() {
                     </p>
                   </div>
                   <a 
-                    href="mailto:christian@hulelab.no" 
+                    href="mailto:christian@hulelab.com" 
                     className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-br from-[#cbb37c]/8 to-[#cbb37c]/5 hover:from-[#cbb37c]/12 hover:to-[#cbb37c]/8 border border-[#cbb37c] hover:border-[#cbb37c]/80 transition-all duration-300 font-medium group text-[#1a1918]"
                   >
-                    <span className="text-[1.0625rem]">christian@hulelab.no</span>
+                    <span className="text-[1.0625rem]">christian@hulelab.com</span>
                     <svg 
                       width="18" 
                       height="18" 
@@ -689,22 +690,9 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Footer with logo */}
-          <footer className="reveal pt-10 border-t border-black/5">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <Logo size={20} className="opacity-50" />
-                <span className="text-[0.6875rem] tracking-[0.08em] uppercase text-[#6b6966]/40">
-                  Human Learning Lab
-                </span>
-              </div>
-              <span className="text-[0.6875rem] tracking-[0.08em] uppercase text-[#6b6966]/40">
-                Oslo
-              </span>
-            </div>
-          </footer>
         </div>
       </main>
+      <Footer />
     </>
   );
 }

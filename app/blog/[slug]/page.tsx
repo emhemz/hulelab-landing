@@ -1,12 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+
+const BASE = "https://humanlearninglab.com";
 
 // Blog post data (same as before, but with full content)
 const posts = {
   "when-intelligence-scales-faster-than-judgment": {
     slug: "when-intelligence-scales-faster-than-judgment",
     date: "December 1, 2025",
+    dateISO: "2025-12-01",
     title: "When Intelligence Scales Faster Than Judgment",
     author: "Christian Løken",
     role: "CEO - Human Learning Lab",
@@ -26,6 +31,7 @@ At Human Learning Lab, we work from a simple premise: intelligence can be outsou
   "when-speed-outruns-understanding": {
     slug: "when-speed-outruns-understanding",
     date: "December 29, 2025",
+    dateISO: "2025-12-29",
     title: "When Speed Outruns Understanding",
     author: "Christian Løken",
     role: "CEO, Human Learning Lab",
@@ -48,6 +54,43 @@ Human Learning Lab works with precisely this challenge: how people, teams, and o
   },
 };
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = posts[slug as keyof typeof posts];
+  if (!post) return {};
+
+  const description = post.content.slice(0, 160).trimEnd() + "…";
+  const url = `${BASE}/blog/${slug}/`;
+  const imageUrl = post.image.startsWith("/") ? `${BASE}${post.image}` : post.image;
+
+  return {
+    title: post.title,
+    description,
+    openGraph: {
+      title: post.title,
+      description,
+      type: "article",
+      url,
+      publishedTime: post.dateISO,
+      authors: [post.author],
+      images: [{ url: imageUrl, width: 1200, height: 630, alt: post.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description,
+      images: [imageUrl],
+    },
+    alternates: {
+      canonical: url,
+    },
+  };
+}
+
 // Generate static paths for all blog posts
 export function generateStaticParams() {
   return Object.keys(posts).map((slug) => ({
@@ -63,8 +106,35 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     notFound();
   }
 
+  const blogPostingJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    datePublished: post.dateISO,
+    dateModified: post.dateISO,
+    author: {
+      "@type": "Person",
+      name: post.author,
+      jobTitle: post.role,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Human Learning Lab",
+      url: BASE,
+      logo: { "@type": "ImageObject", url: `${BASE}/logo.svg` },
+    },
+    url: `${BASE}/blog/${post.slug}/`,
+    image: post.image ? `${BASE}${post.image}` : undefined,
+    articleBody: post.content,
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingJsonLd) }}
+      />
+
       {/* Subtle grain */}
       <div className="grain" />
 
@@ -220,47 +290,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </div>
         </article>
 
-        {/* Footer */}
-        <footer id="blog-footer" className="bg-white border-t border-[#1a1918]/10">
-          <div className="max-w-[800px] mx-auto px-10 sm:px-12 py-12">
-            <div className="flex items-center justify-between mb-8">
-              <Link 
-                href="/blog" 
-                className="blog-footer-link inline-flex items-center gap-2 text-[0.875rem] transition-colors duration-300 font-medium group"
-              >
-                <svg 
-                  width="16" 
-                  height="16" 
-                  viewBox="0 0 16 16" 
-                  className="transition-transform duration-300 group-hover:-translate-x-1"
-                  stroke="currentColor"
-                  fill="none"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M10 12L6 8l4-4" />
-                </svg>
-                All posts
-              </Link>
-              <Link 
-                href="/" 
-                className="blog-footer-link text-[0.875rem] transition-colors duration-300 font-medium"
-              >
-                Home
-              </Link>
-            </div>
-            <div className="flex items-center justify-between pt-6 border-t border-[#1a1918]/5">
-              <span className="blog-footer-text text-[0.6875rem] tracking-[0.08em] uppercase">
-                Human Learning Lab
-              </span>
-              <span className="blog-footer-text text-[0.6875rem] tracking-[0.08em] uppercase">
-                Oslo
-              </span>
-            </div>
-          </div>
-        </footer>
       </main>
+      <Footer />
     </>
   );
 }

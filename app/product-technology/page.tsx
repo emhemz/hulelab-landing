@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function ProductTechnologyPage() {
   return (
@@ -176,7 +177,7 @@ export default function ProductTechnologyPage() {
               <div className="relative h-[400px] rounded-2xl overflow-hidden order-1 md:order-2">
                 <img 
                   src="/ChatGPT Image Feb 3, 2026, 01_18_13 PM.png" 
-                  alt="" 
+                  alt="Aura — adaptive intelligence layer that evolves with the learner"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-bl from-[#cbb37c]/20 to-transparent" />
@@ -195,7 +196,7 @@ export default function ProductTechnologyPage() {
             <div className="absolute inset-0">
               <img 
                 src="/ChatGPT Image Jan 14, 2026, 04_01_34 PM.png" 
-                alt="" 
+                alt="Root — the organizational intelligence layer powering institutional learning"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#1a1918]/92 via-[#1a1918]/88 to-[#1a1918]/75" />
@@ -286,19 +287,9 @@ export default function ProductTechnologyPage() {
             </div>
           </section>
 
-          {/* Footer */}
-          <footer className="pt-10 border-t border-black/5">
-            <div className="flex items-center justify-between">
-              <span className="text-[0.6875rem] tracking-[0.08em] uppercase text-[#6b6966]/40">
-                Human Learning Lab
-              </span>
-              <Link href="/" className="text-[0.875rem] text-[#6b6966] hover:text-[#cbb37c] transition-colors duration-300">
-                Home
-              </Link>
-            </div>
-          </footer>
         </div>
       </article>
+      <Footer />
     </main>
   );
 }

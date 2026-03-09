@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 // Reveal sections on scroll (same as main page)
 function useReveal() {
@@ -139,19 +140,9 @@ export default function BlogPage() {
             ))}
           </div>
 
-          {/* Footer */}
-          <footer className="reveal mt-32 md:mt-40 pt-10 border-t border-black/5">
-            <div className="flex items-center justify-between">
-              <span className="text-[0.6875rem] tracking-[0.08em] uppercase text-[#6b6966]/40">
-                Human Learning Lab
-              </span>
-              <Link href="/" className="link-hover text-[0.875rem]">
-                Home
-              </Link>
-            </div>
-          </footer>
         </div>
       </main>
+      <Footer />
     </>
   );
 }

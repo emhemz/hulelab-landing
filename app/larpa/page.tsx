@@ -2,11 +2,71 @@
 
 import Link from "next/link";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Does your idea address a fundamental learning challenge?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "LARPA looks for ideas that address fundamental learning challenges — not incremental improvements. The idea must have genuine potential to move the field forward in a meaningful way.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does it move beyond incremental improvement?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "LARPA funds and builds bold, breakthrough ideas — not marginal iterations on existing approaches. The work must represent a step change in how individuals or institutions develop capability.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can it create measurable improvement in learning capacity or intelligence?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "LARPA requires that proposed ideas can demonstrate or credibly predict measurable improvements in learning outcomes, learning speed, or organizational intelligence.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is the approach technically and scientifically plausible?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Ideas submitted to LARPA must be grounded in technical and scientific plausibility. Ambitious is good; unfounded is not. We work at the intersection of neuroscience, artificial intelligence, and institutional design.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can it scale beyond a single organization or context?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "LARPA prioritizes ideas with the potential to scale — to reach many individuals, institutions, or contexts beyond where they start.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are you willing to build it with us — rigorously and transparently?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "LARPA partners build collaboratively, rigorously, and transparently. If you can commit to that standard, we want to talk.",
+      },
+    },
+  ],
+};
 
 export default function LarpaPage() {
   return (
     <main className="relative min-h-screen bg-[#f5f3f0]">
-      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+
       {/* Grain texture */}
       <div className="grain" />
       
@@ -56,7 +116,7 @@ export default function LarpaPage() {
           <div className="relative mb-32 md:mb-40 h-[400px] md:h-[500px] overflow-hidden rounded-3xl">
             <img 
               src="/larpa/Hero-bilde-larpa.png" 
-              alt="" 
+              alt="LARPA — Learning Advanced Research Project Agency facility"
               className="w-full h-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#1a1918]/40 via-transparent to-[#cbb37c]/30" />
@@ -134,7 +194,7 @@ export default function LarpaPage() {
               <div className="relative h-[500px] rounded-2xl overflow-hidden">
                 <img 
                   src="/larpa/Bring Us Your Idea-larpa.png" 
-                  alt="" 
+                  alt="Submit your learning research idea to LARPA"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a1918]/50 to-transparent" />
@@ -193,7 +253,7 @@ export default function LarpaPage() {
                 </div>
 
                 <a 
-                  href="mailto:christian@hulelab.no" 
+                  href="mailto:christian@hulelab.com" 
                   className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-br from-[#cbb37c]/8 to-[#cbb37c]/5 hover:from-[#cbb37c]/12 hover:to-[#cbb37c]/8 border border-[#cbb37c] text-[#1a1918] hover:border-[#cbb37c]/80 transition-all duration-300 font-medium group"
                 >
                   <span className="text-[1.0625rem]">Submit Your Idea</span>
@@ -332,7 +392,7 @@ export default function LarpaPage() {
               <div className="relative h-[450px] rounded-2xl overflow-hidden">
                 <img 
                   src="/larpa/Challenges & Prize Programs-larpa.png" 
-                  alt="" 
+                  alt="LARPA open learning challenges and prize programs"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tl from-[#cbb37c]/30 to-transparent" />
@@ -350,7 +410,7 @@ export default function LarpaPage() {
             <div className="absolute inset-0 opacity-[0.05]">
               <img 
                 src="/larpa/Research & Institutional Development-larpa.png" 
-                alt="" 
+                alt="Research and institutional development in learning science"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -416,7 +476,7 @@ export default function LarpaPage() {
             <div className="absolute inset-0">
               <img 
                 src="/larpa/Why LARPA Exists-larpa.png" 
-                alt="" 
+                alt="Bold experimentation to unlock the next wave of human and institutional capability"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#1a1918]/93 via-[#1a1918]/88 to-[#1a1918]/80" />
@@ -438,7 +498,7 @@ export default function LarpaPage() {
               
               <div className="flex flex-wrap gap-6">
                 <a 
-                  href="mailto:christian@hulelab.no" 
+                  href="mailto:christian@hulelab.com" 
                   className="inline-flex items-center gap-3 px-7 py-4 rounded-xl bg-white hover:bg-[#cbb37c]/20 hover:backdrop-blur-md border border-white hover:border-[#cbb37c] transition-all duration-300 group hover:scale-105"
                 >
                   <span className="text-[1.0625rem] font-medium text-[#1a1918]">Partner With LARPA</span>
@@ -462,19 +522,9 @@ export default function LarpaPage() {
             </div>
           </section>
 
-          {/* Footer */}
-          <footer className="pt-10 border-t border-black/5">
-            <div className="flex items-center justify-between">
-              <span className="text-[0.6875rem] tracking-[0.08em] uppercase text-[#6b6966]/40">
-                Human Learning Lab
-              </span>
-              <Link href="/" className="text-[0.875rem] text-[#6b6966] hover:text-[#cbb37c] transition-colors duration-300">
-                Home
-              </Link>
-            </div>
-          </footer>
         </div>
       </article>
+      <Footer />
     </main>
   );
 }

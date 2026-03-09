@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function StrategicPositioningPage() {
   return (
@@ -55,7 +56,7 @@ export default function StrategicPositioningPage() {
               <div className="relative h-[400px] rounded-2xl overflow-hidden order-2 md:order-1">
                 <img 
                   src="/strategic/For Individuals-strategic.png" 
-                  alt="" 
+                  alt="Individual developing strategic learning capacity"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#cbb37c]/20 to-transparent" />
@@ -143,7 +144,7 @@ export default function StrategicPositioningPage() {
               <div className="relative h-[500px] rounded-2xl overflow-hidden">
                 <img 
                   src="/strategic/For Organizations-left-strategic.png" 
-                  alt="" 
+                  alt="Organizations building adaptive learning structures"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#f5f3f0]/40" />
@@ -157,7 +158,7 @@ export default function StrategicPositioningPage() {
               <div className="relative h-[450px] rounded-2xl overflow-hidden order-2 md:order-1">
                 <img 
                   src="/strategic/For Schools-strategic.png" 
-                  alt="" 
+                  alt="Schools implementing learning systems for long-term capability"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-[#cbb37c]/20 to-transparent" />
@@ -219,7 +220,7 @@ export default function StrategicPositioningPage() {
             <div className="absolute inset-0">
               <img 
                 src="/strategic/For Organizations-right-strategic.png" 
-                alt="" 
+                alt="Strategic organizational learning and intelligence development" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#1a1918]/90 via-[#1a1918]/85 to-[#1a1918]/70" />
@@ -241,7 +242,7 @@ export default function StrategicPositioningPage() {
                 </p>
               </div>
               <a 
-                href="mailto:christian@hulelab.no" 
+                href="mailto:christian@hulelab.com" 
                 className="inline-flex items-center gap-3 px-7 py-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white text-white hover:border-white/80 transition-all duration-300 group"
               >
                 <span className="text-[1.0625rem] font-medium">Book a conversation</span>
@@ -264,19 +265,9 @@ export default function StrategicPositioningPage() {
             </div>
           </section>
 
-          {/* Footer */}
-          <footer className="mt-40 pt-10 border-t border-black/5 max-w-[1400px] mx-auto">
-            <div className="flex items-center justify-between">
-              <span className="text-[0.6875rem] tracking-[0.08em] uppercase text-[#6b6966]/40">
-                Human Learning Lab
-              </span>
-              <Link href="/" className="text-[0.875rem] text-[#6b6966] hover:text-[#cbb37c] transition-colors duration-300">
-                Home
-              </Link>
-            </div>
-          </footer>
         </div>
       </article>
+      <Footer />
     </main>
   );
 }

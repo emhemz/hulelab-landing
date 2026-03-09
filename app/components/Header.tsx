@@ -32,7 +32,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-6 sm:px-8 pt-6 pointer-events-none">
-      <nav className="max-w-[1400px] mx-auto flex items-start justify-between pointer-events-auto">
+      <nav aria-label="Main navigation" className="max-w-[1400px] mx-auto flex items-start justify-between pointer-events-auto">
         {/* Logo - Left Corner */}
         <Link 
           href="/" 
@@ -70,6 +70,8 @@ export default function Header() {
         >
           {/* Hamburger Button */}
           <button
+            aria-label="Open navigation menu"
+            aria-expanded={menuOpen}
             className="hamburger-button flex flex-col items-end gap-1.5 px-4 py-3 rounded-xl transition-all duration-300 group"
             style={{
               background: scrolled 

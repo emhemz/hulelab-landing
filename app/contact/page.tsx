@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Header from "../components/Header";
 import Button from "../components/Button";
+import Footer from "../components/Footer";
 
 export default function ContactPage() {
   return (
@@ -38,7 +39,7 @@ export default function ContactPage() {
                     Location
                   </h2>
                   <p className="text-[1.125rem] text-[#1a1918]">
-                    Oslo, Norway
+                    Sandvika, Norway
                   </p>
                 </div>
               </div>
@@ -101,16 +102,9 @@ export default function ContactPage() {
             </div>
           </section>
 
-          <footer className="pt-10 border-t border-black/5 flex justify-between items-center">
-            <span className="text-[0.6875rem] tracking-[0.08em] uppercase text-[#6b6966]/40">
-              Human Learning Lab
-            </span>
-            <Link href="/" className="link-hover text-[0.875rem]">
-              Home
-            </Link>
-          </footer>
         </div>
       </main>
+      <Footer />
     </>
   );
 }

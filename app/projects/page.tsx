@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function ProjectsPage() {
   return (
@@ -107,16 +108,9 @@ export default function ProjectsPage() {
             </div>
           </section>
 
-          <footer className="pt-10 border-t border-black/5 flex justify-between items-center">
-            <span className="text-[0.6875rem] tracking-[0.08em] uppercase text-[#6b6966]/40">
-              Human Learning Lab
-            </span>
-            <Link href="/" className="text-[0.875rem] text-[#6b6966] hover:text-[#cbb37c] transition-colors duration-300">
-              Home
-            </Link>
-          </footer>
         </div>
       </main>
+      <Footer />
     </>
   );
 }
