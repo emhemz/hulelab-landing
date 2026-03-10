@@ -300,9 +300,21 @@ export default function AboutPage() {
           </section>
 
           {/* What we're building - Featured section with image */}
-          <section className="reveal mb-32 md:mb-40 relative overflow-hidden rounded-2xl border border-[#1a1918]/10" style={{ backgroundColor: '#ffffff' }}>
+          <section className="reveal mb-32 md:mb-40 relative overflow-hidden rounded-2xl border border-[#1a1918]/8 min-h-[420px]" style={{ backgroundColor: '#f5f1eb' }}>
+            {/* Background image revealed on right */}
+            <div className="absolute inset-y-0 right-0 w-full md:w-[62%]">
+              <img
+                src="/ChatGPT Image Jan 14, 2026, 04_01_34 PM.png"
+                alt=""
+                aria-hidden="true"
+                className="w-full h-full object-cover object-left"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#f5f1eb] via-[#f5f1eb]/85 to-[#f5f1eb]/10 md:via-[#f5f1eb]/60 md:to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#f5f1eb]/40 to-transparent md:hidden" />
+            </div>
+
             <div className="relative p-10 md:p-16">
-              <div className="max-w-[700px]">
+              <div className="max-w-[520px]">
                 <span className="inline-block px-3 py-1 rounded-full bg-[#cbb37c]/10 border border-[#cbb37c]/20 mb-6">
                   <span className="text-[0.6875rem] tracking-[0.12em] uppercase text-[#cbb37c] font-medium">
                     Our Mission
@@ -311,12 +323,12 @@ export default function AboutPage() {
                 <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] mb-8 tracking-tight leading-[1.1]">
                   What We're Building
                 </h2>
-                <div className="space-y-6">
+                <div className="space-y-5">
                   <p className="text-[1.125rem] leading-[1.8] text-[#6b6966]">
                     Tools that help people learn better. Starting with podcasts, expanding to other forms of long-form content, and eventually to any situation where sustained learning matters.
                   </p>
                   <p className="text-[1.125rem] leading-[1.8] text-[#6b6966]">
-                    Our first product is Luna—a podcast player designed around how learning actually works. It's the beginning of a longer journey.
+                    Our first product is Luna — a podcast player designed around how learning actually works. It's the beginning of a longer journey.
                   </p>
                 </div>
                 <div className="mt-8">
