@@ -613,7 +613,7 @@ export default function Home() {
           {/* Contact section - Simple Layout */}
           <section className="reveal mb-40 md:mb-56 relative">
             <div className="relative">
-              <div className="grid md:grid-cols-[1.3fr_1fr] gap-12 md:gap-16 items-center">
+              <div className="grid md:grid-cols-[1.3fr_0.9fr] gap-12 md:gap-16 items-center">
                 <div>
                   <span className="text-[0.7rem] tracking-[0.2em] uppercase text-[#cbb37c]/70 font-medium mb-6 block">Connect</span>
                   <h2 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] mb-8 font-serif tracking-tight leading-[1.05] text-[#1a1918]">
@@ -643,47 +643,19 @@ export default function Home() {
                   </a>
                 </div>
                 
-                {/* Icon Grid */}
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="flex flex-col items-center justify-center p-6 rounded-xl bg-white/60 backdrop-blur-sm border border-[#cbb37c]/10">
-                    <div className="w-12 h-12 rounded-lg bg-[#cbb37c]/15 flex items-center justify-center mb-3">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cbb37c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                        <circle cx="9" cy="7" r="4" />
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
-                      </svg>
+                {/* Christian photo */}
+                <div className="relative">
+                  <div className="relative overflow-hidden rounded-2xl aspect-[3/4] bg-[#edeae4]">
+                    <img
+                      src="/team/christian.webp"
+                      alt="Christian Løken"
+                      className="w-full h-full object-cover object-top"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1a1918]/40 via-transparent to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <p className="text-white font-medium text-[1rem] leading-snug">Christian Løken</p>
+                      <p className="text-white/60 text-[0.8125rem] uppercase tracking-widest font-medium mt-0.5">CEO</p>
                     </div>
-                    <span className="text-[0.875rem] font-medium text-[#1a1918]">Collaborate</span>
-                  </div>
-
-                  <div className="flex flex-col items-center justify-center p-6 rounded-xl bg-white/60 backdrop-blur-sm border border-[#cbb37c]/10">
-                    <div className="w-12 h-12 rounded-lg bg-[#cbb37c]/15 flex items-center justify-center mb-3">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cbb37c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
-                        <line x1="12" y1="17" x2="12.01" y2="17" />
-                      </svg>
-                    </div>
-                    <span className="text-[0.875rem] font-medium text-[#1a1918]">Ask Questions</span>
-                  </div>
-
-                  <div className="flex flex-col items-center justify-center p-6 rounded-xl bg-white/60 backdrop-blur-sm border border-[#cbb37c]/10">
-                    <div className="w-12 h-12 rounded-lg bg-[#cbb37c]/15 flex items-center justify-center mb-3">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cbb37c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M12 20h9" />
-                        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
-                      </svg>
-                    </div>
-                    <span className="text-[0.875rem] font-medium text-[#1a1918]">Pitch Ideas</span>
-                  </div>
-
-                  <div className="flex flex-col items-center justify-center p-6 rounded-xl bg-white/60 backdrop-blur-sm border border-[#cbb37c]/10">
-                    <div className="w-12 h-12 rounded-lg bg-[#cbb37c]/15 flex items-center justify-center mb-3">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cbb37c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-                      </svg>
-                    </div>
-                    <span className="text-[0.875rem] font-medium text-[#1a1918]">Join Us</span>
                   </div>
                 </div>
               </div>
