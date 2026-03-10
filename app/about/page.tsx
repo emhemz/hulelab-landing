@@ -274,28 +274,24 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* Why this matters - Two column */}
+          {/* Why this matters */}
           <section className="reveal mb-24 md:mb-32">
-            <div className="grid md:grid-cols-2 gap-12 md:gap-20">
-              <div>
-                <h2 className="text-[2rem] sm:text-[2.5rem] mb-8 tracking-tight">
-                  Why This Combination Matters
-                </h2>
-              </div>
-              <div className="space-y-6">
-                <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
-                  The pace of change is accelerating. What worked well last year may no longer be enough today. As technology evolves, new possibilities emerge, for how we learn, adapt, and make decisions.
-                </p>
-                <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
-                  Learning cannot be static. It must be continuously updated, tested, and rethought. Building effective learning tools therefore requires more than speed or scale. It requires a deep understanding of how the human mind works, what drives real change, and how to design learning experiences that remain relevant as the world shifts.
-                </p>
-                <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
-                  It also requires discipline. The ability to move with change without chasing every trend. To build carefully, test rigorously, and accept that real understanding still takes time.
-                </p>
-                <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
-                  We are not trying to preserve what once worked. We are building the capacity to learn, again and again, as the world continues to change.
-                </p>
-              </div>
+            <h2 className="text-[2rem] sm:text-[2.5rem] mb-12 tracking-tight max-w-[600px]">
+              Why This Combination Matters
+            </h2>
+            <div className="grid md:grid-cols-2 gap-x-16 gap-y-6">
+              <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
+                The pace of change is accelerating. What worked well last year may no longer be enough today. As technology evolves, new possibilities emerge for how we learn, adapt, and make decisions.
+              </p>
+              <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
+                Learning cannot be static. It must be continuously updated, tested, and rethought. Building effective learning tools requires a deep understanding of how the human mind works and how to design experiences that remain relevant as the world shifts.
+              </p>
+              <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
+                It also requires discipline — the ability to move with change without chasing every trend. To build carefully, test rigorously, and accept that real understanding still takes time.
+              </p>
+              <p className="text-[1.0625rem] leading-[1.8] text-[#6b6966]">
+                We are not trying to preserve what once worked. We are building the capacity to learn, again and again, as the world continues to change.
+              </p>
             </div>
           </section>
 
