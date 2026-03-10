@@ -644,8 +644,8 @@ export default function Home() {
                 </div>
                 
                 {/* Christian photo */}
-                <div className="relative">
-                  <div className="relative overflow-hidden rounded-2xl aspect-[3/4] bg-[#edeae4]">
+                <div className="relative flex justify-center">
+                  <div className="relative overflow-hidden rounded-2xl aspect-[3/4] bg-[#edeae4] w-full max-w-[280px]">
                     <img
                       src="/team/christian.webp"
                       alt="Christian Løken"
