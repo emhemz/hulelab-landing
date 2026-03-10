@@ -37,7 +37,7 @@ export default function Header() {
         <Link 
           href="/" 
           onClick={handleLogoClick}
-          className="group flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-500 hover:px-6 overflow-hidden"
+          className="group flex items-center justify-center px-4 py-3 rounded-xl transition-all duration-500 hover:px-6 overflow-hidden"
           style={{
             background: scrolled 
               ? 'linear-gradient(135deg, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.72) 50%, rgba(255,255,255,0.82) 100%)'
@@ -57,7 +57,7 @@ export default function Header() {
             height={20}
             className="opacity-80 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0"
           />
-          <span className="font-serif text-[0.9375rem] tracking-tight whitespace-nowrap max-w-0 group-hover:max-w-xs opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out text-[#1a1918]">
+          <span className="font-serif text-[0.9375rem] tracking-tight whitespace-nowrap max-w-0 group-hover:max-w-xs opacity-0 group-hover:opacity-100 pl-0 group-hover:pl-3 transition-all duration-500 ease-out text-[#1a1918] overflow-hidden">
             Human Learning Lab
           </span>
         </Link>
