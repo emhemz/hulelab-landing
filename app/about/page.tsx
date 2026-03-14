@@ -197,9 +197,10 @@ export default function AboutPage() {
               {[
                 { name: "Christian Løken", role: "CEO", image: "/team/christian.webp" },
                 { name: "Anders Sverdrup-Dahl", role: "CFO", image: "/team/anders.webp" },
-                { name: "Rasmus Køstner", role: "Neurobiologist", image: "/team/rasmus.webp" },
+                { name: "Rasmus Køstner", role: "Professional Sailor", image: "/team/rasmus.webp" },
                 { name: "Benjamin Nærø", role: "Fullstack Developer", image: "/team/benjamin.webp" },
-                { name: "Emilie Hemsett", role: "UX Designer", image: "/team/emilie.webp" },
+                { name: "Emilie Hemsett", role: "Serial Entrepreneur", image: "/team/emilie.webp" },
+                { name: "Denise Martin", role: "Fullstack Developer", image: "/team/denise.webp" },
               ].map((member, i) => (
                 <div
                   key={member.name}
@@ -243,6 +244,12 @@ export default function AboutPage() {
                   role: "Associate Professor",
                   affiliation: "University of South-Eastern Norway",
                   image: "/team/advisors/hedda.webp",
+                },
+                {
+                  name: "Nima J. Shahinian",
+                  role: "Industrial Designer",
+                  affiliation: "Norway's first astronaut candidate",
+                  image: "/team/advisors/nima.webp",
                 },
               ].map((advisor, i) => (
                 <div
